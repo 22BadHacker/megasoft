@@ -17,23 +17,28 @@ body {
 
 
 *::-webkit-scrollbar{
-   width: 15px;
+   width: 13px;
    
-   /* cursor: pointer; */
+
 }
 
 
 *::-webkit-scrollbar-thumb{
-   width: 15px;
-   background: #222;
+   width: 13px;
+   background: rgb(34, 34, 34, .8);
    /* cursor: pointer; */
-   transition: .2s ease-in-out;
+   transition: .3s ease-in-out;
 }
-/* *::-webkit-scrollbar-thumb:hover{
-   width: 15px;
-   background: #333;
+*::-webkit-scrollbar-thumb:hover{
+   background: rgb(51, 51, 51, .8);
    cursor: pointer;
-} */
+}
+
+@media (max-width: 490px) {
+    *::-webkit-scrollbar{
+        width: 0px;
+    }
+}
 
 
 
@@ -96,20 +101,7 @@ body {
 
 
    
-     .contact::-webkit-scrollbar{
-        width: 15px;
-        
-        /* cursor: pointer; */
-     }
      
-     
-     .contact::-webkit-scrollbar-thumb{
-        width: 15px;
-        background: #222;
-        /* cursor: pointer; */
-        transition: .2s ease-in-out;
-     }
-
    
 
     .burger.open, .window *{

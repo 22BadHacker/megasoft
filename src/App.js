@@ -11,16 +11,16 @@ export default function App() {
 
   return (
     <main className="relative">
-      <Nav />
+      {/* <Nav /> */}
 
-      {/* <section style={backgroundImage} className="aurora h-screen relative w-screen bg-[#000] overflow-hidden">
+      <section  className="aurora h-screen relative w-screen bg-[#000] overflow-hidden">
         
           <Hero />
-      </section> */}
-
-      <section className=" relative">
-        <Contact />
       </section>
+
+      {/* <section className=" relative">
+        <Contact />
+      </section> */}
     </main>
   )
 }

@@ -10,8 +10,8 @@ const Contact = () => {
     <div className='contact h-screen pt-[130px] px-8 w-screen overflow-x-hidden overflow-y-scroll pb-10  mx-auto bg-black sm:pt-[120px] md:lg:pt-[130px] md:lg:px-[20px]  sm:px-8'>
         <div className='w-full mx-auto max-w-[1500px]'>
 
-            <div className=' w-full gap-4 pb-2 flex text-nowrap md:lg:flex-col md:lg:pb-[70px] '>
-                <h1  className='text-[12vw] pointer-events-none tracking-[2px]   font-roboto relative font-[900] sm:text-[12.5vw]  lg:text-[8.5vw] tracking-tight  lg:even:-top-[65px] md:text-[11vw] md:even:-top-[50px]'>Let's get to work</h1>               
+            <div className=' w-full  pb-2 flex text-wrap md:lg:pb-[70px] '>
+                <h1  className='text-[12vw] pointer-events-none tracking-[2px]   font-roboto relative font-[900] sm:text-[12.5vw]  lg:text-[8.5vw] tracking-tight   lg:even:-top-[65px] md:text-[11vw] md:even:-top-[50px]'>Let's get to work</h1>               
             </div>
 
 

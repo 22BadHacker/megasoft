@@ -2,6 +2,7 @@ import {useState} from 'react'
 import  {navLinks, navLinksPhone , socialLinks} from '../Constants/main'
 import logo2 from '../Assets/new.svg'
 import {motion, AnimatePresence} from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 
 
@@ -35,7 +36,7 @@ const Nav = () => {
         <nav className=' px-6 transition-all ease-in-out pt-8 w-full z-10 max-w-[1500px] mx-auto  flex-center-between    md:lg:px-4 md:lg:pt-8  sm:px-8'>
             {/* Logo */}
             <>
-                <a href="#">
+                <a href="/">
                     
                     <img  className='size-[200px] flex-1 lg:size-[210px] ' src={logo2} alt="" />
                     
@@ -116,7 +117,8 @@ const Nav = () => {
 
 
                          {/* Contact Btn */}
-                         <motion.a transition={{delay: 1.5}}  initial={{ filter: 'blur(20px)', opacity: 0}} animate={{ filter: 'blur(0px)', opacity: 1}} className=' absolute bottom-20 left-[50%] -translate-x-[50%]  bg-white  text-black w-[80%] font-roboto font-medium text-[18px] flex justify-center py-2 rounded-full fonr-bold font-roboto hover:bg-white/80  '  href="#">Get in Touch</motion.a>
+                         <motion.a transition={{delay: 1.5}}  initial={{ filter: 'blur(20px)', opacity: 0}} animate={{ filter: 'blur(0px)', opacity: 1}} href="/contact" className=' absolute bottom-20 left-[50%] -translate-x-[50%]  bg-white  text-black w-[80%] font-roboto font-medium text-[18px] flex justify-center py-2 rounded-full fonr-bold font-roboto hover:bg-white/80  '  >
+                         Get in Touch</motion.a>
                      </motion.div>
 
                  </>
