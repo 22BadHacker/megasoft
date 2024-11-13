@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import  {navLinks, navLinksPhone , socialLinks} from '../Constants/main'
-import logo2 from '../Assets/new.svg'
+// import logo2 from '../Assets/new.svg'
+import logo2 from '../Assets/newColor.svg'
 import {motion, AnimatePresence} from 'framer-motion'
 import { Link } from 'react-router-dom'
 
@@ -32,7 +33,7 @@ const Nav = () => {
    
 
   return (
-    <header id='navbar' className='h-16 bg-transparent z-10 fixed top-0 left-0 inset-0 flex-center'>
+    <header id='navbar' className='h-16 mr-4 bg-transparent backdrop-blur-[6px] pb-8 lg:md:sm:mr-4 pt-2 z-10 fixed top-0 left-0 inset-0 flex-center'>
         <nav className=' px-6 transition-all ease-in-out pt-8 w-full z-10 max-w-[1500px] mx-auto  flex-center-between    md:lg:px-4 md:lg:pt-8  sm:px-8'>
             {/* Logo */}
             <>
@@ -53,7 +54,7 @@ const Nav = () => {
                             const { href, label, icon, classId} = link
                             return (
                                 <li  key={label}>
-                                    <a  href={href} id={classId} className={`linkss relative max-w-content text-white/80 font-roboto font-normal text-[18px] hover:text-[#fff] flex gap-2 items-center`}>{label} <span>{icon}</span></a>
+                                    <a  href={href} id={classId} className={`linkss relative max-w-content text-white/80 font-roboto font-normal text-[18px] hover:text-orangee flex gap-2 items-center`}>{label} <span>{icon}</span></a>
                                 </li>
                             )
                         })
@@ -66,7 +67,7 @@ const Nav = () => {
 
             <>
                 <div className='hidden lg:flex items-center  gap-3'>
-                    <a className=' sm:btn-flex2 hover:text-black lg:btn-flex '  href="#">Get in Touch</a>
+                    <a className='  hover:text-orangee lg:btn-flex '  href="/contact/">Get in Touch</a>
                     
                 </div>
             </>
@@ -75,7 +76,7 @@ const Nav = () => {
             {/* Burger */}
 
             <>
-                <div className={`burger ${toggleClass} scale-[.78] flex rounded-full justify-center  flex-col gap-[6px] relative w-12 h-12  shadow-lg bg-[#111] cursor-pointer items-center lg:hidden sm:scale-[.8]`}onClick={toggleMenu}>
+                <div className={`burger ${toggleClass} relative left-4 scale-[.78] flex rounded-full justify-center  flex-col gap-[6px] relative w-12 h-12  shadow-lg bg-[#111] cursor-pointer items-center lg:hidden sm:scale-[.8]`}onClick={toggleMenu}>
                     <div className="bar absolute -translate-y-1 w-7 h-[1.5px] bg-white"></div>
                     <div className="bar2 absolute translate-y-1 w-7 h-[1.5px] bg-white"></div>
                     
@@ -95,12 +96,12 @@ const Nav = () => {
 
                     <>
                    
-                        <motion.div initial= {{opacity: 0}} transition={{duration: .2}} animate={{opacity: 1}}  className='window px-7 h-screen z-8   w-screen absolute top-0 left-0 bg-black/90 flex-left flex-col gap-4 md:lg:hidden sm:px-8'>
+                        <motion.div initial= {{opacity: 0}} animate={{opacity: 1}} transition={{delay: .4, ease: 'anticipate', duration: .3}}   className='window px-7 h-screen z-8   w-screen absolute top-0 left-0 bg-black flex-left flex-col gap-4 md:lg:hidden sm:px-8'>
                             {navLinks.map((link, i) => {
                                 return (
                                     
                                     <div className="flex  flex-col relative top-[120px] sm:top-[100px]">
-                                        <motion.a initial={{ filter: 'blur(20px)', opacity: 0}} transition={{duration: .3, delay: i * .3, ease: 'anticipate', type: 'tween'}}  animate={{ filter: 'blur(0px)', opacity: 1}}  key={i} href={link.href} className='links font-roboto font-bold text-white/70 text-[55px] font-roboto font-medium text-[18px] hover:text-[#fff] '>{link.label}</motion.a>
+                                        <motion.a initial={{ filter: 'blur(20px)', opacity: 0,translateY: 10}} transition={{duration: .3, delay: i * .3, ease: 'easeInOut', type: 'spring', stiffness: 100}}  animate={{ filter: 'blur(0px)', opacity: 1, translateY: 0}}  key={i} href={link.href} className='links font-roboto font-bold text-white/70 text-[55px] font-roboto font-medium text-[18px] hover:text-orangee '>{link.label}</motion.a>
                                     </div>
                                 )
                             })}
@@ -110,14 +111,14 @@ const Nav = () => {
                             <motion.div initial={{  opacity: 0}} transition={{delay: 1.3, ease: 'easeInOut', type: 'tween'}} animate={{ opacity: 1}} className="flex  gap-[1px] absolute bottom-24 mb-12 scale-[.8] left-[50%] -translate-x-[50%]">
                             {socialLinks.map((link, i) => {
                                     return (
-                                        <a  key={i} href={link.href} className='font-roboto font-bold text-white/70 text-[55px] font-roboto font-medium text-md scale-[.5] hover:text-[#fff] '>{link.icon}</a>
+                                        <a  key={i} href={link.href} className='font-roboto font-bold text-white/70 text-[55px] font-roboto font-medium text-md scale-[.5] hover:text-orangee '>{link.icon}</a>
                                     )
                                 })}
                             </motion.div>
 
 
                          {/* Contact Btn */}
-                         <motion.a transition={{delay: 1.5}}  initial={{ filter: 'blur(20px)', opacity: 0}} animate={{ filter: 'blur(0px)', opacity: 1}} href="/contact" className=' absolute bottom-20 left-[50%] -translate-x-[50%]  bg-white  text-black w-[80%] font-roboto font-medium text-[18px] flex justify-center py-2 rounded-full fonr-bold font-roboto hover:bg-white/80  '  >
+                         <motion.a transition={{delay: 1.5}}  initial={{ filter: 'blur(20px)', opacity: 0}} animate={{ filter: 'blur(0px)', opacity: 1}} href="/contact/" className='submit absolute bottom-20 left-[50%] -translate-x-[50%]  bg-orangee  text-white w-[80%] font-roboto font-bold text-[18px] flex justify-center py-2 rounded-full fonr-bold font-roboto hover:text-orangee hover:bg-white/90  '  >
                          Get in Touch</motion.a>
                      </motion.div>
 

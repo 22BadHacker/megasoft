@@ -13,8 +13,9 @@ module.exports = {
         colors: {
             creamy: 'var(--primary)',
             orangee: 'var(--secondary)',
-            // whiteColor: 'var(--body_color)',
-            // black: 'var(--body_background)',
+            orangeLight: 'var(--secondary-orange)',
+            lightBlue: 'var(--light-blue)',
+            
         },
     },
     screens:{

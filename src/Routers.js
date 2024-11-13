@@ -10,8 +10,8 @@ const Routers = () => {
    <Nav />
     <Router>
         <Routes>
-            <Route path='/' element={<App />} />
-            <Route path='/contact' element={<Contact />} />
+            {/* <Route path='/' element={<App />} /> */}
+            <Route path='/' element={<Contact />} />
         </Routes>
 
     </Router>

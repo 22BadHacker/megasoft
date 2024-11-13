@@ -7,7 +7,9 @@
     --body_background: #fff;
     --body_color: #000;
     --primary: #e8d5c8;
-    --secondary: #f95302;
+    --secondary: rgb(249, 83, 2,.9);
+    --secondary-orange: rgb(249, 83, 2,.8);
+    --light-blue: #e4ebf5;
 }
 
 body {
@@ -17,14 +19,14 @@ body {
 
 
 *::-webkit-scrollbar{
-   width: 13px;
+   width: 12px;
    
 
 }
 
 
 *::-webkit-scrollbar-thumb{
-   width: 13px;
+   width: 12px;
    background: rgb(34, 34, 34, .8);
    /* cursor: pointer; */
    transition: .3s ease-in-out;
@@ -34,12 +36,23 @@ body {
    cursor: pointer;
 }
 
+
+
+@media (max-width: 690px) {
+    *::-webkit-scrollbar{
+        width: 10px;
+    }
+}
 @media (max-width: 490px) {
     *::-webkit-scrollbar{
         width: 0px;
     }
 }
 
+
+.links{
+    transition: .2s ease-in-out;
+}
 
 
 @layer components{
@@ -75,11 +88,14 @@ body {
     }
 
     .submit{
-        transition: .4s ease-in-out;
+        transition: .2s ease-in-out;
     }
 
-    .submit:hover > .arrow{
-        display: none;
+    .submit:hover{
+        @apply gap-5 text-orangee
+    }
+    .submit:hover > input{
+        @apply text-orangee
     }
 
    /* .linkss::after{
@@ -142,11 +158,10 @@ body {
     }
 
     .btn-flex{
-        @apply  lg:text-black/80 font-[roboto]  bg-white font-[900] text-[16px] px-7 py-[10px] hover:bg-[#fff]/80 rounded-full
+        transition: .2s ease-in-out;
+        @apply  lg:text-white/80 font-[roboto]  bg-orangee  font-[900] text-[16px] px-7 py-[10px] hover:bg-[#fff]/80 rounded-full
     }
-    .btn-flex2{
-        @apply  text-black/80 font-[roboto]  bg-white font-[900] text-[15px] px-4 py-[4px] hover:bg-[#fff]/80 rounded-full
-    }
+    
 
     .text-position{
         @apply text-white text-[18vw] relative left-[350px]
