@@ -1,13 +1,183 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --body_background: #fff;
+    --body_color: #000;
+    --primary: #e8d5c8;
+    --secondary: #f95302;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    @apply bg-[111] text-gray-300 font-roboto
 }
+
+
+
+*::-webkit-scrollbar{
+   width: 15px;
+   
+   /* cursor: pointer; */
+}
+
+
+*::-webkit-scrollbar-thumb{
+   width: 15px;
+   background: #222;
+   /* cursor: pointer; */
+   transition: .2s ease-in-out;
+}
+/* *::-webkit-scrollbar-thumb:hover{
+   width: 15px;
+   background: #333;
+   cursor: pointer;
+} */
+
+
+
+@layer components{
+   /* .aurora{
+    background-image: radial-gradient(125% 125% at 50% 0%, #020617 50%, rgb(221, 51, 92, .7)  )
+   } */
+    .bar, .bar2, .burger{
+        transition: .4s ease-in-out;
+    }
+   .burger:hover > .bar{
+    cursor: pointer;
+    transform: translateY(0) ;
+    
+   }
+   .burger:hover > .bar2{
+    cursor: pointer;
+    transform: translateY(0) ;
+    
+   }
+
+   .burger.open > .bar{
+    transform:  rotate(45deg);
+    transition: .4s ease-in-out;
+   }
+   .burger.open > .bar2{
+    transform:  rotate(-45deg);
+    transition: .4s ease-in-out;
+   }
+   .burger.open:hover{
+       transform:  rotate(-45deg);
+       scale: .9;
+       
+    }
+
+    .submit{
+        transition: .4s ease-in-out;
+    }
+
+    .submit:hover > .arrow{
+        display: none;
+    }
+
+   /* .linkss::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    top: -34px;
+    background: #fff;
+    transition: .3s ease-in-out
+   }
+
+   
+   .linkss:hover::after{
+       width: 90%;
+    }
+     */
+
+
+   
+     .contact::-webkit-scrollbar{
+        width: 15px;
+        
+        /* cursor: pointer; */
+     }
+     
+     
+     .contact::-webkit-scrollbar-thumb{
+        width: 15px;
+        background: #222;
+        /* cursor: pointer; */
+        transition: .2s ease-in-out;
+     }
+
+   
+
+    .burger.open, .window *{
+        opacity: 1;
+        filter: blur(0px);
+    }
+    
+    .icon{
+
+        transition: .4s ease
+    }
+
+    #link:hover > * > .icon{
+        rotate: 180deg;
+        transition: .5s ease-in-out
+    }
+
+
+
+    
+}
+
+@layer utilities{
+    .flex-center{
+        @apply flex items-center justify-center;
+    }
+
+    .flex-center-between{
+        @apply flex items-center justify-between
+    }
+
+    .flex-center-gap{
+        @apply flex gap-7 items-center 
+    }
+
+    .flex-burger{
+        @apply gap-4 flex flex-col w-10 h-10 relative
+    }
+
+    .btn-flex{
+        @apply  lg:text-black/80 font-[roboto]  bg-white font-[900] text-[16px] px-7 py-[10px] hover:bg-[#fff]/80 rounded-full
+    }
+    .btn-flex2{
+        @apply  text-black/80 font-[roboto]  bg-white font-[900] text-[15px] px-4 py-[4px] hover:bg-[#fff]/80 rounded-full
+    }
+
+    .text-position{
+        @apply text-white text-[18vw] relative left-[350px]
+    }
+    .text-position2{
+        @apply text-white text-[18.5vw] relative left-[0px]
+    }
+
+    .flex-opacity{
+        @apply h-full max-w-[1400px] mx-auto  pt-[100px] z-[4] w-full flex flex-col leading-[240px] 
+    }
+    .flex-opacity2{
+        @apply h-full max-w-[1400px] mx-auto  pt-[100px] z-[4] w-full flex flex-col leading-[80px] 
+    }
+    
+       
+}
+
+
+/* @media (max-width:1085px) {
+    .containContact{
+        display: flex;
+        flex-direction: column;
+    }
+    
+} */

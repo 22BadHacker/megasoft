@@ -1,0 +1,135 @@
+import {useState} from 'react'
+import  {navLinks, navLinksPhone , socialLinks} from '../Constants/main'
+import logo2 from '../Assets/new.svg'
+import {motion, AnimatePresence} from 'framer-motion'
+
+
+
+const Nav = () => {
+
+    const [open, setOpen] = useState(false)
+
+    const toggleMenu = () => {
+        setOpen( !open)
+    }
+
+    let toggleClass = open ? "open" : '';
+    // const  classId = 'link';
+
+    // const prevScrollpos = window.pageYOffset;
+    // window.onscroll = function() {
+    //     const currentScrollPos = window.pageYOffset;
+    //     if (prevScrollpos > currentScrollPos) {
+    //         document.getElementById("navbar").style.top = "0";
+    //     } else {
+    //         document.getElementById("navbar").style.top = "-50px";
+    //     }
+    //     prevScrollpos = currentScrollPos;
+    // }
+    
+
+   
+
+  return (
+    <header id='navbar' className='h-16 bg-transparent z-10 fixed top-0 left-0 inset-0 flex-center'>
+        <nav className=' px-6 transition-all ease-in-out pt-8 w-full z-10 max-w-[1500px] mx-auto  flex-center-between    md:lg:px-4 md:lg:pt-8  sm:px-8'>
+            {/* Logo */}
+            <>
+                <a href="#">
+                    
+                    <img  className='size-[200px] flex-1 lg:size-[210px] ' src={logo2} alt="" />
+                    
+                </a>
+            </>
+
+            {/* Nav Links */}
+
+            <>
+                    
+                <ul className='lg:flex-center-gap hidden'>
+                    {
+                        navLinks.map((link) => {
+                            const { href, label, icon, classId} = link
+                            return (
+                                <li  key={label}>
+                                    <a  href={href} id={classId} className={`linkss relative max-w-content text-white/80 font-roboto font-normal text-[18px] hover:text-[#fff] flex gap-2 items-center`}>{label} <span>{icon}</span></a>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </>
+
+
+            {/* Contact Btn */}
+
+            <>
+                <div className='hidden lg:flex items-center  gap-3'>
+                    <a className=' sm:btn-flex2 hover:text-black lg:btn-flex '  href="#">Get in Touch</a>
+                    
+                </div>
+            </>
+            
+
+            {/* Burger */}
+
+            <>
+                <div className={`burger ${toggleClass} scale-[.78] flex rounded-full justify-center  flex-col gap-[6px] relative w-12 h-12  shadow-lg bg-[#111] cursor-pointer items-center lg:hidden sm:scale-[.8]`}onClick={toggleMenu}>
+                    <div className="bar absolute -translate-y-1 w-7 h-[1.5px] bg-white"></div>
+                    <div className="bar2 absolute translate-y-1 w-7 h-[1.5px] bg-white"></div>
+                    
+                </div>
+            </>
+
+
+
+
+        </nav>
+        
+           
+
+           {
+                toggleClass ? 
+
+
+                    <>
+                   
+                        <motion.div initial= {{opacity: 0}} transition={{duration: .2}} animate={{opacity: 1}}  className='window px-7 h-screen z-8   w-screen absolute top-0 left-0 bg-black/90 flex-left flex-col gap-4 md:lg:hidden sm:px-8'>
+                            {navLinks.map((link, i) => {
+                                return (
+                                    
+                                    <div className="flex  flex-col relative top-[120px] sm:top-[100px]">
+                                        <motion.a initial={{ filter: 'blur(20px)', opacity: 0}} transition={{duration: .3, delay: i * .3, ease: 'anticipate', type: 'tween'}}  animate={{ filter: 'blur(0px)', opacity: 1}}  key={i} href={link.href} className='links font-roboto font-bold text-white/70 text-[55px] font-roboto font-medium text-[18px] hover:text-[#fff] '>{link.label}</motion.a>
+                                    </div>
+                                )
+                            })}
+
+                            {/* Social Media */}
+
+                            <motion.div initial={{  opacity: 0}} transition={{delay: 1.3, ease: 'easeInOut', type: 'tween'}} animate={{ opacity: 1}} className="flex  gap-[1px] absolute bottom-24 mb-12 scale-[.8] left-[50%] -translate-x-[50%]">
+                            {socialLinks.map((link, i) => {
+                                    return (
+                                        <a  key={i} href={link.href} className='font-roboto font-bold text-white/70 text-[55px] font-roboto font-medium text-md scale-[.5] hover:text-[#fff] '>{link.icon}</a>
+                                    )
+                                })}
+                            </motion.div>
+
+
+                         {/* Contact Btn */}
+                         <motion.a transition={{delay: 1.5}}  initial={{ filter: 'blur(20px)', opacity: 0}} animate={{ filter: 'blur(0px)', opacity: 1}} className=' absolute bottom-20 left-[50%] -translate-x-[50%]  bg-white  text-black w-[80%] font-roboto font-medium text-[18px] flex justify-center py-2 rounded-full fonr-bold font-roboto hover:bg-white/80  '  href="#">Get in Touch</motion.a>
+                     </motion.div>
+
+                 </>
+
+                : null
+                   
+           }
+           
+
+
+      
+    </header>
+  )
+}
+
+export default Nav

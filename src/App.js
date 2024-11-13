@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from "./component/Nav";
+import Contact from "./section/Contact";
+import Hero from "./section/Hero";
+import Main from "./section/Main";
+import {motion, useMotionTemplate} from 'framer-motion'
 
-function App() {
+export default function App() {
+
+  
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <main className="relative">
+      <Nav />
 
-export default App;
+      {/* <section style={backgroundImage} className="aurora h-screen relative w-screen bg-[#000] overflow-hidden">
+        
+          <Hero />
+      </section> */}
+
+      <section className=" relative">
+        <Contact />
+      </section>
+    </main>
+  )
+}
