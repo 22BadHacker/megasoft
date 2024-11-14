@@ -185,6 +185,41 @@ input:focus + .line::before{
         height: 18px;
         width: 20px;
     }
+
+    .box:hover > .pics{
+        transition: .2s ease;
+        filter: saturate(2) brightness(.8);
+        
+    }
+
+
+
+    .box p{
+        
+        bottom: -70px;
+    }
+
+    .box:hover > p{
+        transition: .2s ease;
+       /* color: var(--secondary); */
+       bottom: 12px
+
+        
+    }
+
+    @media (max-width: 690px) {
+
+        .box:hover > p{
+            transition: .2s ease;
+           bottom: 7px;
+           font-size: 15.5px;
+           line-height: 16px;   
+        }
+        
+        /* .box .rita{
+            font-size: 12px;
+        } */
+    }
     /* .check::before {
         content: "";
         width: 1.2rem;

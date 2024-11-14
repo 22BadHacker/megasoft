@@ -26,27 +26,27 @@ const Footer = () => {
 
             <div className="grid relative gap-8 md:lg:gap-8 grid-cols-2 sm:grid-cols-3 md:lg:grid-cols-3">
                 <div className="foot flex flex-col gap-1">
-                    <h1 className='pb-2 hover:text-white cursor-pointer text-[26px]  font-bold'>Explore</h1>
-                    <p className=' text-[20px] text-white/70 font-medium'>Features</p>
-                    <p className='text-[20px] text-white/70 font-medium'>Our Story</p>
-                    <p className='text-[20px] text-white/70 font-medium'>Our Work</p>
-                    <p className='text-[20px] text-white/70 font-medium'>Services</p>
-                    <p className='text-[20px] text-white/70 font-medium'>Contact</p>
+                    <h1 className='pb-2 hover:text-white cursor-pointer text-[24px]  font-bold'>Explore</h1>
+                    <p className=' text-[18px] text-white/70 font-medium'>Features</p>
+                    <p className='text-[17px] text-white/70 font-medium'>Our Story</p>
+                    <p className='text-[17px] text-white/70 font-medium'>Our Work</p>
+                    <p className='text-[17px] text-white/70 font-medium'>Services</p>
+                    <p className='text-[17px] text-white/70 font-medium'>Contact</p>
                 </div>
                 <div className="flex flex-col gap-1 foot">
-                    <h1 className='hover:text-white cursor-pointer pb-2 text-[26px]  font-bold'>Services</h1>
-                    <p className=' text-[20px] text-white/70 font-medium'>Web Design</p>
-                    <p className='text-[20px] text-white/70 font-medium'>Graphic Design</p>
-                    <p className='text-[20px] text-white/70 font-medium'>Digital Marketing</p>
-                    <p className='text-[20px] text-white/70 font-medium'>Web Maintenance</p>
-                    <p className='text-[20px] text-white/70 font-medium'>More....</p>
+                    <h1 className='hover:text-white cursor-pointer pb-2 text-[24px]  font-bold'>Services</h1>
+                    <p className=' text-[17px] text-white/70 font-medium'>Web Design</p>
+                    <p className='text-[17px] text-white/70 font-medium'>Graphic Design</p>
+                    <p className='text-[17px] text-white/70 font-medium'>Digital Marketing</p>
+                    <p className='text-[17px] text-white/70 font-medium'>Web Maintenance</p>
+                    <p className='text-[17px] text-white/70 font-medium'>More....</p>
                 </div>
                 <div className="flex flex-col gap-1 foot">
-                    <h1 className='hover:text-white cursor-pointer pb-2 text-[26px]  font-bold'>Society </h1>
-                    <p className=' text-[20px] text-white/70 font-medium'>About</p>
-                    <p className='text-[20px] text-white/70 font-medium'>Support</p>
-                    <p className='text-[20px] text-white/70 font-medium'>Privacy policy</p>
-                    <p className='text-[20px] text-white/70 font-medium'>Contact</p>
+                    <h1 className='hover:text-white cursor-pointer pb-2 text-[24px]  font-bold'>Society </h1>
+                    <p className=' text-[17px] text-white/70 font-medium'>About</p>
+                    <p className='text-[17px] text-white/70 font-medium'>Support</p>
+                    <p className='text-[17px] text-white/70 font-medium'>Privacy policy</p>
+                    <p className='text-[17px] text-white/70 font-medium'>Contact</p>
                 </div>
                 
             </div>

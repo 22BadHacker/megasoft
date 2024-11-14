@@ -1,6 +1,19 @@
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp, FaChevronLeft } from "react-icons/fa";
 import {animate, color, motion} from 'framer-motion'
 import { option } from "framer-motion/client";
+// import img1 from '../Assets/services/img1.png'
+import img2 from '../Assets/services/img2.png'
+import img3 from '../Assets/services/img3.png'
+import img4 from '../Assets/services/img4.png'
+import img5 from '../Assets/services/img5.png'
+import img6 from '../Assets/services/img6.png'
+import img7 from '../Assets/services/img7.png'
+import img8 from '../Assets/services/img8.webp'
+import { FaArrowLeftLong } from 'react-icons/fa6'
+
+
+
+// import {img1, img2, img3, img4, img5, img6} from '../Assets/Services'
 
 export const navLinks = [
     { href: "#", label: "Features" },
@@ -66,13 +79,13 @@ export const customStyles = {
 
 const services = [
 
-    { href: '#', name: 'Web Design'},
-    { href: '#', name: 'Web Development'},
-    { href: '#', name: 'Branding & Graphic Design'},
-    { href: '#', name: 'Digital Marketing'},
-    { href: '#', name: 'Web Maintenance and Support'},
-    { href: '#', name: 'Consulting and Strategy'},
-    { href: '#', name: 'Search Engine Optimization (SEO)'},
+    { number: '01',src: img6,icone: <FaArrowLeftLong className='absolute top-3 right-3   hover:text-orangee cursor-pointer transition delay-75 ease-in-out   lg:top-5 lg:right-5    -rotate-[230deg] lg:text-[24px] text-[16px] text-white '/>, href: '#', name: 'Web Design'},
+    { number: '02',src: img2,icone: <FaArrowLeftLong className='absolute top-3 right-3   hover:text-orangee cursor-pointer transition delay-75 ease-in-out   lg:top-5 lg:right-5    -rotate-[230deg] lg:text-[24px] text-[16px] text-white '/>, href: '#', name: 'Web Development'},
+    { number: '03',src: img8,icone: <FaArrowLeftLong className='absolute top-3 right-3   hover:text-orangee cursor-pointer transition delay-75 ease-in-out   lg:top-5 lg:right-5    -rotate-[230deg] lg:text-[24px] text-[16px] text-white '/>, href: '#', name: 'Branding & Graphic Design'},
+    { number: '04',src: img4,icone: <FaArrowLeftLong className='absolute top-3 right-3   hover:text-orangee cursor-pointer transition delay-75 ease-in-out   lg:top-5 lg:right-5    -rotate-[230deg] lg:text-[24px] text-[16px] text-white '/>, href: '#', name: 'Digital Marketing'},
+    { number: '05',src: img5,icone: <FaArrowLeftLong className='absolute top-3 right-3   hover:text-orangee cursor-pointer transition delay-75 ease-in-out   lg:top-5 lg:right-5    -rotate-[230deg] lg:text-[24px] text-[16px] text-white '/>, href: '#', name: 'Web Maintenance and Support'},
+    { number: '06',src: img3,icone: <FaArrowLeftLong className='absolute top-3 right-3   hover:text-orangee cursor-pointer transition delay-75 ease-in-out   lg:top-5 lg:right-5    -rotate-[230deg] lg:text-[24px] text-[16px] text-white '/>, href: '#', name: 'Consulting and Strategy'},
+    { number: '07',src: img7,icone: <FaArrowLeftLong className='absolute top-3 right-3   hover:text-orangee cursor-pointer transition delay-75 ease-in-out   lg:top-5 lg:right-5    -rotate-[230deg] lg:text-[24px] text-[16px] text-white '/>, href: '#', name: 'Search Engine Optimization (SEO)'},
 ]
 
 

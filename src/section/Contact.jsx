@@ -19,7 +19,7 @@ const Contact = () => {
 
 
         {/*Information section*/}
-        <div className=' w-full  pb-1 flex text-wrap md:lg:pb-[70px] pt-[100px]'>
+        <div className=' w-full  pb-1 flex text-wrap md:lg:pb-[70px] pt-[60px]'>
                 {/* Head Title */}
                 <h1  className='text-[12vw] pointer-events-none tracking-[2px]   font-roboto relative font-[900] sm:text-[12.5vw]  lg:text-[8.5vw] tracking-tight   lg:even:-top-[65px] md:text-[11vw] md:even:-top-[50px]'>Our Information</h1>               
         </div>
@@ -192,7 +192,7 @@ const Contact = () => {
 
                         </div>
 
-                        <div className="flex gap-4 pt-2">
+                        <div className="flex gap-4 pt-5">
                             <input type="checkbox" className='check w-[16px]' name="" id="" />
                             <p className='text-[12px]'>I Want To receive news and updates in my email</p>
                         </div>
