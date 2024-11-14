@@ -23,7 +23,7 @@ const Services = () => {
                  return (
 
                   <div className='box relative h-[32vw] w-full lg:h-[17vw] lg:w-full  rounded-[5px] overflow-hidden'>
-                    <img className='pics w-full  cursor-pointer transition delay-75  h-full object-cover filter brightness-[.8] ' src={src} alt="" />
+                    <img className='pics w-full  cursor-pointer transition delay-75  h-full object-cover filter brightness-[.8] ' loading='lazy'  src={src} alt="" />
                     <h5 className='absolute hover:text-orangee cursor-pointer transition delay-75 top-2 left-2 text-[12px] md:lg:top-4 md:lg:left-4 rounded-full md:lg:w-[50px] md:lg:h-[50px] flex items-center justify-center bg-[rgb(17,17,17,.2)] px-2 py-[5.5px] backdrop-blur-[10px] text-white font-bold lg:md:text-[20px] '>{number}</h5>
                     <p className='absolute cursor-pointer  lg:md:bottom-3 left-2 text-wrap leading-tight   text-white lg:md:leading-[30px] font-bold text-[14px] lg:text-[1.5vw] '>{name}</p> 
                     <a href={href} className='rita'>{icone}</a>
