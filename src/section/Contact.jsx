@@ -92,7 +92,7 @@ const Contact = () => {
 
 
             <form className=' w-full flex flex-col gap-8' action='https://api.web3forms.com/submit' method='POST'>
-                <input type="hidden" name="access_key" value="892b7e5a-ae68-4eaf-bf53-9395db43e459"></input>
+                <input type="hidden" name="access_key" value="6d80584c-6352-4e19-8bbb-0437d67139f9"></input>
 
                 <div className="grid gap-6 lg:grid-cols-[.5fr_1fr] md:grid-cols-[.5fr_1fr]">
 
