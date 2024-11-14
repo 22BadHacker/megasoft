@@ -1,7 +1,7 @@
 import Nav from "./component/Nav";
 import Contact from "./section/Contact";
 import Hero from "./section/Hero";
-import Main from "./section/Main";
+import Main from "./section/Services";
 import {motion, useMotionTemplate} from 'framer-motion'
 
 export default function App() {

@@ -3,20 +3,22 @@ import Contact from './section/Contact'
 import App from './App'
 import Nav from './component/Nav'
 import {BrowserRouter as Router ,Routes, Route } from 'react-router-dom'
+import Footer from './component/Footer'
 
 const Routers = () => {
   return (
-    <>
-   <Nav />
-    <Router>
-        <Routes>
-            {/* <Route path='/' element={<App />} /> */}
-            <Route path='/' element={<Contact />} />
-        </Routes>
+    <div className='boxContain relative overflow-x-hidden'>
+    <Nav />
+      <Router>
+          <Routes>
+              {/* <Route path='/' element={<App />} /> */}
+              <Route path='/' element={<Contact />} />
+          </Routes>
 
-    </Router>
+      </Router>
+      <Footer />
       
-    </>
+    </div>
   )
 }
 

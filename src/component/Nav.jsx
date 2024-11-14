@@ -16,25 +16,14 @@ const Nav = () => {
     }
 
     let toggleClass = open ? "open" : '';
-    // const  classId = 'link';
-
-    // const prevScrollpos = window.pageYOffset;
-    // window.onscroll = function() {
-    //     const currentScrollPos = window.pageYOffset;
-    //     if (prevScrollpos > currentScrollPos) {
-    //         document.getElementById("navbar").style.top = "0";
-    //     } else {
-    //         document.getElementById("navbar").style.top = "-50px";
-    //     }
-    //     prevScrollpos = currentScrollPos;
-    // }
+    
     
 
    
 
   return (
-    <header id='navbar' className='h-16 mr-4 bg-transparent backdrop-blur-[6px] pb-8 lg:md:sm:mr-4 pt-2 z-10 fixed top-0 left-0 inset-0 flex-center'>
-        <nav className=' px-6 transition-all ease-in-out pt-8 w-full z-10 max-w-[1500px] mx-auto  flex-center-between    md:lg:px-4 md:lg:pt-8  sm:px-8'>
+    <header id='navbar' className='h-[65px]   bg-black backdrop-blur-[6px] pb-10 lg:md:sm:mr-0 pt-2 z-10 fixed top-0 left-0 inset-0 flex-center'>
+        <nav className=' px-6 transition-all ease-in-out pt-8 w-full z-[22] max-w-[1500px] mx-auto  flex-center-between    md:lg:px-4 md:lg:pt-8  sm:px-8'>
             {/* Logo */}
             <>
                 <a href="/">
@@ -89,14 +78,13 @@ const Nav = () => {
         </nav>
         
            
-
            {
                 toggleClass ? 
 
 
                     <>
                    
-                        <motion.div initial= {{opacity: 0}} animate={{opacity: 1}} transition={{delay: .4, ease: 'anticipate', duration: .3}}   className='window px-7 h-screen z-8   w-screen absolute top-0 left-0 bg-black flex-left flex-col gap-4 md:lg:hidden sm:px-8'>
+                        <motion.div initial= {{opacity: 0}} animate={{opacity: 1}} transition={{delay: .4, ease: 'anticipate', duration: .3}}   className='window px-7 h-screen z-[20]   w-screen absolute top-0 left-0 bg-black flex-left flex-col gap-4 md:lg:hidden sm:px-8'>
                             {navLinks.map((link, i) => {
                                 return (
                                     
@@ -127,6 +115,7 @@ const Nav = () => {
                 : null
                    
            }
+
            
 
 

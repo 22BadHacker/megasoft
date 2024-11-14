@@ -13,7 +13,7 @@
 }
 
 body {
-    @apply bg-[111] text-gray-300 font-roboto
+    @apply bg-[#111] text-gray-300 font-roboto
 }
 
 
@@ -23,6 +23,7 @@ body {
    
 
 }
+
 
 
 *::-webkit-scrollbar-thumb{
@@ -149,7 +150,11 @@ input:focus + .line::before{
 
 
    
-     
+     .foot p:hover{
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        @apply text-orangee
+     }
    
 
     .burger.open, .window *{
@@ -167,8 +172,37 @@ input:focus + .line::before{
         transition: .5s ease-in-out
     }
 
+    .check{
+        transition: .3s ease;
+        cursor: pointer;
+        border: .1px solid #fff;
+        opacity: .8;
+        background-color: #000;
+        
+        padding: 0.1rem;
+        accent-color: var(--secondary-orange);
+       
+        height: 18px;
+        width: 20px;
+    }
+    /* .check::before {
+        content: "";
+        width: 1.2rem;
+        height: 1.2rem;
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+        transform: scale(0);
+        background-color: var(--secondary);
+      }
 
+      .check:checked::before {
+        transform: scale(.9);
+      }
 
+      .check:hover{
+        color: var(--secondary);
+        transition: .2s ease;
+      } */
+      
     
 }
 
