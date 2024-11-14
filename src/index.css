@@ -162,7 +162,7 @@ input:focus + .line::before{
         transition: .4s ease
     }
 
-    #link:hover + *{
+    #link:hover > *{
         rotate: 180deg;
         transition: .5s ease-in-out
     }
