@@ -116,7 +116,7 @@ const Contact = () => {
                                 Last name
                                 <span className='text-red-600'> *</span>
                             </p> 
-                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' name="" id="" />
+                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' name="last_name" id="" />
                             <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
@@ -127,7 +127,7 @@ const Contact = () => {
                                 Business email
                                 <span className='text-red-600'> *</span>
                             </p> 
-                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' name="" id="" />
+                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' name="business_email" id="" />
                             <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
@@ -136,7 +136,7 @@ const Contact = () => {
                                 Phone number
                                 <span className='text-red-600'> *</span>
                             </p> 
-                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' name="" id="" />
+                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' name="phone_number" id="" />
                             <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
@@ -145,7 +145,7 @@ const Contact = () => {
                                 How did you hear about us?
                                 <span className='text-green-600'> (optional)</span>
                             </p> 
-                            <input type="text" className='inner bg-transparent outline-none py-2 flex text-white  font-roboto font-semibold' name="" id="" />
+                            <input type="text" className='inner bg-transparent outline-none py-2 flex text-white  font-roboto font-semibold' name="How did you hear about us" id="" />
                             <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
@@ -171,7 +171,7 @@ const Contact = () => {
                                 </p> 
 
                                 {/* <input type="text" className='bg-transparent border-b border-white/40 outline-none py-2 flex text-white ' name="" id="" /> */}
-                                <select name="" className='select bg-black cursor-pointer mt-1 shadow-none font-roboto font-semibold  outline-none py-2 flex text-white ' id="">
+                                <select name="selection" className='select bg-black cursor-pointer mt-1 shadow-none font-roboto font-semibold  outline-none py-2 flex text-white ' id="">
                                     {options.map((option, index) => (
                                         <option key={index} value={option.value}>{option.label}</option>
                                     ))}
@@ -185,7 +185,7 @@ const Contact = () => {
                                     Tell us about your project
                                     <span className='text-red-600'> *</span>
                                 </p> 
-                                <input type="text" className='bg-transparent font-roboto font-semibold outline-none py-2 flex text-white ' name="" id="" />
+                                <input type="text" className='bg-transparent font-roboto font-semibold outline-none py-2 flex text-white ' name="about_the_project" id="" />
                                 <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                             </div>                            
@@ -193,7 +193,7 @@ const Contact = () => {
                         </div>
 
                         <div className="flex gap-4 pt-5">
-                            <input type="checkbox" className='check w-[16px]' name="" id="" />
+                            <input type="checkbox" className='check w-[16px]' name="Check" id="" />
                             <p className='text-[12px]'>I Want To receive news and updates in my email</p>
                         </div>
 
