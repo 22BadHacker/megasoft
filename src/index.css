@@ -38,6 +38,7 @@ body {
 
 
 
+
 @media (max-width: 690px) {
     *::-webkit-scrollbar{
         width: 10px;
@@ -49,6 +50,37 @@ body {
     }
 }
 
+input:focus + .line::before{
+    width: 100%;
+    background: var(--secondary-orange);
+    bottom: 0;
+    left: 0;
+    transition: .4s ease-in-out;
+}
+
+.select::placeholder{
+    color: #fff;
+}
+
+.select:focus + .line::before{
+    width: 100%;
+    background: var(--secondary-orange);
+    bottom: 0;
+    left: 0;
+    transition: .4s ease-in-out;
+}
+
+
+.line::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: .1px;
+    background: var(--secondary-orange);
+    bottom: 0;
+    left: 0;
+    transition: .3s ease-in-out;
+}
 
 .links{
     transition: .2s ease-in-out;
@@ -130,7 +162,7 @@ body {
         transition: .4s ease
     }
 
-    #link:hover > * > .icon{
+    #link:hover + *{
         rotate: 180deg;
         transition: .5s ease-in-out
     }

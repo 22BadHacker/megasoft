@@ -1,10 +1,13 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp, FaChevronLeft, FaArrowRight } from "react-icons/fa";
 import {animate, motion} from 'framer-motion'
+import { options, customStyles } from '../Constants/main';
+import Select from 'react-select';
 
 
 
 const Contact = () => {
+    
 
 
   return (
@@ -103,7 +106,9 @@ const Contact = () => {
                                 First name
                                 <span className='text-red-600'> *</span>
                             </p> 
-                            <input id='prenom' type="text" name='first_name' className='bg-transparent border-b border-white/40 outline-none py-2 flex text-white ' name="" id="" />
+                            <input id='prenom' type="text" name='first_name' className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold'  />
+                            
+                            <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
                         <div className="flex flex-col">
@@ -111,7 +116,8 @@ const Contact = () => {
                                 Last name
                                 <span className='text-red-600'> *</span>
                             </p> 
-                            <input type="text" className='bg-transparent border-b border-white/40 outline-none py-2 flex text-white ' name="" id="" />
+                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' name="" id="" />
+                            <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
                         
@@ -121,7 +127,8 @@ const Contact = () => {
                                 Business email
                                 <span className='text-red-600'> *</span>
                             </p> 
-                            <input type="text" className='bg-transparent border-b border-white/40 outline-none py-2 flex text-white ' name="" id="" />
+                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' name="" id="" />
+                            <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
                         <div className="flex flex-col">
@@ -129,15 +136,17 @@ const Contact = () => {
                                 Phone number
                                 <span className='text-red-600'> *</span>
                             </p> 
-                            <input type="text" className='bg-transparent border-b border-white/40 outline-none py-2 flex text-white ' name="" id="" />
+                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' name="" id="" />
+                            <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
-                        <div className="flex  flex-col   ">
+                        <div className="flex relative flex-col   ">
                             <p>
                                 How did you hear about us?
                                 <span className='text-green-600'> (optional)</span>
                             </p> 
-                            <input type="text" className='bg-transparent border-b border-white/40 outline-none py-2 flex text-white ' name="" id="" />
+                            <input type="text" className='inner bg-transparent outline-none py-2 flex text-white  font-roboto font-semibold' name="" id="" />
+                            <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
                        
@@ -161,13 +170,13 @@ const Contact = () => {
                             </p> 
 
                             {/* <input type="text" className='bg-transparent border-b border-white/40 outline-none py-2 flex text-white ' name="" id="" /> */}
-                            <select name="" className='bg-black cursor-pointer mt-1 marker:bg-black border-b border-white/40 outline-none py-2 flex text-white ' id="">
-                                <option className='hidden' value=""></option>
-                                <option value="Design A Website">Design A Website</option>
-                                <option value="Logo">Logo</option>
-                                <option value="Flayers">Flayers</option>
-                                <option value="Business Card">Business Card</option>
+                            <select name="" className='select bg-black cursor-pointer mt-1 shadow-none font-roboto font-semibold  outline-none py-2 flex text-white ' id="">
+                                {options.map((option, index) => (
+                                    <option key={index} value={option.value}>{option.label}</option>
+                                ))}
                             </select>
+                            {/* <Select isMulti className='select bg-black cursor-pointer placeholder:text-white text-white   outline-none py-[1.3px] value:text-white ' options={options} styles={customStyles}/> */}
+                            <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
                         <div className="flex flex-col">
@@ -175,7 +184,8 @@ const Contact = () => {
                                 Tell us about your project
                                 <span className='text-red-600'> *</span>
                             </p> 
-                            <input type="text" className='bg-transparent border-b border-white/40 outline-none py-2 flex text-white ' name="" id="" />
+                            <input type="text" className='bg-transparent font-roboto font-semibold outline-none py-2 flex text-white ' name="" id="" />
+                            <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
 

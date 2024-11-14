@@ -1,5 +1,6 @@
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp, FaChevronLeft } from "react-icons/fa";
-import {animate, motion} from 'framer-motion'
+import {animate, color, motion} from 'framer-motion'
+import { option } from "framer-motion/client";
 
 export const navLinks = [
     { href: "#", label: "Features" },
@@ -19,14 +20,52 @@ export const socialLinks = [
 ];
 
 
+export const options = [
+
+    { value: '', label: <span className="none"></span> },
+    { value: 'Web Design', label: 'Web Design' },
+    { value: 'Branding & Graphic Design', label: 'Branding & Graphic Design' },
+    { value: 'Digital Marketing', label: 'Digital Marketing' },
+    { value: 'Logo', label: 'Logo' },
+    { value: 'Posters', label: 'Posters' },
+    { value: 'Flayers', label: 'Flayers' },
+    { value: 'Business Card', label: 'Business Card' },
+    { value: 'E-Commerce website', label: 'E-commerce website' },
+    { value: 'Portfolio Design', label: 'Portfolio Design' },
+    { value: 'Something else....', label: 'else....' },
+  ];
 
 
+  
+export const customStyles = {
+    control: (provided) => ({
+        ...provided,
 
+        color: '#fff',
+        width: '100%',
+        height: '100%',
+        border: 'none',
+        backgroundColor: 'none',
+        boxShadow: 'none',
 
+    }),
+    option: (provided, state) => ({
+        ...provided,
+        color: 'white',
+        backgroundColor: state.isSelected ? 'lightGray' : 'black',
+        boxShadow: 'none',
+        fontFamily: 'roboto',
+        fontWeight: '700',
+        scrollBar: {
+            width: '2px',
+        }
+    })
+}
 
 // Services Drop Down
 
 const services = [
+
     { href: '#', name: 'Web Design'},
     { href: '#', name: 'Web Development'},
     { href: '#', name: 'Branding & Graphic Design'},
