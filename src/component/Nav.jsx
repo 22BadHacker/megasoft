@@ -84,12 +84,12 @@ const Nav = () => {
 
                     <>
                    
-                        <motion.div initial= {{opacity: 0}} animate={{opacity: 1}} transition={{delay: .4, ease: 'anticipate', duration: .3}}   className='window px-7 h-screen  z-[20]   w-[100%] absolute top-0 left-0 bg-black flex-left flex-col gap-4 md:lg:hidden sm:px-8'>
+                        <motion.div initial= {{opacity: 0}} animate={{opacity: 1}} transition={{delay: .4, ease: 'anticipate', duration: .3}}   className='window px-7 h-screen  z-[20]   w-[100vw] absolute top-0 left-0 bg-black flex-left flex-col gap-4 md:lg:hidden sm:px-8'>
                             {navLinks.map((link, i) => {
                                 return (
                                     
                                     <div className="flex  flex-col relative top-[120px] sm:top-[100px]">
-                                        <motion.a initial={{ filter: 'blur(20px)', opacity: 0,translateY: 10}} transition={{duration: .3, delay: i * .3, ease: 'easeInOut', type: 'spring', stiffness: 100}}  animate={{ filter: 'blur(0px)', opacity: 1, translateY: 0}}  key={i} href={link.href} className='links font-roboto font-bold text-white/70 text-[55px] font-roboto font-medium text-[18px] hover:text-orangee '>{link.label}</motion.a>
+                                        <motion.a initial={{ filter: 'blur(30px)', opacity: 0,translateY: 10}} transition={{duration: .3, delay: i * .3, ease: 'easeInOut', type: 'spring', stiffness: 100}}  animate={{ filter: 'blur(0px)', opacity: 1, translateY: 0}}  key={i} href={link.href} className='links font-roboto font-bold text-white/70 text-[55px] font-roboto font-medium text-[18px] hover:text-orangee '>{link.label}</motion.a>
                                     </div>
                                 )
                             })}
@@ -106,7 +106,7 @@ const Nav = () => {
 
 
                          {/* Contact Btn */}
-                         <motion.a transition={{delay: 1.5}}  initial={{ filter: 'blur(20px)', opacity: 0}} animate={{ filter: 'blur(0px)', opacity: 1}} href="/contact/" className='submit absolute bottom-20 left-[50%] -translate-x-[50%]  bg-orangee  text-white w-[80%] font-roboto font-bold text-[18px] flex justify-center py-2 rounded-full fonr-bold font-roboto hover:text-orangee hover:bg-white/90  '  >
+                         <motion.a transition={{delay: 1.5}}  initial={{ filter: 'blur(30px)', opacity: 0}} animate={{ filter: 'blur(0px)', opacity: 1}} href="/contact/" className='submit absolute bottom-20 left-[50%] -translate-x-[50%]  bg-orangee  text-white w-[80%] font-roboto font-bold text-[18px] flex justify-center py-2 rounded-full fonr-bold font-roboto hover:text-orangee hover:bg-white/90  '  >
                          Get in Touch</motion.a>
                      </motion.div>
 

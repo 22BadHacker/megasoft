@@ -26,7 +26,7 @@ body {
 
 
 
-*::-webkit-scrollbar-thumb{
+.window::-webkit-scrollbar-thumb{
    width: 12px;
    background: rgb(34, 34, 34, .8);
    /* cursor: pointer; */
@@ -42,7 +42,7 @@ body {
 
 @media (max-width: 690px) {
     *::-webkit-scrollbar{
-        width: 10px;
+        width: 8px;
     }
 }
 @media (max-width: 490px) {

@@ -2,6 +2,10 @@ import React from 'react'
 import img1 from '../Assets/services/img1.png'
 import { FaArrowLeftLong } from 'react-icons/fa6'
 import { services } from '../Constants/main'
+// import  '../Assets/services/'
+// import VideoJS from './VideoJS'
+// import video from './vidio2.mp4'
+import video from './video.mp4'
 
 const Services = () => {
   return (
@@ -15,7 +19,8 @@ const Services = () => {
           </div>
 
 
-          <div className="w-full place-content-center gap-4 mx-auto place-items-center grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-x-2 lg:gap-4 lg:md:gap-y-7">
+
+          <div className="w-full place-content-center  mt-5 gap-4 mx-auto place-items-center lg:mt-0 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-x-2 lg:gap-4 lg:md:gap-y-7">
              
 
                 {services.map((item) => {
@@ -36,6 +41,9 @@ const Services = () => {
 
 
                
+          </div>
+          <div className="w-full mt-10  h-full grid grid-cols-1">
+            <video controls='false' className='w-full h-full' autoPlay muted  loop='true' src={video}></video>
           </div>
             {/* <a href="" style={{transition: 'all .3s ease-in-out'}} className=' text-white/90 flex justify-center items-center gap-3 text-[14px] lg:md:text-[20px] lg:text-[18px] hover:bg-[#222] font-semibold hover:scale-95 px-4 py-1  rounded-full lg:md:px-10 lg:md:py-3 bg-orangee'>See More 
             <FaArrowLeftLong className='  cursor-pointer -rotate-[230deg] text-[14.5px]  text-white '/>

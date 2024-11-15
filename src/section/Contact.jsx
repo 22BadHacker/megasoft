@@ -9,6 +9,7 @@ import logo from '../Assets/newColor.svg'
 
 
 
+
 const Contact = () => {
 
     
