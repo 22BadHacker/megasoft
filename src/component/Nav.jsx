@@ -22,8 +22,8 @@ const Nav = () => {
    
 
   return (
-    <header id='navbar' className='h-[65px] bg-black  pb-10 lg:md:sm:mr-0 pt-2 z-10 fixed top-0 left-0 inset-0 flex-center'>
-        <nav className=' px-6 transition-all ease-in-out pt-8 w-full z-[22] max-w-[1500px] mx-auto  flex-center-between    md:lg:px-4 md:lg:pt-8  sm:px-8'>
+    <header id='navbar' className='h-[68px] flex items-center bg-black  pb-12 lg:md:sm:mr-0 pt-6 z-10 fixed top-0 left-0 inset-0 flex-center'>
+        <nav className=' px-6 transition-all ease-in-out pt-8 w-full z-[22] h-full max-w-[1500px] mx-auto  flex-center-between    md:lg:px-4 md:lg:pt-10 lg:pb-2 sm:px-8'>
             {/* Logo */}
             <>
                 <a href="/">
@@ -56,7 +56,7 @@ const Nav = () => {
 
             <>
                 <div className='hidden lg:flex items-center  gap-3'>
-                    <a className='  hover:text-orangee lg:btn-flex '  href="/contact/">Get in Touch</a>
+                    <a className=' get hover:text-orangee lg:btn-flex '  href="/contact/">Get in Touch</a>
                     
                 </div>
             </>

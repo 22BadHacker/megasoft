@@ -9,6 +9,7 @@ import img5 from '../Assets/services/img5.png'
 import img6 from '../Assets/services/img6.png'
 import img7 from '../Assets/services/img7.png'
 import img8 from '../Assets/services/img8.webp'
+import img10 from '../Assets/services/img10.png'
 import { FaArrowLeftLong } from 'react-icons/fa6'
 
 
@@ -86,6 +87,7 @@ const services = [
     { number: '05',src: img5,icone: <FaArrowLeftLong className='absolute top-3 right-3   hover:text-orangee cursor-pointer transition delay-75 ease-in-out   lg:top-5 lg:right-5    -rotate-[230deg] lg:text-[24px] text-[16px] text-white '/>, href: '#', name: 'Web Maintenance and Support'},
     { number: '06',src: img3,icone: <FaArrowLeftLong className='absolute top-3 right-3   hover:text-orangee cursor-pointer transition delay-75 ease-in-out   lg:top-5 lg:right-5    -rotate-[230deg] lg:text-[24px] text-[16px] text-white '/>, href: '#', name: 'Consulting and Strategy'},
     { number: '07',src: img7,icone: <FaArrowLeftLong className='absolute top-3 right-3   hover:text-orangee cursor-pointer transition delay-75 ease-in-out   lg:top-5 lg:right-5    -rotate-[230deg] lg:text-[24px] text-[16px] text-white '/>, href: '#', name: 'Search Engine Optimization (SEO)'},
+    { number: '07',src: img10,icone: <FaArrowLeftLong className='absolute top-3 right-3   hover:text-orangee cursor-pointer transition delay-75 ease-in-out   lg:top-5 lg:right-5    -rotate-[230deg] lg:text-[24px] text-[16px] text-white '/>, href: '#', name: 'Mobile Application'},
 ]
 
 

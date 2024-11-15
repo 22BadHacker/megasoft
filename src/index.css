@@ -124,7 +124,7 @@ input:focus + .line::before{
         transition: .2s ease-in-out;
     }
 
-    .submit:hover{
+    .submit:hover > span{
         @apply gap-5 text-orangee
     }
     .submit:hover > input{
@@ -207,6 +207,48 @@ input:focus + .line::before{
         
     }
 
+    .get{
+        transition: .3s ease-in-out;
+        position: relative ;
+    }
+
+    .get:hover{
+        color: #111 !important;
+    }
+
+    .get:hover::before{
+        width: 0;
+        transition: .3s ease-in-out;
+    }
+    .get:hover::after{
+        width: 100%;
+        transition: .3s ease-in-out;
+    }
+
+    .get::before, .get::after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: var(--secondary-orange);
+        top: 0;
+        left: 0;
+        transition: .3s ease-in-out;
+    }
+
+    .get::after{
+        bottom: 0 !important;
+        left: 0;
+        width: 0;
+        background: var(--primary);
+    }
+
+
+    .hov:hover > span{
+        color: var(--secondary);
+        transition: .3s ease;
+    }
     @media (max-width: 690px) {
 
         .box:hover > p{
@@ -260,7 +302,7 @@ input:focus + .line::before{
 
     .btn-flex{
         transition: .2s ease-in-out;
-        @apply  lg:text-white/80 font-[roboto]  bg-orangee  font-[900] text-[16px] px-7 py-[10px] hover:bg-[#fff]/80 rounded-full
+        @apply  lg:text-white/80 font-[roboto]  overflow-hidden  font-[900] text-[16px] px-7 py-[10px]  rounded-full
     }
     
 

@@ -246,7 +246,7 @@ const Contact = () => {
                             <p className='text-[12px]'>I Want To receive news and updates in my email</p>
                         </div>
 
-                        <div className="submit flex mt-8 bg-orangee hover:bg-white/70 cursor-pointer  max-w-fit px-8 py-3 rounded-full gap-4 items-center justify-center">
+                        <div className="submit flex mt-8 bg-orangee overflow-hidden hover:bg-white/70 cursor-pointer  max-w-fit px-8 py-3 rounded-full gap-4 items-center justify-center">
                             {/* <input className='text-white text-[16px] font-[900]' type="submit" value={"Submit"}/> */}
                                     <button>
                                     {isSubmitting ? (
@@ -268,8 +268,8 @@ const Contact = () => {
                                                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                             </svg>
                                             ) : (
-                                                <div className='items-center justify-center flex gap-4'>
-                                                    <span>Send Message</span>
+                                                <div className='hov z-1 items-center w-full h-full justify-center flex gap-4'>
+                                                    <span className='text-white text-[16px] font-[900] hover:text-orangee'>Send Message</span>
                                                     <FaArrowRight className='arrow text-white/80 text-[14px]'/>
                                                 </div>
                                             )}
