@@ -222,6 +222,15 @@ const Contact = () => {
                             </div>
                             <div className="flex flex-col">
                                 <p>
+                                    Your Enterprise/Business name
+                                    <span className='text-red-600'> *</span>
+                                </p> 
+                                <input type="text" className='bg-transparent font-roboto font-semibold outline-none py-2 flex text-white ' {...register("Enterprise/Business name", { required: true })} id="" />
+                                <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
+
+                            </div>                            
+                            <div className="flex flex-col">
+                                <p>
                                     Tell us about your project
                                     <span className='text-red-600'> *</span>
                                 </p> 
@@ -233,7 +242,7 @@ const Contact = () => {
                         </div>
 
                         <div className="flex gap-4 pt-5">
-                            <input type="checkbox" className='check w-[16px]' {...register("checkbox", { required: true })} id="" />
+                            <input type="checkbox" className='check w-[16px]' {...register("Checks for updates", { required: true })} id="" />
                             <p className='text-[12px]'>I Want To receive news and updates in my email</p>
                         </div>
 

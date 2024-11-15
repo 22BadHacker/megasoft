@@ -45,7 +45,7 @@ export const options = [
     { value: 'Business Card', label: 'Business Card' },
     { value: 'E-Commerce website', label: 'E-commerce website' },
     { value: 'Portfolio Design', label: 'Portfolio Design' },
-    { value: 'Something else....', label: 'else....' },
+    { value: 'Something else....', label: 'Something else....' },
   ];
 
 
