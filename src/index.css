@@ -192,6 +192,10 @@ input:focus + .line::before{
         
     }
 
+    .box{
+        /* box-shadow: 5px 5px 10px rgb(255, 255, 255, .1); */
+        border: .2px solid #fff;
+    }
 
 
     .box p{
