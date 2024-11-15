@@ -1,12 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp, FaChevronLeft, FaArrowRight } from "react-icons/fa";
 import {animate, motion} from 'framer-motion'
 import { options, customStyles } from '../Constants/main';
-import Select from 'react-select';
+// import Select from 'react-select';
+import { useForm } from "react-hook-form";
+import useWeb3Forms from "@web3forms/react";
+import logo from '../Assets/newColor.svg'
 
 
 
 const Contact = () => {
+
+    
+    const {
+        register,
+        handleSubmit,
+        reset,
+        watch,
+        control,
+        setValue,
+        formState: { errors, isSubmitSuccessful, isSubmitting },
+      } = useForm({
+        mode: "onTouched",
+      });
+      const [isSuccess, setIsSuccess] = useState(false);
+      const [message, setMessage] = useState(false);
+    
+      // Please update the Access Key in the .env
+      const apiKey = process.env.PUBLIC_ACCESS_KEY || "6d80584c-6352-4e19-8bbb-0437d67139f9";
+    
+      const { submit: onSubmit } = useWeb3Forms({
+        access_key: apiKey,
+        settings: {
+          from_name: "MegaSoft Form",
+          subject: "New Contact Message from your Website",
+            
+        },
+        onSuccess: (msg, data) => {
+          setIsSuccess(true);
+          setMessage(msg);
+          reset();
+        },
+        onError: (msg, data) => {
+          setIsSuccess(false);
+          setMessage(msg);
+        },
+      });
     
 
 
@@ -90,9 +129,10 @@ const Contact = () => {
                 <h1  className='text-[12vw] pointer-events-none tracking-[2px]   font-roboto relative font-[900] sm:text-[12.5vw]  lg:text-[8.5vw] tracking-tight   lg:even:-top-[65px] md:text-[11vw] md:even:-top-[50px]'>Let's get to work</h1>               
             </div>
 
+            {/* action='https://api.web3forms.com/submit' */}
 
-            <form className=' w-full flex flex-col gap-8' action='https://api.web3forms.com/submit' method='POST'>
-                <input type="hidden" name="access_key" value="6d80584c-6352-4e19-8bbb-0437d67139f9"></input>
+            <form className=' w-full flex flex-col gap-8' onSubmit={handleSubmit(onSubmit)} >
+                {/* <input type="hidden" name="access_key" value="6d80584c-6352-4e19-8bbb-0437d67139f9"></input> */}
 
                 <div className="grid gap-6 lg:grid-cols-[.5fr_1fr] md:grid-cols-[.5fr_1fr]">
 
@@ -106,7 +146,7 @@ const Contact = () => {
                                 First name
                                 <span className='text-red-600'> *</span>
                             </p> 
-                            <input id='prenom' type="text" name='first_name' className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold'  />
+                            <input id='prenom' type="text" {...register("First Name", { required: true })} className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold'  />
                             
                             <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
@@ -116,7 +156,7 @@ const Contact = () => {
                                 Last name
                                 <span className='text-red-600'> *</span>
                             </p> 
-                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' name="last_name" id="" />
+                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' {...register("Last Name", { required: true })} id="" />
                             <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
@@ -127,7 +167,7 @@ const Contact = () => {
                                 Business email
                                 <span className='text-red-600'> *</span>
                             </p> 
-                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' name="business_email" id="" />
+                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' {...register("Email", { required: true })} id="" />
                             <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
@@ -136,7 +176,7 @@ const Contact = () => {
                                 Phone number
                                 <span className='text-red-600'> *</span>
                             </p> 
-                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' name="phone_number" id="" />
+                            <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' {...register("Phone Number", { required: true })} id="" />
                             <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
@@ -145,7 +185,7 @@ const Contact = () => {
                                 How did you hear about us?
                                 <span className='text-green-600'> (optional)</span>
                             </p> 
-                            <input type="text" className='inner bg-transparent outline-none py-2 flex text-white  font-roboto font-semibold' name="How did you hear about us" id="" />
+                            <input type="text" className='inner bg-transparent outline-none py-2 flex text-white  font-roboto font-semibold' {...register("How we get to them", { required: true })} id="" />
                             <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
@@ -171,7 +211,7 @@ const Contact = () => {
                                 </p> 
 
                                 {/* <input type="text" className='bg-transparent border-b border-white/40 outline-none py-2 flex text-white ' name="" id="" /> */}
-                                <select name="selection" className='select bg-black cursor-pointer mt-1 shadow-none font-roboto font-semibold  outline-none py-2 flex text-white ' id="">
+                                <select {...register("Category", { required: true })} className='select bg-black cursor-pointer mt-1 shadow-none font-roboto font-semibold  outline-none py-2 flex text-white ' id="">
                                     {options.map((option, index) => (
                                         <option key={index} value={option.value}>{option.label}</option>
                                     ))}
@@ -185,7 +225,7 @@ const Contact = () => {
                                     Tell us about your project
                                     <span className='text-red-600'> *</span>
                                 </p> 
-                                <input type="text" className='bg-transparent font-roboto font-semibold outline-none py-2 flex text-white ' name="about_the_project" id="" />
+                                <input type="text" className='bg-transparent font-roboto font-semibold outline-none py-2 flex text-white ' {...register("Brief about the project", { required: true })} id="" />
                                 <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                             </div>                            
@@ -193,15 +233,52 @@ const Contact = () => {
                         </div>
 
                         <div className="flex gap-4 pt-5">
-                            <input type="checkbox" className='check w-[16px]' name="Check" id="" />
+                            <input type="checkbox" className='check w-[16px]' {...register("checkbox", { required: true })} id="" />
                             <p className='text-[12px]'>I Want To receive news and updates in my email</p>
                         </div>
 
                         <div className="submit flex mt-8 bg-orangee hover:bg-white/70 cursor-pointer  max-w-fit px-8 py-3 rounded-full gap-4 items-center justify-center">
-                            <input className='text-white text-[16px] font-[900]' type="submit" value={"Submit"}/>
-                            <FaArrowRight className='arrow text-white/80 text-[14px]'/>
+                            {/* <input className='text-white text-[16px] font-[900]' type="submit" value={"Submit"}/> */}
+                                    <button>
+                                    {isSubmitting ? (
+                                            <svg
+                                                className="w-5 h-5 mx-auto text-white dark:text-black animate-spin"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24">
+                                                <circle
+                                                className="opacity-25"
+                                                cx="12"
+                                                cy="12"
+                                                r="10"
+                                                stroke="currentColor"
+                                                strokeWidth="4"></circle>
+                                                <path
+                                                className="opacity-75"
+                                                fill="currentColor"
+                                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                            ) : (
+                                                <div className='items-center justify-center flex gap-4'>
+                                                    <span>Send Message</span>
+                                                    <FaArrowRight className='arrow text-white/80 text-[14px]'/>
+                                                </div>
+                                            )}
+                                    </button>
+                            {/* <FaArrowRight className='arrow text-white/80 text-[14px]'/> */}
 
                         </div>
+
+                        {isSubmitSuccessful && isSuccess && (
+                        <div className="mt-3 text-sm font-semibold text-green-500">
+                        {message || prompt("Success. Message sent successfully")}
+                        </div>
+                        )}
+                        {isSubmitSuccessful && !isSuccess && (
+                            <div className="mt-3 text-sm text-center text-red-500">
+                            {message || "Something went wrong. Please try later."}
+                            </div>
+                        )}
                     </div>
 
                 </div>
