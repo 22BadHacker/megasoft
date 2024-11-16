@@ -18,6 +18,9 @@ const Services = () => {
                   <h5 className='lg:md:max-w-[800px] text-white/90 pb-5 text-[14px] md:lg:text-[16px]'> our team of experts is here to bring your vision to life. With a passion for creativity and a focus on technology, we help businesses grow online, enhance user experiences, and achieve measurable results</h5>             
           </div>
 
+          {/* <div className="w-full mb-10  h-full grid grid-cols-1">
+            <video controls='false' className='w-full h-full' autoPlay muted  loop='true' src={video}></video>
+          </div> */}
 
 
           <div className="w-full place-content-center  mt-5 gap-4 mx-auto place-items-center lg:mt-0 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-x-2 lg:gap-4 lg:md:gap-y-7">
@@ -41,9 +44,6 @@ const Services = () => {
 
 
                
-          </div>
-          <div className="w-full mt-10  h-full grid grid-cols-1">
-            <video controls='false' className='w-full h-full' autoPlay muted  loop='true' src={video}></video>
           </div>
             {/* <a href="" style={{transition: 'all .3s ease-in-out'}} className=' text-white/90 flex justify-center items-center gap-3 text-[14px] lg:md:text-[20px] lg:text-[18px] hover:bg-[#222] font-semibold hover:scale-95 px-4 py-1  rounded-full lg:md:px-10 lg:md:py-3 bg-orangee'>See More 
             <FaArrowLeftLong className='  cursor-pointer -rotate-[230deg] text-[14.5px]  text-white '/>
