@@ -33,7 +33,7 @@ const Work = () => {
                               return <div key={i} className="relative flex flex-col gap-3 rounded-sm overflow-hidden">
                                 <img src={src}  className='object-cover w-full h-full rounded-sm' alt="Flora Cosmitic" />
                                 <h4 className='lg:md:sm:text-[12px] text-[10px] flex gap-2 items-center text-orangeLight '><FaLongArrowAltRight/> {desc}</h4>
-                                <p className='lg:md:sm:text-[20px] text-[17px] relative -top-3 font-semibold tracking-[1px]'>{name}</p>
+                                <p className='lg:md:sm:text-[20px] text-[15px] relative -top-3 font-semibold tracking-[1px]'>{name}</p>
 
                               </div>
                             })
