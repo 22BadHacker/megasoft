@@ -26,14 +26,14 @@ const Work = () => {
                           }
                       </div>   
 
-                      <div className="grid lg:grid-cols-4 md:lg:grid-cols-3 grid-cols-2 gap-x-2 lg:gap-4 lg:md:gap-y-7 gap-y-4 mt-12">
+                      <div className="grid lg:grid-cols-3 md:lg:grid-cols-3 grid-cols-2 gap-x-2 lg:gap-4 lg:md:gap-y-7 gap-y-4 mt-12">
                           {
                             workSlide.map((item, i) => {
                               const {src, name, desc} = item
                               return <div key={i} className="relative flex flex-col gap-3 rounded-sm overflow-hidden">
                                 <img src={src}  className='object-cover w-full h-full rounded-sm' alt="Flora Cosmitic" />
-                                <h4 className='text-[11px] flex gap-2 items-center text-orangeLight '><FaLongArrowAltRight/> {desc}</h4>
-                                <p className='text-[20px] relative -top-3 font-semibold tracking-[1px]'>{name}</p>
+                                <h4 className='lg:md:sm:text-[12px] text-[10px] flex gap-2 items-center text-orangeLight '><FaLongArrowAltRight/> {desc}</h4>
+                                <p className='lg:md:sm:text-[20px] text-[17px] relative -top-3 font-semibold tracking-[1px]'>{name}</p>
 
                               </div>
                             })
