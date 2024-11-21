@@ -9,6 +9,7 @@ module.exports = {
     extend: {
         fontFamily: {
             roboto: ['Roboto', 'sans-serif'],
+            novea: 'var(--novea)',
         },
         colors: {
             creamy: 'var(--primary)',
@@ -20,6 +21,7 @@ module.exports = {
     },
     screens:{
       'lg': '954px',
+      'lgg': '850px',
       // 'xl': '1200px',
       'md': '768px',
       'sm': '568px',

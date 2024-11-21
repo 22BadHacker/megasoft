@@ -1,4 +1,5 @@
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp, FaChevronLeft } from "react-icons/fa";
+import {FaReact} from 'react-icons'
 import {animate, color, motion} from 'framer-motion'
 import { option } from "framer-motion/client";
 // import img1 from '../Assets/services/img1.png'
@@ -11,6 +12,13 @@ import img7 from '../Assets/services/img7.png'
 import img8 from '../Assets/services/img8.webp'
 import img10 from '../Assets/services/img10.png'
 import { FaArrowLeftLong } from 'react-icons/fa6'
+import work from '../Assets/Work/Device-Mockup_6.jpg'
+import work2 from '../Assets/Work/Free Business Cards on Chair Mockup.jpg'
+import work3 from '../Assets/Work/Free-PSD-Modern-Brand-Business-Card-Mockup.jpg'
+import work4 from '../Assets/Work/small reusable bag mockup.jpg'
+import work5 from '../Assets/Work/Logo_on_the_Builiding_Mockup_2.jpg'
+import work6 from '../Assets/Work/Mockup.jpg'
+import work7 from '../Assets/Work/MorocAffiche.jpg'
 
 
 
@@ -19,8 +27,8 @@ import { FaArrowLeftLong } from 'react-icons/fa6'
 export const navLinks = [
     { href: "#", label: "Features" },
     { href: "#", label: "Our Story" },
-    { href: "#", label: "Our Work" },
-    { href: "#", label: "Services",  icon: <FaChevronLeft className="icon transition-all transition-[.4s] -rotate-90 text-[12px]" />, classId: 'link'}, 
+    { href: "/ourWork/", label: "Our Work" },
+    { href: "/services/", label: "Services",  icon: <FaChevronLeft className="icon transition-all transition-[.4s] -rotate-90 text-[12px]" />, classId: 'link'}, 
     { href: "#", label: "Pricing" },
 ];
 
@@ -171,3 +179,36 @@ export {
 // initial={{x: -100, filter: 'blur(10px)', opacity: 0}} ,
 // transition={{duration: .5, delay: i * .5, ease: 'easeInOut'}},
 //  animate={{x: 0, filter: 'blur(0px)', opacity: 1}},
+
+
+
+
+
+export const servicesSlider = [
+    'UX design', 
+    'Web Development',
+    'Graphic Design',
+    'E-Commerce website',
+    'Web Maintenance',
+    'Mobile Application',
+    'Full Stack Application',
+    'Digital Marketing',
+    'SEO',
+] 
+
+export const sliderIcons =[
+    {src: '', name: 'React'},
+    {src: '', name: 'Tailwind css'},
+]
+
+
+
+export const workSlide = [
+    {src: work, name: 'Floora Cosmitic', desc: 'UX Design/Web Devolepment'},
+    {src: work6, name: 'Intelligence Industry.', desc: 'UX Design/Web Devolepment'},
+    {src: work2, name: 'MEGASOFT', desc: 'Graphic Design/Business Card'},
+    {src: work3, name: 'HMS Proprete', desc: 'Graphic Design/Business Card'},
+    {src: work4, name: 'Omeniya Event', desc: 'Branding/Logo Design'},
+    {src: work5, name: 'Coopérative ITRANE', desc: 'Branding/Logo Design'},
+    // {src: work7, name: 'Morocco vs Leshoto', desc: 'Graphic Design/Poster'},
+]

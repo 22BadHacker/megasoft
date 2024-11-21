@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'novea';
+    src: url(./Assets/services/PNANoeva-Bold-BF66c38bd26e486.otf);
+}
+
 :root{
     --body_background: #fff;
     --body_color: #000;
@@ -10,6 +15,7 @@
     --secondary: rgb(249, 83, 2,.9);
     --secondary-orange: rgb(249, 83, 2,.8);
     --light-blue: #e4ebf5;
+    --novea: 'novea', sans-serif;
 }
 
 body {
@@ -50,6 +56,19 @@ body {
         width: 0px;
     }
 }
+
+/* @media (max-width: 1161px) {
+    .infoo{
+        grid-template-columns: 1fr;
+    }
+} */
+
+/* @media (max-width: 1161px){
+    .infoo{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+} */
 
 input:focus + .line::before{
     width: 100%;
@@ -217,16 +236,17 @@ input:focus + .line::before{
     }
 
     .get:hover{
-        color: #111 !important;
+        color: var(--secondary) !important;
     }
 
     .get:hover::before{
-        width: 0;
+        height: 0;
         transition: .3s ease-in-out;
     }
     .get:hover::after{
         width: 100%;
         transition: .3s ease-in-out;
+        background: var(--primary);
     }
 
     .get::before, .get::after{
@@ -235,7 +255,7 @@ input:focus + .line::before{
         z-index: -1;
         width: 100%;
         height: 100%;
-        background: var(--secondary-orange);
+        background: var(--secondary);
         top: 0;
         left: 0;
         transition: .3s ease-in-out;
@@ -243,9 +263,11 @@ input:focus + .line::before{
 
     .get::after{
         bottom: 0 !important;
-        left: 0;
-        width: 0;
+        z-index: -2;
+        height: 100%;
+        width: 100%;
         background: var(--primary);
+        
     }
 
 
@@ -284,6 +306,85 @@ input:focus + .line::before{
         transition: .2s ease;
       } */
       
+    .buttons:hover{
+        border: .1px black;
+    }
+    .buttons:hover:before{
+        height: 100%;
+        /* top: 0; */
+    }
+    
+    .buttons::before, .butt:before{
+        content: '';
+        z-index: -1;
+        width: 100%;
+        height: 0%;
+        background: var(--secondary);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: .3s ease-in-out;
+    }
+    .buttons::after, .butt::after{
+        content: '';
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: 2px solid rgba(113, 110, 110, .2);
+        border-radius: 50px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: .3s ease-in-out;
+    }
+
+    .work{
+        z-index: 1;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .work:hover{
+        color: white;
+        /* background: white; */
+    }
+    .work:hover::before{
+       height: 100%;
+    }
+
+    .work:before{
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--secondary);
+        /* background: black; */
+        /* border: 1px solid var(--secondary); */
+        /* box-shadow: 2px 2px 4px #fff; */
+        width: 100%;
+        height: 0;
+        transition: .4s ease-in-out
+        
+    }
+
+    .con{
+        margin-top: 10px;
+        /* con [mask-image:linear-gradient(to_right, transparent, black_10%, black_90%, transparent)] */
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    .con2{
+        margin-top: 10px;
+        /* con [mask-image:linear-gradient(to_right, transparent, black_10%, black_90%, transparent)] */
+        mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
+    }
+
+    .number{
+       -webkit-text-stroke: 2px white;
+       color: transparent;
+    }
+    
     
 }
 

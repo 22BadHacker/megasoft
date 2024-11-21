@@ -6,7 +6,7 @@ import { socialLinks } from '../Constants/main';
 
 const Footer = () => {
   return (
-    <div className='footer z-1 relative  pt-[30px] px-8 w-screen overflow-hidden py-10  mx-auto bg-[rgba(0,0,0,0.2)] sm:py-[60px]  md:lg:py-[60px] md:lg:px-[20px]  sm:px-8'>
+    <div className='footer z-1 relative  pt-[30px] px-8 w-screen overflow-hidden py-10  mx-auto bg-[rgba(0,0,0,.6)] sm:py-[60px]  md:lg:py-[60px] md:lg:px-[20px]  sm:px-8'>
         <div className='w-full gap-[60px] mx-auto max-w-[1500px] grid grid-cols-1 lg:md:gap-[150px] md:lg:grid-cols-[1fr,1fr]'>
 
             <div className="flex  sm:lg:md:max-w-[500px] gap-4 flex-col">

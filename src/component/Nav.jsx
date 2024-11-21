@@ -1,9 +1,11 @@
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 import  {navLinks, navLinksPhone , socialLinks} from '../Constants/main'
 // import logo2 from '../Assets/new.svg'
 import logo2 from '../Assets/newColor.svg'
 import {motion, AnimatePresence} from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 
 
@@ -16,8 +18,17 @@ const Nav = () => {
     }
 
     let toggleClass = open ? "open" : '';
+
+    // const ref = useRef(null)
     
-    
+    useGSAP(
+        () => {
+            // gsap code here...
+            gsap.from('.li', { opacity: 0, ease: 'circ.inOut', y: 10, stagger: {amount: .4}, delay: .4 }); 
+            // gsap.from('.logo', { opacity: 0, ease: 'circ.inOut', y: 20, delay: .3 }); 
+        },
+        
+    ); 
 
    
 
@@ -26,11 +37,13 @@ const Nav = () => {
         <nav className=' px-6 transition-all ease-in-out pt-8 w-full z-[22] h-full max-w-[1500px] mx-auto  flex-center-between    md:lg:px-4 md:lg:pt-10 lg:pb-2 sm:px-8'>
             {/* Logo */}
             <>
-                <a href="/">
+                <Link to="/">
+
                     
-                    <img  className='size-[200px] flex-1 lg:size-[210px] ' src={logo2} alt="" />
                     
-                </a>
+                    <img  className='logo size-[200px] flex-1 lg:size-[210px] ' src={logo2} alt="" />
+                    
+                </Link>
             </>
 
             {/* Nav Links */}
@@ -42,8 +55,10 @@ const Nav = () => {
                         navLinks.map((link) => {
                             const { href, label, icon, classId} = link
                             return (
-                                <li  key={label}>
-                                    <a  href={href} id={classId} className={`linkss relative max-w-content text-white/80 font-roboto font-normal text-[18px] hover:text-orangee flex gap-2 items-center`}>{label} <span>{icon}</span></a>
+                                <li className='li'  key={label}>
+                                    
+                                    <Link  to={href} id={classId} className={`linkss  relative max-w-content text-white/80 font-roboto font-normal text-[18px] hover:text-orangee flex gap-2 items-center`}>{label} <span>{icon}</span></Link>
+                                    
                                 </li>
                             )
                         })
@@ -56,10 +71,11 @@ const Nav = () => {
 
             <>
                 <div className='hidden lg:flex items-center  gap-3'>
-                    <a className=' get hover:text-orangee lg:btn-flex '  href="/contact/">Get in Touch</a>
+                    <Link className=' get hover:text-orangee lg:btn-flex '  to="/contact/">Get in Touch</Link>
                     
                 </div>
             </>
+            {/*
             
 
             {/* Burger */}
@@ -106,8 +122,8 @@ const Nav = () => {
 
 
                          {/* Contact Btn */}
-                         <motion.a transition={{delay: 1.5}}  initial={{ filter: 'blur(30px)', opacity: 0}} animate={{ filter: 'blur(0px)', opacity: 1}} href="/contact/" className='submit absolute bottom-20 left-[50%] -translate-x-[50%]  bg-orangee  text-white w-[80%] font-roboto font-bold text-[18px] flex justify-center py-2 rounded-full fonr-bold font-roboto hover:text-orangee hover:bg-white/90  '  >
-                         Get in Touch</motion.a>
+                         <motion.Link transition={{delay: 1.5}}  initial={{ filter: 'blur(30px)', opacity: 0}} animate={{ filter: 'blur(0px)', opacity: 1}} href="/contact/" className='submit absolute bottom-20 left-[50%] -translate-x-[50%]  bg-orangee  text-white w-[80%] font-roboto font-bold text-[18px] flex justify-center py-2 rounded-full fonr-bold font-roboto hover:text-orangee hover:bg-white/90  '  >
+                         Get in Touch</motion.Link>
                      </motion.div>
 
                  </>
