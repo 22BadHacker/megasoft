@@ -57,7 +57,7 @@ const Nav = () => {
                             return (
                                 <li className='li'  key={label}>
                                     
-                                    <Link  to={href} id={classId} className={`linkss  relative max-w-content text-white/80 font-roboto font-normal text-[18px] hover:text-orangee flex gap-2 items-center`}>{label} <span>{icon}</span></Link>
+                                    <Link  to={href} id={classId} className={`linkss  relative max-w-content text-white/80 font-roboto font-semibold text-[18px] hover:text-orangee flex gap-2 items-center`}>{label} <span>{icon}</span></Link>
                                     
                                 </li>
                             )
@@ -122,8 +122,9 @@ const Nav = () => {
 
 
                          {/* Contact Btn */}
-                         <motion.Link transition={{delay: 1.5}}  initial={{ filter: 'blur(30px)', opacity: 0}} animate={{ filter: 'blur(0px)', opacity: 1}} href="/contact/" className='submit absolute bottom-20 left-[50%] -translate-x-[50%]  bg-orangee  text-white w-[80%] font-roboto font-bold text-[18px] flex justify-center py-2 rounded-full fonr-bold font-roboto hover:text-orangee hover:bg-white/90  '  >
-                         Get in Touch</motion.Link>
+                         <motion.div transition={{delay: 1.5}}   initial={{ filter: 'blur(30px)', opacity: 0}} animate={{ filter: 'blur(0px)', opacity: 1}}  className='submit absolute bottom-20 left-[50%] -translate-x-[50%]  bg-orangee  text-white w-[80%] font-roboto font-bold text-[18px] flex justify-center py-2 rounded-full fonr-bold font-roboto cursor-pointer hover:text-orangee hover:bg-white/90  '  >
+                            <Link to='/contact/'>Get in Touch</Link>
+                         </motion.div>
                      </motion.div>
 
                  </>

@@ -9,7 +9,7 @@ import { FaBars, FaSearch, FaShoppingBag } from 'react-icons/fa'
 
 const Drag = () => {
   return (
-    <div className='relative'>
+    <div className='relative lg:md:flex hidden'>
       <motion.div disabled drag  whileDrag={{borderColor: 'yellow'}} className='w-[280px] h-[460px] cursor-grab  absolute right-5 bg-[#111] px-3 rounded-md border-[.2px] flex flex-col z-20  border-orange-500/30 select-none'>
       <p className='text-[18px] bg-[#111] px-5 py-1 font-medium text-orange-500 absolute -top-[36px] left-1/2  -translate-x-1/2'>UX Design</p>
           <div className="w-2 h-2 absolute -left-1 -top-1 bg-white"></div>

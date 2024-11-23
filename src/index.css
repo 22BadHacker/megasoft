@@ -32,10 +32,9 @@ body {
 
 
 
-.window::-webkit-scrollbar-thumb{
+*::-webkit-scrollbar-thumb{
    width: 12px;
    background: rgb(34, 34, 34, .8);
-   /* cursor: pointer; */
    transition: .3s ease-in-out;
 }
 *::-webkit-scrollbar-thumb:hover{
@@ -43,7 +42,12 @@ body {
    cursor: pointer;
 }
 
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* transition: .2s ease; */
+}
 
 
 @media (max-width: 690px) {
@@ -57,18 +61,7 @@ body {
     }
 }
 
-/* @media (max-width: 1161px) {
-    .infoo{
-        grid-template-columns: 1fr;
-    }
-} */
 
-/* @media (max-width: 1161px){
-    .infoo{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-} */
 
 input:focus + .line::before{
     width: 100%;
@@ -167,7 +160,25 @@ input:focus + .line::before{
     }
      */
 
+    .late:hover > p{
+        color: var(--secondary);
+        /* transition: .3s ease; */
+        cursor: pointer;
+    }
+    .late:hover > img{
+        filter: saturate(1.5);
+        cursor: pointer;
+    }
 
+
+    .late{
+        cursor: pointer;
+        transition: .4s ease !important;
+    }
+
+    .late img, .late p{
+        transition: .2s ease !important;
+    }
    
      .foot p:hover{
         cursor: pointer;
@@ -313,6 +324,10 @@ input:focus + .line::before{
         height: 100%;
         /* top: 0; */
     }
+
+    .buttons:first-child{
+        background: var(--secondary) !important;
+    }
     
     .buttons::before, .butt:before{
         content: '';
@@ -371,13 +386,17 @@ input:focus + .line::before{
 
     .con{
         margin-top: 10px;
-        /* con [mask-image:linear-gradient(to_right, transparent, black_10%, black_90%, transparent)] */
         mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     }
     .con2{
         margin-top: 10px;
-        /* con [mask-image:linear-gradient(to_right, transparent, black_10%, black_90%, transparent)] */
-        mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
+        mask-image: linear-gradient(to left, transparent, black 20%, black 80%, transparent);
+    }
+    .con4{
+        mask-image: linear-gradient(to left, transparent, black 30%, black 92%, transparent);
+    }
+    .con3{
+       mask-image: linear-gradient(to left, transparent, black 50%, black 98%, transparent);
     }
 
     .number{
@@ -429,10 +448,3 @@ input:focus + .line::before{
 }
 
 
-/* @media (max-width:1085px) {
-    .containContact{
-        display: flex;
-        flex-direction: column;
-    }
-    
-} */

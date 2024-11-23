@@ -27,26 +27,38 @@ const Footer = () => {
             <div className="grid relative gap-8 md:lg:gap-8 grid-cols-2 sm:grid-cols-3 md:lg:grid-cols-3">
                 <div className="foot flex flex-col gap-1">
                     <h1 className='pb-2 hover:text-white cursor-pointer text-[24px]  font-bold'>Explore</h1>
-                    <p className=' text-[18px] text-white/70 font-medium'>Features</p>
-                    <p className='text-[17px] text-white/70 font-medium'>Our Story</p>
-                    <p className='text-[17px] text-white/70 font-medium'>Our Work</p>
-                    <p className='text-[17px] text-white/70 font-medium'>Services</p>
-                    <p className='text-[17px] text-white/70 font-medium'>Contact</p>
+                    
+                    {
+                        ['Features', 'Our Story', 'Our Story', 'Services', 'Contact'].map((item)=> {
+                            return (
+                                <p className=' text-[17px] text-white/70 font-medium'>{item}</p>
+                            )
+                        })
+                    }
+                    
                 </div>
                 <div className="flex flex-col gap-1 foot">
                     <h1 className='hover:text-white cursor-pointer pb-2 text-[24px]  font-bold'>Services</h1>
-                    <p className=' text-[17px] text-white/70 font-medium'>Web Design</p>
-                    <p className='text-[17px] text-white/70 font-medium'>Graphic Design</p>
-                    <p className='text-[17px] text-white/70 font-medium'>Digital Marketing</p>
-                    <p className='text-[17px] text-white/70 font-medium'>Web Maintenance</p>
-                    <p className='text-[17px] text-white/70 font-medium'>More....</p>
+                    {
+                        ['Services', 'Web Design', 'Graphic Design', 'Digital Marketing', 'Web Maintenance', 'More ...'].map((item)=> {
+                            return (
+                                <p className=' text-[17px] text-white/70 font-medium'>{item}</p>
+                            )
+                        })
+                    }
                 </div>
+
+
                 <div className="flex flex-col gap-1 foot">
                     <h1 className='hover:text-white cursor-pointer pb-2 text-[24px]  font-bold'>Society </h1>
-                    <p className=' text-[17px] text-white/70 font-medium'>About</p>
-                    <p className='text-[17px] text-white/70 font-medium'>Support</p>
-                    <p className='text-[17px] text-white/70 font-medium'>Privacy policy</p>
-                    <p className='text-[17px] text-white/70 font-medium'>Contact</p>
+                    {
+                        ['About', 'Support', 'Privacy policy', 'Contact'].map((item)=> {
+                            return (
+                                <p className=' text-[17px] text-white/70 font-medium'>{item}</p>
+                            )
+                        })
+                    }
+                
                 </div>
                 
             </div>
@@ -58,8 +70,6 @@ const Footer = () => {
         <div className="w-full pt-5 gap-8 justify-between items-center  flex flex-col md:flex-row md:lg:sm:gap-0 mx-auto max-w-[1500px]  ">
             <p className='text-center'>Copyright © 2025 MEGASOFT corp. All rights reserved</p>
             <div className="flex gap-4 items-center ">
-               {/* {socialLinks.map((item , index) => (<a href={item.link} key={index} className='text-white hover:text-[#FFC107] cursor-pointer text-[25px]'><item.icon /></a>))} */}
-
                {socialLinks.map((item , index) => (<a href={item.link} key={index} className='text-white  hover:text-orangee cursor-pointer text-[18px]'>{item.icon}</a>))}
             </div>
         </div>

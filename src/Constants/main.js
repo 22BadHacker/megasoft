@@ -1,7 +1,8 @@
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp, FaChevronLeft } from "react-icons/fa";
-import {FaReact} from 'react-icons'
+// import {} from 'react-icons'
 import {animate, color, motion} from 'framer-motion'
 import { option } from "framer-motion/client";
+import { Link } from "react-router-dom";
 // import img1 from '../Assets/services/img1.png'
 import img2 from '../Assets/services/img2.png'
 import img3 from '../Assets/services/img3.png'
@@ -204,11 +205,57 @@ export const sliderIcons =[
 
 
 export const workSlide = [
-    {src: work, name: 'Floora Cosmitic', desc: 'UX Design/Web Devolepment'},
-    {src: work6, name: 'Intelligence Industry.', desc: 'UX Design/Web Devolepment'},
-    {src: work2, name: 'MEGASOFT', desc: 'Graphic Design/Business Card'},
-    {src: work3, name: 'HMS Proprete', desc: 'Graphic Design/Business Card'},
-    {src: work4, name: 'Omeniya Event', desc: 'Branding/Logo Design'},
-    {src: work5, name: 'Coopérative ITRANE', desc: 'Branding/Logo Design'},
+    {id: 'box1', src: work, name: 'Floora Cosmitic', desc: 'UX Design/Web Devolepment'},
+    {id: 'box2', src: work6, name: 'Intelligence Industry.', desc: 'UX Design/Web Devolepment'},
+    {id: "box3", src: work2, name: 'MEGASOFT', desc: 'Graphic Design/Business Card'},
+    {id: "box4", src: work3, name: 'HMS Proprete', desc: 'Graphic Design/Business Card'},
+    {id: "box5", src: work4, name: 'Omeniya Event', desc: 'Branding/Logo Design'},
+    {id: "box6", src: work5, name: 'Coopérative ITRANE', desc: 'Branding/Logo Design'},
     // {src: work7, name: 'Morocco vs Leshoto', desc: 'Graphic Design/Poster'},
 ]
+
+
+export const Latest = [
+    {date: '15 nov, 2024',src: work6, name: 'Intelligence Industry.', desc: 'Web Devolepment'},
+    {date: '5 nov, 2024',src: work3, name: 'HMS Proprete', desc: 'Graphic Design'},
+    {date: '25 oct, 2024',src: work, name: 'Floora Cosmitic', desc: 'UX Design'},
+    {date: '2 oct, 2024',src: work2, name: 'MEGASOFT', desc: 'Business Card'},
+]
+
+
+
+
+export const Questions = [
+    {title: 'How long does it take to develop a website?', desc: 'The timeline of developing a website depends on the complexity and scope of the project. Simple websites may take a few weeks, while more complex, custom-built websites may take several months.'},
+    {title: 'Do I need a domain name and hosting for my website?', desc: 'Yes, a domain name is your website’s address on the internet, and hosting is where your website’s files are stored and accessed. Both are essential to make your website live.'},
+    {title: 'What is SEO and why is it important for web design?', desc: 'SEO (Search Engine Optimization) is the practice of improving a website’s visibility in search engine results. Good web design incorporates SEO practices, ensuring the site is easily discoverable by search engines.'},
+    {title: 'What is the services that we offer?', desc: ' we offer Services that can help your Businesses improve their visibility and your reputation online. we Offer Graphic design, Web Development, UI/UX Design, E-Commerce websites, SEO, Branding & Visual Identity And More ....', link: <Link className="text-orangee underline" to='/services/#id'>On Our Explore Section</Link>},
+    {title: 'What do I need to provide for the designer to start?', desc: <div >
+        <p>To start, you'll typically need to provide:</p>
+        <ul className="pt-1">
+            <li className="list-disc">Your Business Name</li>
+            <li className="list-disc">A brief outlining your project goals, target audience, and any preferences or inspirations.</li>
+            <li className="list-disc">Any existing branding materials, such as logos or color schemes.</li>
+            <li className="list-disc">Content like text or images (if needed for the project).</li>
+        </ul>
+    </div>},
+    {title: 'Do I need to have a clear idea of what I want before contacting Your Society?', desc: 'While having an idea helps, you don’t need to have everything figured out. Designers can help you clarify your vision, provide suggestions, and guide you through the creative process.'},
+    {title: 'What is the process of working on My Project in graphic design?', desc: <div >
+        <p>The process typically includes:</p>
+        <ul className="pt-1">
+            <li className="list-disc">Initial consultation to understand your needs</li>
+            <li className="list-disc">Research and concept development.</li>
+            <li className="list-disc">Design drafts and feedback.</li>
+            <li className="list-disc">Revisions based on feedback.</li>
+            <li className="list-disc">Final delivery of the design files.</li>
+        </ul>
+    </div>},
+    
+]
+
+
+
+
+export const text = ['we offre services that can help business improve their visibility and business reputation online, expand market reach, and increase turnover through effective digital strategies. Following are the services we provide.']
+
+// What is the process of building a website?
