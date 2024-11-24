@@ -16,15 +16,26 @@ import FAQ from '../Constants/FAQ'
 
 const Home = () => {
   return (
-    <div className='w-screen bg-black pb-[200px] lg:md:pt-[180px] pt-[120px]'>
+    <div className='w-screen h-auto relative z-[1] bg-black pb-[200px] lg:md:pt-[180px] pt-[120px]'>
+         <div aria-hidden="true" className="absolute  left-0 -z-[1]  inset-0 grid grid-cols-2 opacity-55 -space-x-52 lg:md:sm:opacity-35">
+                    <div className="con6 w-screen "></div>
+                    <div className="blur-[106px] rotate-[180deg] h-[80px] opacity-90 lg:md:sm:opacity-90 relative   lg:md:sm:left-0 top-[60px] bg-gradient-to-r from-cyan-400 to-sky-300"></div>
+                    
+          </div>
+
 
       <div className='max-w-[1500px] px-4 md:lg:px-5 h-full mx-auto w-full md:px-9'>
+        
 
           {/* Part 1 */}
           <div className="grid sm:grid-cols-1 lg:md:grid-cols-2 w-full">
-              <div className=" flex flex-col gap-4 lg:md:gap-7 w-full lg:max-w-[720px]">
+            
+              <div className=" flex  flex-col gap-4 z-[1] lg:md:gap-7 w-full lg:max-w-[720px]">
+                
+         
+                
                 <p className='text-orangee text-[18px] font-semibold relative top-1'>Empower Your Business with Exceptional Web Design</p>                
-                <p className='con4 lg:md:text-[68px] sm:text-[60px] text-[40px] font-bold sm:leading-[-10px] lg:md:sm:leading-tight lg:md:sm:-tracking-[2px]'>Where Innovation Meets Design, Build Your Dream Project Today</p>
+                <p className='con4 lg:md:text-[68px] sm:text-[60px]  text-[40px] font-bold sm:leading-[-10px] lg:md:sm:leading-tight lg:md:sm:-tracking-[2px]'>Where Innovation Meets Design, Build Your Dream Project Today</p>
               
                 <p className='text-gray-300 font-semibold py-5 sm:w-[600px]'>Our team of talented designers and developers work collaboratively to bring your vision to life, ensuring every website we create is tailored to meet the unique needs of your brand and your users.</p>
 
@@ -56,7 +67,7 @@ const Home = () => {
                         // const rev = .reverse();
                         return (
                           <>
-                            <a className='font-semibold px-6 py-2 text-nowrap bg-[#111] rounded-full'>{item}</a>
+                            <a className='font-semibold px-6 py-2 text-nowrap bg-[rgb(17,17,17,.6)] rounded-full'>{item}</a>
                             <a className='lg:md:flex hidden font-semibold px-6 py-2 text-nowrap text-orange-500 rounded-full '>*</a>
 
                            
@@ -70,27 +81,27 @@ const Home = () => {
 
 
           {/* Part 3 Latest Work */}
-          <section>
+          <section className='z-[2]'>
             <LatestWork />
 
           </section>
 
           {/* Part 4 analytics */}
-          <section className='mt-20'>
+          <section className='mt-20 z-[2]'>
                 <Analitics />
           </section>
 
-          <section className='mt-20'>
+          <section className='mt-20 z-[2]'>
                 Services
           </section>
 
           {/* Part 5 Report */}
-          <section className='mt-20'>
+          <section className='mt-20 z-[2]'>
                 <Report />
           </section>
 
           {/* Part 6 FAQ */}
-          <section className='mt-20 '>
+          <section className='mt-20  z-[2]'>
                 <FAQ />
           </section>
                 

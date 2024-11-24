@@ -160,6 +160,26 @@ input:focus + .line::before{
     }
      */
 
+     .hoov:hover > img{
+        filter: saturate(1.5);
+        transition: .3s ease-in-out;
+     }
+     
+     .hoov:hover > p{
+       color: var(--secondary);
+        transition: .3s ease-in-out;
+     }
+     .hoov:hover > h4{
+       color: var(--primary);
+        transition: .3s ease-in-out;
+     }
+
+
+     .hoov{
+        transition: .3s ease-in-out;
+        cursor: pointer;
+     }
+
     .late:hover > p{
         color: var(--secondary);
         /* transition: .3s ease; */
@@ -384,6 +404,11 @@ input:focus + .line::before{
         
     }
 
+    .conns{
+        mask-image: linear-gradient(to left, transparent, black 10%,  97%, transparent);
+        /* background: radial-gradient(orange 10%, transparent 10.1%, transparent 90%, orange 90.1%); */
+    }
+
     .con{
         margin-top: 10px;
         mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -397,13 +422,74 @@ input:focus + .line::before{
     }
     .con3{
        mask-image: linear-gradient(to left, transparent, black 50%, black 98%, transparent);
+       position: relative;
+       left: 5px
     }
+
+    .con6{
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110%;
+        border-radius: 100%;
+        background: linear-gradient(to right,cyan, skyblue);
+        opacity: .25;
+        filter: blur(200px);
+        z-index: -1;
+        transition: .3s ease-in-out;
+    }
+
+    /* <div className="blur-[106px] rotate-[-180deg] h-[100px] relative -left-[0px] top-[0px] bg-gradient-to-r from-cyan-400 to-sky-500"></div> */
 
     .number{
        -webkit-text-stroke: 2px white;
        color: transparent;
     }
     
+    .desc, .brand{
+        /* display: none; */
+        transition: .3s ease-in-out;
+    }
+
+    .brand{
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px rgb(255, 255, 255, .1);
+    }
+    
+    .div1{
+        transition: .3s ease-in-out !important;
+        cursor: pointer;
+    }
+    .div1:hover > .desc{
+        transition: .3s ease-in-out !important;
+        /* display: block; */
+        
+    }
+    
+    /* .brandText:hover > .brand{
+        transition: .3s ease-in-out !important;
+        rotate: -20deg;
+        translate: 10px -10px;
+        
+    } */
+    .div1:hover > .brandText{
+        color: var(--secondary);
+
+    }
+    .div1:hover >  .brandText .brand{
+        /* color: var(--secondary); */
+         transition: .3s ease-in-out !important;
+        rotate: -20deg;
+        translate: 10px -10px;
+    }
+
+    .num{
+        color: transparent;
+        -webkit-text-stroke: 2px white;
+        
+    }
     
 }
 

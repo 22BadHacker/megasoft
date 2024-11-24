@@ -33,7 +33,7 @@ const Nav = () => {
    
 
   return (
-    <header id='navbar' className='h-[68px] flex items-center bg-black  pb-12 lg:md:sm:mr-0 pt-6 z-10 fixed top-0 left-0 inset-0 flex-center'>
+    <header id='navbar' className='h-[68px] flex items-center bg-gradient-to-b from-[rgb(0,0,0, .1)] to-transparent backdrop-blur-sm  pb-12 lg:md:sm:mr-0 pt-6 z-10 fixed top-0 left-0 inset-0 flex-center'>
         <nav className=' px-6 transition-all ease-in-out pt-8 w-full z-[22] h-full max-w-[1500px] mx-auto  flex-center-between    md:lg:px-4 md:lg:pt-10 lg:pb-2 sm:px-8'>
             {/* Logo */}
             <>
@@ -100,7 +100,12 @@ const Nav = () => {
 
                     <>
                    
-                        <motion.div initial= {{opacity: 0}} animate={{opacity: 1}} transition={{delay: .4, ease: 'anticipate', duration: .3}}   className='window px-7 h-screen  z-[20]   w-[100vw] absolute top-0 left-0 bg-black flex-left flex-col gap-4 md:lg:hidden sm:px-8'>
+                        <motion.div initial= {{opacity: 0}} animate={{opacity: 1}} transition={{delay: .4, ease: 'anticipate', duration: .3}}   className='window overflow-x-hidden px-7 h-screen z-[20]   w-[100vw] absolute top-0 left-0 bg-black flex-left flex-col gap-4 md:lg:hidden sm:px-8'>
+                            <div aria-hidden="true" className="absolute h-full w-auto overflow-hidden  left-0 -z-[1]  inset-0 grid grid-cols-2 -space-x-52 opacity-55">
+                                <div className="con6 overflow-hidden "></div>
+                                <div className="blur-[106px] rotate-[180deg] h-[80px] opacity-50 lg:md:sm:opacity-90 relative -left-[100px] top-[60px] bg-gradient-to-r from-cyan-400 to-sky-300"></div>
+                                
+                            </div>
                             {navLinks.map((link, i) => {
                                 return (
                                     

@@ -4,7 +4,7 @@ import { div } from 'framer-motion/client'
 
 const LatestWork = () => {
   return (
-    <div className='w-full bg-[rgb(17,17,17,.9)]'>
+    <div className='w-full bg-gradient-to-b from-[rgb(0,0,0,.1)] to-transparent backdrop-blur-[10px] '>
 
         <div className=' py-6 pt-7 flex flex-col gap-4 mt-[100px] px-4 md:lg:px-5 mx-auto w-full '>
             <p className='text-white text-[35px] w-fit cursor-pointer hover:text-orangee font-bold pb-2 hover'><span className='text-orangee'>* </span>Our Latest Work</p>

@@ -256,6 +256,6 @@ export const Questions = [
 
 
 
-export const text = ['we offre services that can help business improve their visibility and business reputation online, expand market reach, and increase turnover through effective digital strategies. Following are the services we provide.']
+export const text = [' we offre services that can help business improve their visibility and business reputation online, expand market reach, and increase turnover through effective digital strategies. Following are the services we provide.']
 
 // What is the process of building a website?

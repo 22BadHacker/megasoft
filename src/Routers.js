@@ -12,10 +12,13 @@ import Transition from './Constants/Transition'
 const Routers = () => {
   return (
     <>
+    
       <Router>
-      <div className='boxContain z-5 relative overflow-x-hidden bg-black'>
-      {/* <Transition /> */}
+      <div className='boxContain relative w-auto h-auto z-5 relative overflow-x-hidden bg-black'>
+        
+      
           <Nav />
+          
             <Routes>
                 {/* <Route path='/' element={<App />} /> */}
                 <Route path='/' element={<Home />} />
@@ -33,3 +36,7 @@ const Routers = () => {
 }
 
 export default Routers
+
+
+
+
