@@ -7,7 +7,7 @@ const LatestWork = () => {
     <div className='w-full bg-gradient-to-b from-[rgb(0,0,0,.1)] to-transparent backdrop-blur-[10px] '>
 
         <div className=' py-6 pt-7 flex flex-col gap-4 mt-[100px] px-4 md:lg:px-5 mx-auto w-full '>
-            <p className='text-white text-[35px] w-fit cursor-pointer hover:text-orangee font-bold pb-2 hover'><span className='text-orangee'>* </span>Our Latest Work</p>
+            <p className='text-white text-[35px] duration-[.3s] ease-in-out w-fit cursor-pointer hover:text-orangee font-bold pb-3 hover'><span className='text-orangee'>* </span>Our Latest Work</p>
             <div className="grid w-full lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4">
             {
                     Latest.map((item, i) => {

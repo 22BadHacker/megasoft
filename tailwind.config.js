@@ -10,6 +10,7 @@ module.exports = {
         fontFamily: {
             roboto: ['Roboto', 'sans-serif'],
             novea: 'var(--novea)',
+            sign: 'var(--sign)',
         },
         colors: {
             creamy: 'var(--primary)',

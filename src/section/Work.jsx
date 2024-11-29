@@ -10,7 +10,7 @@ import gsap from 'gsap';
 
 import { easeInOut } from 'framer-motion';
 import { div } from 'framer-motion/client';
-import Transition from '../Constants/Transition';
+
 
 const Work = () => {
 
@@ -45,8 +45,9 @@ const Work = () => {
     <>
       {/* <Transition /> */}
       
-      <div className='w-screen relative h-auto z-[1]  bg-black pb-[200px] '>
-          <div aria-hidden="true" className="absolute  left-0 -z-[1]  inset-0 grid grid-cols-2 -space-x-52 opacity-65 lg:md:sm:opacity-35">
+      <div className='woork w-screen relative h-auto z-[1]  bg-black pb-[200px] '>
+      {/* <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div> */}
+          <div aria-hidden="true" className="fixed  left-0 -z-[1]  inset-0 grid grid-cols-2 -space-x-52 opacity-65 lg:md:sm:opacity-35">
                         <div className="con6 w-screen "></div>
                         <div className="blur-[106px] rotate-[180deg] h-[80px] opacity-40 lg:md:sm:opacity-85 relative -left-[0px] top-[60px] bg-gradient-to-r from-cyan-400 to-sky-300"></div>
                     
@@ -55,12 +56,18 @@ const Work = () => {
               <div className=' w-full  pb-1 flex flex-col text-wrap md:lg:pb-[70px] pt-[100px]'>
                         {/* Head Title */}
                         <h1  className='text-[12vw] con2 max-w-[600px] px-2 pointer-events-none tracking-[2px]   font-roboto relative font-[900] sm:text-[12.5vw]  lg:text-[8.5vw] tracking-tight   lg:even:-top-[65px] md:text-[11vw] md:even:-top-[50px]'>Our Work</h1>  
-                        <div className="flex gap-5 w-full items-center max-w-[1000px] overflow-x-hidden">
+                        <div className="flex gap-5 w-full items-center max-w-[1000px]">
                           
                             {
                               buttons.map((item, i) => {
 
-                                return <a className='buttons text-nowrap relative overflow-hidden z-[1] cursor-pointer  first:bg-orange-500 font-medium  flex justify-center items-center max-w-content h-[39px] px-[26px] inline-block  rounded-full' key={i}>{item}</a>
+                                return (
+
+                                  // <div>
+
+                                  // </div> 
+                                  <a className='buttons text-nowrap relative  z-[1] cursor-pointer overflow-hidden  first:bg-orange-500 font-medium  flex justify-center items-center max-w-content h-[39px] px-[26px] inline-block  rounded-full' key={i}>{item}</a>
+                                )
                                 
                               })
                             }

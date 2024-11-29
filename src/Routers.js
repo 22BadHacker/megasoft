@@ -7,20 +7,19 @@ import Footer from './component/Footer'
 import Services from './section/Services'
 import Work from './section/Work'
 import Home from './section/Home'
-import Transition from './Constants/Transition'
 
 const Routers = () => {
   return (
     <>
     
       <Router>
-      <div className='boxContain relative w-auto h-auto z-5 relative overflow-x-hidden bg-black'>
+        <Nav />
         
       
-          <Nav />
+      <div className='boxContain  w-auto h-auto z-5 relative  overflow-x-hidden bg-black'>
           
             <Routes>
-                {/* <Route path='/' element={<App />} /> */}
+                
                 <Route path='/' element={<Home />} />
                 <Route path='/ourWork' element={<Work />} />
                 <Route path='/services/' element={<Services />} />

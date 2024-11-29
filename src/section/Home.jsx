@@ -6,29 +6,27 @@ import { Link } from 'react-router-dom'
 import { FaCheck, FaArrowRight } from 'react-icons/fa'
 import { servicesSlider } from '../Constants/main'
 // import { drags } from '../Constants/main'
-import Drag from '../Constants/Drag'
 import {motion} from 'framer-motion'
-import LatestWork from '../Constants/LatestWork'
-import Report from '../Constants/Report'
-import Analitics from '../Constants/Analitics'
-import FAQ from '../Constants/FAQ'
+import {OurStory, FAQ, Drag, Analitics, Report, LatestWork} from '../Constants/main'
+import megaa from '../Assets/services/mm.png'
 
 
 const Home = () => {
   return (
     <div className='w-screen h-auto relative z-[1] bg-black pb-[200px] lg:md:pt-[180px] pt-[120px]'>
-         <div aria-hidden="true" className="absolute  left-0 -z-[1]  inset-0 grid grid-cols-2 opacity-55 -space-x-52 lg:md:sm:opacity-35">
+      <div className="woo fixed -z-[1] h-[120vh] w-full inset-0"></div>
+         <div aria-hidden="true" className="fixed  left-0 -z-[1]  inset-0 grid grid-cols-2 opacity-55 -space-x-52 lg:md:sm:opacity-35">
                     <div className="con6 w-screen "></div>
                     <div className="blur-[106px] rotate-[180deg] h-[80px] opacity-90 lg:md:sm:opacity-90 relative   lg:md:sm:left-0 top-[60px] bg-gradient-to-r from-cyan-400 to-sky-300"></div>
                     
           </div>
 
 
-      <div className='max-w-[1500px] px-4 md:lg:px-5 h-full mx-auto w-full md:px-9'>
+      <div className=' max-w-[1500px] px-4 md:lg:px-5 h-full mx-auto w-full md:px-9'>
         
 
           {/* Part 1 */}
-          <div className="grid sm:grid-cols-1 lg:md:grid-cols-2 w-full">
+          <div className="grid  sm:grid-cols-1 lg:md:grid-cols-2 w-full">
             
               <div className=" flex  flex-col gap-4 z-[1] lg:md:gap-7 w-full lg:max-w-[720px]">
                 
@@ -62,12 +60,12 @@ const Home = () => {
           {/* Part 2 */}
           <section className="w-full pt-[55px] gap-4 flex flex-col justify-center items-center overflow-x-clip">
             <div className='overflow-hidden con w-full flex flex-col gap-10'>
-                <motion.div className='flex items-center pr-24 gap-8 ' animate={{translateX: '-50%'}} transition={{duration: 15, repeat: Infinity, ease: 'linear', repeatType: 'mirror'}}>
+                <motion.div className='flex items-center gap-2 pr-24 md:gap-8 sm:gap-6 lg:gap-8 ' animate={{translateX: '-50%'}} transition={{duration: 15, repeat: Infinity, ease: 'linear', repeatType: 'mirror'}}>
                     {servicesSlider.map((item, i)=> {
                         // const rev = .reverse();
                         return (
                           <>
-                            <a className='font-semibold px-6 py-2 text-nowrap bg-[rgb(17,17,17,.6)] rounded-full'>{item}</a>
+                            <a className='font-semibold px-6 py-2 text-[13px] lg:md:sm:text-[16px] text-nowrap bg-[rgb(17,17,17,.6)] rounded-full'>{item}</a>
                             <a className='lg:md:flex hidden font-semibold px-6 py-2 text-nowrap text-orange-500 rounded-full '>*</a>
 
                            
@@ -80,6 +78,16 @@ const Home = () => {
 
 
 
+          {/* Part 3 About */}
+          <section className='z-[2]'>
+            {/* <img className='w-[600px]' src={megaa} alt="" /> */}
+
+          </section>
+
+          <section className='z-[2]'>
+            <OurStory />
+
+          </section>
           {/* Part 3 Latest Work */}
           <section className='z-[2]'>
             <LatestWork />

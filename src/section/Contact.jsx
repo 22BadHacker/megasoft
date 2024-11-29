@@ -55,10 +55,15 @@ const Contact = () => {
   return (
 
     
-    <div className='contact z-1 h-full pb-[200px] pt-[30px] px-8 w-screen overflow-x-hidden  lg:md:pb-[210px]  mx-auto bg-[black] sm:py-[120px] md:lg:pt-[60px] md:lg:px-[20px]  sm:px-8'>
+    <div className='contact  h-auto z-[1] relative pb-[200px] pt-[30px] px-8 w-screen overflow-x-hidden  lg:md:pb-[210px]  mx-auto bg-[black] sm:py-[120px] md:lg:pt-[60px] md:lg:px-[20px]  sm:px-8'>
+
+
+        <div aria-hidden="true" className="fixed  left-0 -z-[10]  inset-0 grid grid-cols-2 -space-x-52 opacity-65 lg:md:sm:opacity-35">
+                    <div className="con6 w-screen "></div>
+                    <div className="blur-[106px] rotate-[180deg] h-[80px] opacity-40 lg:md:sm:opacity-85 relative -left-[0px] top-[60px] bg-gradient-to-r from-cyan-400 to-sky-300"></div>
+                
+        </div>
         <div className='w-full mx-auto max-w-[1500px]'> 
-
-
 
         {/*Information section*/}
         <div className=' w-full  pb-1 flex text-wrap md:lg:pb-[70px] pt-[60px]'>
@@ -161,7 +166,7 @@ const Contact = () => {
 
                         </div>
                         <div className="flex flex-col">
-                            <p className='text-white/80'>
+                            <p className='name text-white/80'>
                                 Last name
                                 <span className='text-red-600'> *</span>
                             </p> 
@@ -276,14 +281,7 @@ const Contact = () => {
                                                 fill="currentColor"
                                                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                             </svg>
-                                            // <DNA
-                                            // visible={true}
-                                            // height="80"
-                                            // width="80"
-                                            // ariaLabel="dna-loading"
-                                            // wrapperStyle={{}}
-                                            // wrapperClass="dna-wrapper"
-                                            // />
+                                           
                                             ) : (
                                                 <div className='hov z-1 items-center w-full h-full justify-center flex gap-4'>
                                                     <span className='text-white text-[16px] font-[900] hover:text-orangee'>Send Message</span>

@@ -13,6 +13,18 @@ import img7 from '../Assets/services/img7.png'
 import img8 from '../Assets/services/img8.webp'
 import img10 from '../Assets/services/img10.png'
 import { FaArrowLeftLong } from 'react-icons/fa6'
+
+// Constants
+
+import Analitics from "./Analitics";
+import FAQ from "./FAQ";
+import OurStory from "./OurStory";
+import Report from "./Report";
+import Drag from "./Drag";
+import LatestWork from "./LatestWork";
+
+
+
 import work from '../Assets/Work/Device-Mockup_6.jpg'
 import work2 from '../Assets/Work/Free Business Cards on Chair Mockup.jpg'
 import work3 from '../Assets/Work/Free-PSD-Modern-Brand-Business-Card-Mockup.jpg'
@@ -21,6 +33,16 @@ import work5 from '../Assets/Work/Logo_on_the_Builiding_Mockup_2.jpg'
 import work6 from '../Assets/Work/Mockup.jpg'
 import work7 from '../Assets/Work/MorocAffiche.jpg'
 
+
+export {
+    Analitics,
+    FAQ,
+    OurStory,
+    Report,
+    LatestWork,
+    Drag,
+
+}
 
 
 // import {img1, img2, img3, img4, img5, img6} from '../Assets/Services'

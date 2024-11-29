@@ -32,10 +32,7 @@ const Drag = () => {
           
       </motion.div>
 
-      {/* <div className='flex flex-col items-center justify-center bg-[#111] pb-4'>
-      <p className='text-[18px] bg-[#111] px-5 py-1 font-medium text-orange-500 absolute -top-[36px] left-1/2  -translate-x-1/2'>Logo Design</p>
-      <img src={pro3} className='w-[200px]' alt="" />
-      </div> */}
+      
 
 
     </div>
