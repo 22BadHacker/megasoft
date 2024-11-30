@@ -9,13 +9,15 @@ import { servicesSlider } from '../Constants/main'
 import {motion} from 'framer-motion'
 import {OurStory, FAQ, Drag, Analitics, Report, LatestWork} from '../Constants/main'
 import megaa from '../Assets/services/mm.png'
+import Drag2 from '../Constants/Drag2'
+import Drag3 from '../Constants/Drag3'
 
 
 const Home = () => {
   return (
     <div className='w-screen h-auto relative z-[1] bg-black pb-[200px] lg:md:pt-[180px] pt-[120px]'>
       <div className="woo fixed -z-[1] h-[120vh] w-full inset-0"></div>
-         <div aria-hidden="true" className="fixed  left-0 -z-[1]  inset-0 grid grid-cols-2 opacity-55 -space-x-52 lg:md:sm:opacity-35">
+         <div aria-hidden="true" className="fixed  left-0 -z-[1]  inset-0 grid grid-cols-2 opacity-55 -space-x-52 lg:md:sm:opacity-40">
                     <div className="con6 w-screen "></div>
                     <div className="blur-[106px] rotate-[180deg] h-[80px] opacity-90 lg:md:sm:opacity-90 relative   lg:md:sm:left-0 top-[60px] bg-gradient-to-r from-cyan-400 to-sky-300"></div>
                     
@@ -50,8 +52,9 @@ const Home = () => {
 
               </div>
               <section className="relative">
-                  {/* <img className='w-full drop-shadow-[2px_0px_4px_#] object-cover' src={img} alt="" /> */}
                   <Drag />
+                  <Drag2 />
+                  <Drag3 />
                   
               </section>
         </div>

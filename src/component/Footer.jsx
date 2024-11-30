@@ -6,7 +6,7 @@ import { socialLinks } from '../Constants/main';
 
 const Footer = () => {
   return (
-    <div className='footer z-10 relative h-auto bg-[rgb(17,17,17,.01)] backdrop-blur-[50px]   pt-[30px] px-8 w-screen overflow-hidden py-10  mx-auto  sm:py-[60px]  md:lg:py-[60px] md:lg:px-[20px]  sm:px-8'>
+    <div className='footer z-[2] relative h-auto bg-[rgb(17,17,17,.01)] backdrop-blur-[50px]   pt-[30px] px-8 w-screen overflow-hidden py-10  mx-auto  sm:py-[60px]  md:lg:py-[60px] md:lg:px-[20px]  sm:px-8'>
         {/* <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div> */}
         {/* <div class="absolute top-0 z-[-2] h-screen w-screen bg-transparent bg-[radial-gradient(ellipse_80%_100%_at_80%_-20%,rgba(255,255,255,0),rgba(120,119,198,0.3))]"></div> */}
         <div className='w-full gap-[60px] mx-auto max-w-[1500px] grid grid-cols-1 lg:md:gap-[150px] md:lg:grid-cols-[1fr,1fr]'>

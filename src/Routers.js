@@ -25,8 +25,8 @@ const Routers = () => {
                 <Route path='/services/' element={<Services />} />
                 <Route path='/contact' element={<Contact />} />
             </Routes>
-
-          <Footer />
+          
+            <Footer />
         </div>
         </Router>
         
@@ -37,5 +37,16 @@ const Routers = () => {
 export default Routers
 
 
+//  {/* <div style={{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'}} className='w-full h-[470px] relative'>
+//             <Footer />
+//           </div> */}
 
+// <div style={{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'}} className='w-full h-[470px] relative'>
+//             <div className="relative h-[calc(100vh-470px)] -top-[100vh]">
+//               <div className="sticky top-[calc(100vh-470px)] h-[470px]">
 
+//                 <Footer />
+//               </div>
+
+//             </div>
+//           </div>

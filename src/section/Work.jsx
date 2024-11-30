@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 import GridLayout from "react-grid-layout";
 import { FaLongArrowAltRight, FaArrowCircleRight, FaArrowCircleLeft } from 'react-icons/fa';
 import { Responsive as ResponsiveGridLayout , } from "react-grid-layout";
@@ -15,7 +15,9 @@ import { div } from 'framer-motion/client';
 const Work = () => {
 
   const buttons = ['All', 'Digital Marketing', 'Web Sites', 'Logos', 'Branding', 'Graphic Design',  ];
-
+  const [selectedFilter, setSelectedFilter] = useState([]);
+  // const [selectedButton, setSelectedButton] = useState(workSlide[0].desc);
+  const [filterdItems, setFilteredItems] = useState(workSlide);
 
   
   
@@ -40,6 +42,44 @@ const Work = () => {
 
   })
 
+
+
+  // const handleFilterButton = (filter) => {
+  //   if (selectedFilter.includes(filter)) {
+  //     setSelectedFilter(selectedFilter.filter((f) => f !== filter));
+  //   } else {
+  //     setSelectedFilter([...selectedFilter, filter]);
+  //   }
+  // };
+
+  const handleFilterButton = (filter) => {
+    if (selectedFilter.includes(filter)) {
+      let filters = selectedFilter.filter((f) => f !== filter);
+      setSelectedFilter(filters);
+    } else {
+      setSelectedFilter([...selectedFilter, filter]);
+    }
+  }
+
+  useEffect(() => {
+    filterItems();
+  }, [selectedFilter]);
+
+
+    const filterItems = () => {
+      if (selectedFilter.length > 0) {
+        let tempItems = workSlide.map((filter) => {
+          let temp = workSlide.filter((item) => item.name === filter)
+          return temp;
+        })
+
+        setFilteredItems(tempItems.flat());
+      } else {
+        setFilteredItems(...workSlide);
+      }
+    }
+
+
   
   return (
     <>
@@ -62,11 +102,7 @@ const Work = () => {
                               buttons.map((item, i) => {
 
                                 return (
-
-                                  // <div>
-
-                                  // </div> 
-                                  <a className='buttons text-nowrap relative  z-[1] cursor-pointer overflow-hidden  first:bg-orange-500 font-medium  flex justify-center items-center max-w-content h-[39px] px-[26px] inline-block  rounded-full' key={i}>{item}</a>
+                                  <a className='buttons text-nowrap relative  z-[1] cursor-pointer overflow-hidden  first:bg-orange-500 font-medium  flex justify-center items-center max-w-content h-[39px] px-[26px] inline-block  rounded-full' onClick={() => handleFilterButton(item)} key={i}>{item}</a>
                                 )
                                 
                               })

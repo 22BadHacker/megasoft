@@ -227,14 +227,24 @@ export const sliderIcons =[
 
 
 export const workSlide = [
-    {id: 'box1', src: work, name: 'Floora Cosmitic', desc: 'UX Design/Web Devolepment'},
+    {id: 'box1', src: work, name: 'Floora Cosmitic', desc: 'logos'},
     {id: 'box2', src: work6, name: 'Intelligence Industry.', desc: 'UX Design/Web Devolepment'},
     {id: "box3", src: work2, name: 'MEGASOFT', desc: 'Graphic Design/Business Card'},
     {id: "box4", src: work3, name: 'HMS Proprete', desc: 'Graphic Design/Business Card'},
     {id: "box5", src: work4, name: 'Omeniya Event', desc: 'Branding/Logo Design'},
     {id: "box6", src: work5, name: 'Coopérative ITRANE', desc: 'Branding/Logo Design'},
-    // {src: work7, name: 'Morocco vs Leshoto', desc: 'Graphic Design/Poster'},
+    
 ]
+
+// export const workSlide = [
+//     {id: 'box1', src: work, name: 'Floora Cosmitic', desc: 'UX Design/Web Devolepment'},
+//     {id: 'box2', src: work6, name: 'Intelligence Industry.', desc: 'UX Design/Web Devolepment'},
+//     {id: "box3", src: work2, name: 'MEGASOFT', desc: 'Graphic Design/Business Card'},
+//     {id: "box4", src: work3, name: 'HMS Proprete', desc: 'Graphic Design/Business Card'},
+//     {id: "box5", src: work4, name: 'Omeniya Event', desc: 'Branding/Logo Design'},
+//     {id: "box6", src: work5, name: 'Coopérative ITRANE', desc: 'Branding/Logo Design'},
+    
+// ]
 
 
 export const Latest = [
