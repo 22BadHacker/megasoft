@@ -5,7 +5,7 @@ import { ImLocation2 } from "react-icons/im";
 const Drag4 = ({name, img, email}) => {
   return (
     
-    <div className='relative left-8 flex '>
+    <div className='relative lg:md:sm:left-8 flex '>
       <motion.div disabled drag  whileDrag={{borderColor: '#ff8a00'}} className='w-[370px] gap-2 h-auto p-4 cursor-grab  bg-[rgb(17,17,17, .2)] backdrop-blur-[10px] px-3 rounded-md border-[.2px] flex flex-col z-20  border-orange-500/30 select-none'>
       <div className="w-full h-full  absolute top-0 left-0 bg-transparent"></div>
       {/* <p className='text-[18px] bg-[#111] px-5 py-1 font-medium text-orange-500 absolute -top-[36px] left-1/2  -translate-x-1/2'>Design</p> */}
@@ -24,6 +24,8 @@ const Drag4 = ({name, img, email}) => {
             <p className='absolute right-0 text-[18px] w-[35px] h-[35px] flex items-center justify-center rounded-full border-[.8px] py-1 border-white/50'>+</p>
 
         </div>
+
+        <p className='px-2 text-[13px] text-white/85 bg-gray-200/10  py-1 w-fit rounded-[1px_6px_6px_6px] mt-1 ml-1'>Hello! My Name's Mohammed</p>
         <div className="flex gap-2 items-center  left-[52px] relative ">
             <BsFillTelephoneFill className='text-white/50 text-[13px]'/>
             <p className='text-[12.5px] text-white/50 relative top-[1px]'>+212 697-889-032</p>

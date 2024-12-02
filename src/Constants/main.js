@@ -261,7 +261,7 @@ export const Questions = [
     {title: 'How long does it take to develop a website?', desc: 'The timeline of developing a website depends on the complexity and scope of the project. Simple websites may take a few weeks, while more complex, custom-built websites may take several months.'},
     {title: 'Do I need a domain name and hosting for my website?', desc: 'Yes, a domain name is your website’s address on the internet, and hosting is where your website’s files are stored and accessed. Both are essential to make your website live.'},
     {title: 'What is SEO and why is it important for web design?', desc: 'SEO (Search Engine Optimization) is the practice of improving a website’s visibility in search engine results. Good web design incorporates SEO practices, ensuring the site is easily discoverable by search engines.'},
-    {title: 'What is the services that we offer?', desc: ' we offer Services that can help your Businesses improve their visibility and your reputation online. we Offer Graphic design, Web Development, UI/UX Design, E-Commerce websites, SEO, Branding & Visual Identity And More ....', link: <Link className="text-orangee underline" to='/services/#id'>On Our Explore Section</Link>},
+    {title: 'What is the services that we offer?', desc: ' we offer Services that can help your Businesses improve their visibility and your reputation online. we Offer Graphic design, Web Development, UI/UX Design, E-Commerce websites, SEO, Branding & Visual Identity And More ....', link: <Link onClick={() => window.scrollTo(0, 0)} className="text-orangee underline" to='/services/#id'>On Our Explore Section</Link>},
     {title: 'What do I need to provide for the designer to start?', desc: <div >
         <p>To start, you'll typically need to provide:</p>
         <ul className="pt-1">
@@ -286,7 +286,9 @@ export const Questions = [
 ]
 
 
-
+export const scrollToTop = () => {
+    window.scrollTo(0, 0)
+}
 
 export const text = [' we offre services that can help business improve their visibility and business reputation online, expand market reach, and increase turnover through effective digital strategies. Following are the services we provide.']
 

@@ -1,9 +1,7 @@
 import React, {useState} from 'react'
 import { FaA, FaArrowRightLong, FaStar} from 'react-icons/fa6'
-
-// import { FaQ } from 'react-icons/fa6';
-import {Questions} from '../Constants/main'
-import { desc, p } from 'framer-motion/client';
+import {Questions, scrollToTop} from '../Constants/main'
+import {motion} from 'framer-motion'
 
 const FAQ = () => {
     // const [faq, setFaq] = useState(false);
@@ -20,7 +18,7 @@ const FAQ = () => {
      
   return (
     <div className='w-full grid grid-cols-1 lg:md:sm:px-4 py-4'>
-        <p className='text-white text-[35px] font-bold pb-5 hover:text-orangee cursor-pointer'><span className='text-orangee'>* </span>FAQ <span className='font-medium text-[20px] text-green-400'>frequently asked questions</span></p>
+        <p className='text-white text-[35px] font-bold pb-5 hover:text-orangee cursor-pointer duration-[200ms] ease-in-out'><span className='text-orangee'>* </span>FAQ <span className='font-medium text-[20px] text-green-400'>frequently asked questions</span></p>
         
         <div className="w-full gap-x-3 grid grid-cols-1 lg:md:grid-cols-2">
 
@@ -41,12 +39,12 @@ const FAQ = () => {
                             
                                     </svg>
                                 </button>
-                                <div style={{transition: '.4s ease'}} className={`w-full relative lg:md:max-w-[600px] py-5 px-5  overflow-hidden flex gap-2 ${
+                                <motion.div animate={{opacity: selected === i ? 1 : 0, x: selected === i ? 0 : -10}} transition={{duration: .2, ease: "easeOut", delay: .1, type: "spring", stiffness: 500}}  className={`w-full relative lg:md:max-w-[600px] py-5 px-5  overflow-hidden flex gap-2 ${
                                     selected === i ? 'flex opacity-100 ' : ' opacity-0 hidden'
                                 }`}>
                                     <FaArrowRightLong className='text-orangee text-[15px] mt-1 absolute left-1' />
                                     <p className='font-medium pl-2 text-[15px] lg:md:sm:text-[16px]'> {desc}{items.link}</p>
-                                </div>
+                                </motion.div>
                                 
                             </div>
                         

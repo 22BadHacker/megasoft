@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 import Routers from './Routers';
+import 'lenis/dist/lenis.css'
 import reportWebVitals from './reportWebVitals';
 
 

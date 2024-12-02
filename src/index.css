@@ -24,13 +24,39 @@
     --sign: 'sign', sans-serif;
 }
 
-body {
-    @apply bg-[#111] text-gray-300 font-roboto
+html,body {
+    @apply bg-[#111] text-gray-300 font-roboto scroll-smooth overflow-x-hidden
 }
 
 
 
-*::-webkit-scrollbar{
+
+html.lenis, html.lenis body {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: clip;
+  }
+  
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+
+
+
+
+
+.body::-webkit-scrollbar{
    width: 12px;
    
 
@@ -38,12 +64,14 @@ body {
 
 
 
-*::-webkit-scrollbar-thumb{
+.body::-webkit-scrollbar-thumb{
    width: 12px;
-   background: rgb(34, 34, 34, .8);
+   background: rgb(34, 34, 34, .9);
    transition: .3s ease-in-out;
+   backdrop-filter: blur(20px);
+   /* border-radius: 10px; */
 }
-*::-webkit-scrollbar-thumb:hover{
+.body::-webkit-scrollbar-thumb:hover{
    background: rgb(51, 51, 51, .8);
    cursor: pointer;
 }
@@ -54,6 +82,8 @@ body {
     box-sizing: border-box;
     /* transition: .2s ease; */
 }
+
+
 
 
 @media (max-width: 690px) {
@@ -490,10 +520,23 @@ input:focus + .line::before{
         mask-image: linear-gradient(to left, transparent, black 10%,  97%, transparent);
         /* background: radial-gradient(orange 10%, transparent 10.1%, transparent 90%, orange 90.1%); */
     }
+    
+    .heaad{
+        mask-image: linear-gradient(to left, transparent, black 5%,  100%, transparent);
+
+    }
+
+
+    .head{
+        /* backdrop-filter: blur(4px); */
+        width: 98vw;
+        /* mask-image: linear-gradient(to right, transparent, black 5%,  100%, transparent); */
+        /* background: ; */
+    }
 
     .con{
         margin-top: 10px;
-        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 20%, black 90%, transparent);
     }
     .con2{
         margin-top: 10px;

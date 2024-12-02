@@ -40,7 +40,7 @@ const itemMain = {
     opacity: 1,
     y: 0,
     transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
+      // ease: [0.6, 0.01, -0.05, 0.95],
       duration: 1.6,
     },
   },
@@ -82,11 +82,11 @@ export const ImageBlock = ({ posX, posY, variants, id }) => {
         left: `${posX}vw `,
       }}
     >
-      <Image
+      {/* <Image
         src={process.env.PUBLIC_URL + `/images/${id}.webp`}
         fallback={process.env.PUBLIC_URL + `/images/${id}.jpg`}
         alt={id}
-      />
+      /> */}
     </motion.div>
   );
 };

@@ -7,28 +7,38 @@ import Footer from './component/Footer'
 import Services from './section/Services'
 import Work from './section/Work'
 import Home from './section/Home'
+import Lenis from './Constants/Lenis'
+import PreLoader from './component/PreLoader'
 
 const Routers = () => {
   return (
     <>
-    
-      <Router>
-        <Nav />
+  <div className="body w-screen h-screen bg-black  fixed top-0 left-0 overflow-y-scroll">
+
+      <Lenis>
+        <PreLoader />
+
+        <Router>
+          <Nav />
+          
         
-      
-      <div className='boxContain  w-auto h-auto z-5 relative  overflow-x-hidden bg-black'>
-          
-            <Routes>
-                
-                <Route path='/' element={<Home />} />
-                <Route path='/ourWork' element={<Work />} />
-                <Route path='/services/' element={<Services />} />
-                <Route path='/contact' element={<Contact />} />
-            </Routes>
-          
-            <Footer />
-        </div>
-        </Router>
+        <div className='boxContain  w-auto h-auto z-5 relative  overflow-x-hidden bg-black'>
+            
+              <Routes>
+                  
+                  <Route path='/' element={<Home />} />
+                  <Route path='/ourWork' element={<Work />} />
+                  <Route path='/services/' element={<Services />} />
+                  <Route path='/contact' element={<Contact />} />
+                  <Route path='/load' element={<PreLoader />} />
+              </Routes>
+            
+              <Footer />
+          </div>
+          </Router>
+      </Lenis>
+  </div>
+    
         
     </>
   )

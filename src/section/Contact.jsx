@@ -138,9 +138,10 @@ const Contact = () => {
         <div className="w-full h-[.1px] bg-slate-400/60 mb-20 mt-10"></div>
 
             { /* Let's get to work Section*/}
-            <div className=' w-full  pb-2 flex text-wrap md:lg:pb-[70px] '>
+            <div className=' w-full relative  pb-2 flex flex-col text-wrap md:lg:pb-[70px] '>
                 {/* Head Title */}
-                <h1  className='text-[12vw] con2 pointer-events-none tracking-[2px]   font-roboto relative font-[900] sm:text-[12.5vw]  lg:text-[8.5vw] tracking-tight px-2   lg:even:-top-[65px] md:text-[11vw] md:even:-top-[50px]'>Let's get to work</h1>               
+                <h1  className='text-[12vw] lg:text-[145px]  lg:leading-normal con2 pointer-events-none tracking-[2px]   font-roboto relative font-[900] sm:text-[12.5vw]  lg:text-[8.5vw] tracking-tight px-2   lg:even:-top-[65px] md:text-[11vw] md:even:-top-[50px]'>Let's get to work</h1> 
+                <p className='ml-4 xl:lg:text-[26.5px] text-[18px] md:text-[25px] sm:text-[23px] opacity-90 font-novea lg:absolute tracking-wide left-[394px] bottom-20'>Let us help you become even greater at what you do.</p>              
             </div>
 
             {/* action='https://api.web3forms.com/submit' */}
@@ -178,7 +179,7 @@ const Contact = () => {
 
                         <div className="flex flex-col">
                             <p>
-                                Business email
+                                your email address
                                 <span className='text-red-600'> *</span>
                             </p> 
                             <input type="text" className='bg-transparent  outline-none py-2 flex text-white  font-roboto font-semibold' {...register("Email", { required: true })} id="" />
@@ -194,7 +195,7 @@ const Contact = () => {
                             <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
 
                         </div>
-                        <div className="flex relative flex-col   ">
+                        <div className="flex relative flex-col   w-full">
                             <p>
                                 How did you hear about us?
                                 <span className='text-green-600'> (optional)</span>
@@ -220,8 +221,8 @@ const Contact = () => {
 
                             <div className="flex flex-col">
                                 <p>
-                                    What can we help you with?
-                                    <span className='text-red-600'> *</span>
+                                    <span className='text-red-600 pr-1'> *</span>
+                                    What's services are you looking for?
                                 </p> 
 
                                 {/* <input type="text" className='bg-transparent border-b border-white/40 outline-none py-2 flex text-white ' name="" id="" /> */}
@@ -236,8 +237,8 @@ const Contact = () => {
                             </div>
                             <div className="flex flex-col">
                                 <p>
-                                    Your Enterprise/Business name
-                                    <span className='text-red-600'> *</span>
+                                    <span className='text-red-600 pr-1'> *</span>
+                                    what's Your Enterprise/Business name?
                                 </p> 
                                 <input type="text" className='bg-transparent font-roboto font-semibold outline-none py-2 flex text-white ' {...register("Enterprise/Business name", { required: true })} id="" />
                                 <div className="line h-[.1px] w-full  bg-white/40 relative"></div>
@@ -245,8 +246,9 @@ const Contact = () => {
                             </div>                            
                             <div className="flex flex-col">
                                 <p>
-                                    Tell us about your project
-                                    <span className='text-red-600'> *</span>
+                                    <span className='text-red-600 pr-1'> *</span>
+                                    Tell us about your project!
+            
                                 </p> 
                                 <input type="text" className='bg-transparent font-roboto font-semibold outline-none py-2 flex text-white ' {...register("Brief about the project", { required: true })} id="" />
                                 <div className="line h-[.1px] w-full  bg-white/40 relative"></div>

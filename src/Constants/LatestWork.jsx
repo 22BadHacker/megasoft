@@ -1,13 +1,18 @@
 import React from 'react'
 import { Latest } from './main'
 import { div } from 'framer-motion/client'
+import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 const LatestWork = () => {
   return (
     <div className='w-full bg-gradient-to-b from-[rgb(0,0,0,.1)] to-transparent backdrop-blur-[10px] '>
 
         <div className=' py-6 pt-7 flex flex-col gap-4 mt-[100px] px-4 md:lg:px-5 mx-auto w-full '>
-            <p className='text-white text-[35px] duration-[.3s] ease-in-out w-fit cursor-pointer hover:text-orangee font-bold pb-3 hover'><span className='text-orangee'>* </span>Our Latest Work</p>
+            <div className="flex w-full items-center justify-between">
+                <p className='text-white text-[35px] duration-[.3s] ease-in-out w-fit cursor-pointer hover:text-orangee font-bold pb-3 hover'><span className='text-orangee'>* </span>Our Latest Work</p>
+                <Link to='/ourWork/' className='text-orangee font-semibold pr-1 flex items-center gap-3'>See ALL <FaArrowRightLong className='text-[16px]' /></Link>
+            </div>
             <div className="grid w-full lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4">
             {
                     Latest.map((item, i) => {
