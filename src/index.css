@@ -87,12 +87,12 @@ html.lenis, html.lenis body {
 
 
 @media (max-width: 690px) {
-    *::-webkit-scrollbar{
+    .body::-webkit-scrollbar{
         width: 8px;
     }
 }
 @media (max-width: 490px) {
-    *::-webkit-scrollbar{
+    .body::-webkit-scrollbar{
         width: 0px;
     }
 }
