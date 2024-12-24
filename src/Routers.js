@@ -1,46 +1,54 @@
-import React from 'react'
-import Contact from './section/Contact'
-import App from './App'
-import Nav from './component/Nav'
+import React,{lazy, Suspense} from 'react'
 import {BrowserRouter as Router ,Routes, Route } from 'react-router-dom'
-import Footer from './component/Footer'
-import Services from './section/Services'
-import Work from './section/Work'
-import Home from './section/Home'
+
 import Lenis from './Constants/Lenis'
-import PreLoader from './component/PreLoader'
+const Nav = lazy(() => import('./component/Nav'))
+const Services2 = lazy(() => import('./section/Services2'))
+const Contact = lazy(() => import('./section/Contact'))
+const Home = lazy(() => import('./section/Home'))
+const Work = lazy(() => import('./section/Work'))
+const Footer = lazy(() => import('./component/Footer'))
+const FallBack = lazy(() => import('./Constants/FallBack'))
+const Story = lazy(()=> import('./section/Story'))
+
 
 const Routers = () => {
   return (
-    <>
-  <div className="body w-screen h-screen bg-black  fixed top-0 left-0 overflow-y-scroll">
-
-      <Lenis>
-        <PreLoader />
-
-        <Router>
-          <Nav />
-          
-        
-        <div className='boxContain  w-auto h-auto z-5 relative  overflow-x-hidden bg-black'>
+    <Lenis>
+    <div className='w-screen h-auto relative overflow-x-hidden'>
+        {/* <div className="body w-screen h-screen bg-black  relative overflow-y-scroll"> */}
             
-              <Routes>
+              {/* <PreLoader /> */}
+
+                <Router>
+                  <Nav />
                   
-                  <Route path='/' element={<Home />} />
-                  <Route path='/ourWork' element={<Work />} />
-                  <Route path='/services/' element={<Services />} />
-                  <Route path='/contact' element={<Contact />} />
-                  <Route path='/load' element={<PreLoader />} />
-              </Routes>
-            
-              <Footer />
-          </div>
-          </Router>
-      </Lenis>
-  </div>
+                
+                  <div className='boxContain  w-auto h-auto z-5 relative  overflow-x-hidden bg-black'>
+
+                  <Suspense fallback={<FallBack />}>
+
+                      <Routes>
+                          
+                          <Route path='/' element={<Home />} />
+                          <Route path='/ourWork' element={<Work />} />
+                          <Route path='/contact' element={<Contact />} />
+                          <Route path='/services/' element={<Services2 />} />
+                          <Route path='/OurStory' element={<Story />} />
+                          {/* <Route path='Load' element={<FallBack />} /> */}
+                          
+                      </Routes>
+                    
+                  </Suspense>
+                    
+                      <Footer />
+                  </div>
+                  </Router>
+          {/* </div> */}
     
         
-    </>
+    </div>
+    </Lenis>
   )
 }
 

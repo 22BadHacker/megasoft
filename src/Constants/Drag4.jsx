@@ -25,15 +25,7 @@ const Drag4 = ({name, img, email}) => {
 
         </div>
 
-        <p className='px-2 text-[13px] text-white/85 bg-gray-200/10  py-1 w-fit rounded-[1px_6px_6px_6px] mt-1 ml-1'>Hello! My Name's Mohammed</p>
-        <div className="flex gap-2 items-center  left-[52px] relative ">
-            <BsFillTelephoneFill className='text-white/50 text-[13px]'/>
-            <p className='text-[12.5px] text-white/50 relative top-[1px]'>+212 697-889-032</p>
-        </div>
-        <div className="flex gap-2 items-center relative left-[52px]">
-            <ImLocation2 className='text-white/50 text-[14px]'/>
-            <p className='text-[12.5px] text-white/50 relative top-[1px] max-w-[220px]'>Rue 14 Amal 2 Imm 2 Etage 2 Bureau N°4 Sidi Bernousi, CASABLANCA</p>
-        </div>
+       
         </motion.div>
     </div>
   )

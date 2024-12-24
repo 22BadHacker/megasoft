@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 import logo from '../Assets/newColor.svg'
 // import { Audio, BallTriangle , DNA } from 'react-loader-spinner'
+import Lenis from '../Constants/Lenis';
 
 
 
@@ -35,7 +36,7 @@ const Contact = () => {
       const { submit: onSubmit } = useWeb3Forms({
         access_key: apiKey,
         settings: {
-          from_name: "MegaSoft Form",
+          from_name: "MegaSoft Contact",
           subject: "New Contact Message from your Website",
             
         },
@@ -54,8 +55,9 @@ const Contact = () => {
 
   return (
 
-    
+    <Lenis>
     <div className='contact  h-auto z-[1] relative pb-[200px] pt-[30px] px-8 w-screen overflow-x-hidden  lg:md:pb-[210px]  mx-auto bg-[black] sm:py-[120px] md:lg:pt-[60px] md:lg:px-[20px]  sm:px-8'>
+        <div className="woo fixed -z-[1] h-[120vh] w-full inset-0"></div>
 
 
         <div aria-hidden="true" className="fixed  left-0 -z-[10]  inset-0 grid grid-cols-2 -space-x-52 opacity-65 lg:md:sm:opacity-35">
@@ -258,7 +260,7 @@ const Contact = () => {
                         </div>
 
                         <div className="flex gap-4 pt-5">
-                            <input type="checkbox" className='check w-[16px]' {...register("Checks for updates", { required: true })} id="" />
+                            <input type="checkbox" className='check w-[16px]' id="" />
                             <p className='text-[12px]'>I Want To receive news and updates in my email</p>
                         </div>
 
@@ -326,7 +328,7 @@ const Contact = () => {
 
     </div>  
 
-    
+    </Lenis>
 
     
                 

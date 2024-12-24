@@ -1,7 +1,8 @@
-const { body } = require('framer-motion/client')
+const { body } = require('framer-motion/client');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  jit: true,
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],

@@ -6,9 +6,14 @@ import { socialLinks } from '../Constants/main';
 
 const Footer = () => {
   return (
-    <div className='footer z-[2] relative h-auto bg-[rgb(17,17,17,.01)] backdrop-blur-[50px]   pt-[30px] px-8 w-screen overflow-hidden py-10  mx-auto  sm:py-[60px]  md:lg:py-[60px] md:lg:px-[20px]  sm:px-8'>
+    <div className='footer z-[2] relative h-auto overflow-hidden bg-[rgb(17,17,17,.01)] backdrop-blur-[50px]   pt-[30px] px-8 w-screen  py-10  mx-auto  sm:py-[60px]  md:lg:py-[60px] md:lg:px-[20px]  sm:px-8'>
         {/* <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div> */}
         {/* <div class="absolute top-0 z-[-2] h-screen w-screen bg-transparent bg-[radial-gradient(ellipse_80%_100%_at_80%_-20%,rgba(255,255,255,0),rgba(120,119,198,0.3))]"></div> */}
+        {/* <div className="w-full z-[1] relative  flex justify-center items-center">
+        </div> */}
+        {/* <div className="w-[100px] left-1/2 blur-[35px] translate-x-[-50%]  z-[-10] h-[100px]  bg-[#d4352e] rounded-full absolute -top-[40px]"></div>
+        <div className="w-[100px] left-1/3 blur-[35px] translate-x-[-0%]  z-[-10] h-[100px]  bg-[#11e1e8] rounded-full absolute -top-[40px]"></div>
+        <div className="w-full h-full z-[-1] bg-[rgb(17,17,17,.01)] backdrop-blur-[80px] absolute top-0 left-0"></div> */}
         <div className='w-full gap-[60px] mx-auto max-w-[1500px] grid grid-cols-1 lg:md:gap-[150px] md:lg:grid-cols-[1fr,1fr]'>
 
             <div className="flex sm:max-w-[800px]  sm:lg:md:max-w-[500px] gap-4 flex-col">
@@ -36,7 +41,7 @@ const Footer = () => {
                     <h1 className='pb-2 hover:text-white cursor-pointer text-[24px]  font-bold'>Explore</h1>
                     
                     {
-                        ['Features', 'Our Story', 'Our Story', 'Services', 'Contact'].map((item)=> {
+                        ['Features', 'Our Story', 'Our Work', 'Services', 'Contact'].map((item)=> {
                             return (
                                 <p className=' text-[17px] text-white/70 font-medium'>{item}</p>
                             )
@@ -47,7 +52,7 @@ const Footer = () => {
                 <div className="flex flex-col gap-1 foot">
                     <h1 className='hover:text-white cursor-pointer pb-2 text-[24px]  font-bold'>Services</h1>
                     {
-                        ['Services', 'Web Design', 'Graphic Design', 'Digital Marketing', 'Web Maintenance', 'More ...'].map((item)=> {
+                        ['Web Development', 'UX Design', 'Graphic Design', 'Digital Marketing', 'Web Maintenance', 'More ...'].map((item)=> {
                             return (
                                 <p className=' text-[17px] text-white/70 font-medium'>{item}</p>
                             )

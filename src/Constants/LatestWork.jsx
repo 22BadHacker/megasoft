@@ -3,15 +3,25 @@ import { Latest } from './main'
 import { div } from 'framer-motion/client'
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const LatestWork = () => {
+
+    useGSAP(() => {
+        gsap.from('.box', { scrollTrigger: { trigger: '.box', start: 'top bottom', end: 'bottom center', smooth: true, scrub: true }, opacity: 0, ease: 'circ.inOut', y: 20, stagger: {amount: .2}, delay: .1 });
+    })
+
   return (
     <div className='w-full bg-gradient-to-b from-[rgb(0,0,0,.1)] to-transparent backdrop-blur-[10px] '>
 
         <div className=' py-6 pt-7 flex flex-col gap-4 mt-[100px] px-4 md:lg:px-5 mx-auto w-full '>
             <div className="flex w-full items-center justify-between">
-                <p className='text-white text-[35px] duration-[.3s] ease-in-out w-fit cursor-pointer hover:text-orangee font-bold pb-3 hover'><span className='text-orangee'>* </span>Our Latest Work</p>
-                <Link to='/ourWork/' className='text-orangee font-semibold pr-1 flex items-center gap-3'>See ALL <FaArrowRightLong className='text-[16px]' /></Link>
+                <p className='text-white text-[35px] items-center flex gap-1 duration-[.3s] ease-in-out w-fit cursor-pointer hover:text-orangee font-bold pb-3 hover'><span className='bg-orangee w-8 h-[2px]'> </span>Our Latest Work</p>
+                {/* <Link to='/ourWork/' className='text-orangee font-semibold pr-1 flex items-center gap-3'>See ALL <FaArrowRightLong className='text-[16px]' /></Link> */}
             </div>
             <div className="grid w-full lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4">
             {
@@ -19,7 +29,7 @@ const LatestWork = () => {
                         const {date, name, desc, src} = item
 
                         return (
-                            <div className='flex relative'>
+                            <div className='box flex relative'>
                                 <div className="late flex flex-col relative">
                                     <img className='object-cover w-full h-full' src={src} alt="" />
                                     <h5 className='absolute top-1 left-1 text-orangee font-bold text-[12px] bg-[rgb(17,17,17,.3)] backdrop-blur-5 py-1 px-2 rounded-full'>{desc}</h5>

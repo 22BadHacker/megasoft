@@ -5,12 +5,15 @@ import { Responsive as ResponsiveGridLayout , } from "react-grid-layout";
 // import img from '../Assets/services/Device-Mockup_6.jpg'
 import { workSlide } from '../Constants/main';
 import { useGSAP } from '@gsap/react';
-
 import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 import { easeInOut } from 'framer-motion';
 import { div } from 'framer-motion/client';
+import Lenis from '../Constants/Lenis';
 
+gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
 
@@ -18,6 +21,13 @@ const Work = () => {
   const [selectedFilter, setSelectedFilter] = useState([]);
   // const [selectedButton, setSelectedButton] = useState(workSlide[0].desc);
   const [filterdItems, setFilteredItems] = useState(workSlide);
+
+//   useGSAP(() => {
+//     const tl = gsap.timeline({});
+//     tl.from('.workSide', { scrollTrigger: { trigger: '.workSide',  start: 'top bottom',
+//       end: 'bottom top', smooth: true, scrub: true }, opacity: 0,y: 60, ease: 'circ.inOut', stagger: {amount: 2}, delay: 1, duration: 1 });
+// })
+ 
 
   
   
@@ -82,10 +92,11 @@ const Work = () => {
 
   
   return (
-    <>
+    <Lenis>
       {/* <Transition /> */}
       
       <div className='woork w-screen relative h-auto z-[1]  bg-black pb-[200px] '>
+          <div className="woo fixed -z-[1] h-[120vh] w-full inset-0"></div>
       {/* <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div> */}
           <div aria-hidden="true" className="fixed  left-0 -z-[1]  inset-0 grid grid-cols-2 -space-x-52 opacity-65 lg:md:sm:opacity-35">
                         <div className="con6 w-screen "></div>
@@ -117,8 +128,8 @@ const Work = () => {
                                   <div className='workSide flex'>
 
                                       <div id={id}   key={i} className="hoov relative flex flex-col gap-3 rounded-md overflow-hidden">
-                                        <img src={src}  className='object-cover w-full h-full rounded-md' alt="Flora Cosmitic" />
-                                        <h4 className='lg:md:sm:text-[12px] text-[10px] flex gap-2 items-center text-orangeLight '><FaLongArrowAltRight/> {desc}</h4>
+                                        <img loading="lazy" src={src}  className='object-cover w-full h-full rounded-md' alt="Flora Cosmitic" />
+                                        <h4 className='lg:md:sm:text-[12px] border-[.5px] border-orange-600/40 w-max px-2 py-[1px] rounded-[20px] text-[10px] flex gap-2 items-center text-orangeLight '><FaLongArrowAltRight className=''/> {desc}</h4>
                                         <p className='lg:md:sm:text-[20px] text-[15px] relative -top-3 font-semibold tracking-[1px]'>{name}</p>
 
                                       </div>
@@ -137,7 +148,7 @@ const Work = () => {
             </div>
 
       </div>
-    </>
+    </Lenis>
 
 
   )

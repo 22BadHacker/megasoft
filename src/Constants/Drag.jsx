@@ -2,7 +2,7 @@ import React from 'react'
 import flora from '../Assets/Logos/flora.svg'
 import pro from '../Assets/Logos/Artboard 8.png'
 import pro2 from '../Assets/Logos/Artboard 4.png'
-import pro3 from '../Assets/Logos/Artboard 16.svg'
+// import pro3 from '../Assets/Logos/Artboard 16.svg'
 
 import {motion} from 'framer-motion'
 import { FaBars, FaSearch, FaShoppingBag } from 'react-icons/fa'

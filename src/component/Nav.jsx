@@ -1,6 +1,5 @@
-import {useState, useRef} from 'react'
+import {useState} from 'react'
 import  {navLinks, navLinksPhone , socialLinks, scrollToTop} from '../Constants/main'
-// import logo2 from '../Assets/new.svg'
 import logo2 from '../Assets/newColor.svg'
 import {motion, AnimatePresence} from 'framer-motion'
 import { Link } from 'react-router-dom'
@@ -9,23 +8,29 @@ import gsap from 'gsap'
 
 
 
+
 const Nav = () => {
 
     const [open, setOpen] = useState(false)
-
+    
+    
+    
+   
+    
     const toggleMenu = () => {
         setOpen( !open)
+        
     }
 
     let toggleClass = open ? "open" : '';
 
-    // const ref = useRef(null)
+    
     
     useGSAP(
         () => {
-            // gsap code here...
+            
             gsap.from('.li', { opacity: 0, ease: 'circ.inOut', y: 10, stagger: {amount: .4}, delay: .4 }); 
-            // gsap.from('.logo', { opacity: 0, ease: 'circ.inOut', y: 20, delay: .3 }); 
+            
         },
         
     ); 
@@ -54,22 +59,24 @@ const Nav = () => {
                 {/* Nav Links */}
 
                 <>
-                        
-                    <ul className='lg:flex-center-gap hidden'>
-                        {
-                            navLinks.map((link) => {
-                                const { href, label, icon, classId} = link
-                                return (
-                                    <li className='li'  key={label}>
-                                        
-                                        <Link onClick={scrollToTop}  to={href} id={classId} className={`linkss  relative max-w-content text-white/80 font-roboto font-semibold text-[18px] hover:text-orangee flex gap-2 items-center`}>{label} <span>{icon}</span></Link>
-                                        
-                                    </li>
-                                )
-                            })
-                        }
+                    <ul className="lg:flex-center-gap hidden">
+                        {navLinks.map((link)=> {
+                            const { href, label} = link
+                            return (
+                                <li className='li' onClick={scrollToTop}  key={label}>
+        
+                                    <Link onClick={scrollToTop}  to={href}  className={`linkss   relative max-w-content text-white/80 font-roboto font-semibold text-[18px] hover:text-orangee flex gap-2 items-center`}>{label}</Link>
+        
+                                </li>
+                            )
+                        })}
+
                     </ul>
+                    
+                   
+                        
                 </>
+                    
 
 
                 {/* Contact Btn */}
@@ -97,6 +104,8 @@ const Nav = () => {
 
 
             </nav>
+
+            <AnimatePresence>
             
             
             {
@@ -115,9 +124,9 @@ const Nav = () => {
                                 {navLinks.map((link, i) => {
                                     return (
                                         
-                                        <div className="flex  flex-col relative top-[120px] sm:top-[100px]">
+                                        <div className="flex  flex-col relative  top-[120px] sm:top-[100px]">
                                             
-                                            <motion.a initial={{ filter: 'blur(30px)', opacity: 0,translateY: 10}} transition={{duration: .3, delay: i * .3, ease: 'easeInOut', type: 'spring', stiffness: 100}}  animate={{ filter: 'blur(0px)', opacity: 1, translateY: 0}}  key={i} href={link.href} className='links font-roboto font-bold cursor-pointer text-white/70 text-[55px]   hover:text-orangee '>{link.label}</motion.a>
+                                            <motion.a initial={{ filter: 'blur(30px)', opacity: 0}} transition={{duration: .25,  ease: 'easeInOut', delay: i * .25,}}  animate={{ filter: 'blur(0px)', opacity: 1}} exit={{filter: 'blur(30px)', opacity: 0}}  key={i} href={link.href} className='links font-roboto font-bold cursor-pointer text-white/70 text-[55px]   hover:text-orangee '>{link.label}</motion.a>
                                         </div>
                                     )
                                 })}
@@ -144,10 +153,13 @@ const Nav = () => {
                     : null
                     
             }
-
+        </AnimatePresence>
             
 
         </header>
+
+        
+
 
         
     </>
@@ -155,3 +167,5 @@ const Nav = () => {
 }
 
 export default Nav
+
+

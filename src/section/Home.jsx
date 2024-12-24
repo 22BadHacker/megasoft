@@ -1,25 +1,32 @@
-import React, {useState} from 'react'
+import React, {useState, lazy, Suspense} from 'react'
 import logo from '../Assets/newColor.svg'
-import img from '../Assets/services/pc2.png'
 import { Link } from 'react-router-dom'
 import { FaCheck, FaArrowRight } from 'react-icons/fa'
 import { servicesSlider } from '../Constants/main'
 import {motion} from 'framer-motion'
-import {OurStory, FAQ, Drag, Analitics, Report, LatestWork} from '../Constants/main'
-import megaa from '../Assets/services/mm.png'
+import {OurStory, FAQ, Drag, Analitics, Report, LatestWork, Services} from '../Constants/main'
 import Drag2 from '../Constants/Drag2'
 import Drag3 from '../Constants/Drag3'
 import Lenis from '../Constants/Lenis'
+import Features from '../Constants/Features'
+const Fin = lazy(() => import('../Constants/Fin'))
+const Tools= lazy(() => import('../Constants/Tools'))
+const Ads= lazy(() => import('../Constants/Ads'))
+
+
+
 
 
 const Home = () => {
+
  
   return (
 
     <Lenis>
 
       <div className='w-screen h-auto relative z-[1] bg-black pb-[200px] lg:md:pt-[180px] pt-[120px]'>
-        <div className="woo fixed -z-[1] h-[120vh] w-full inset-0"></div>
+          
+          <div className="woo fixed -z-[1] h-[120vh] w-full inset-0"></div>
           <div aria-hidden="true" className="fixed  left-0 -z-[1]  inset-0 grid grid-cols-2 opacity-55 -space-x-52 lg:md:sm:opacity-40">
                       <div className="con6 w-screen "></div>
                       <div className="blur-[106px] rotate-[180deg] h-[80px] opacity-90 lg:md:sm:opacity-90 relative   lg:md:sm:left-0 top-[60px] bg-gradient-to-r from-cyan-400 to-sky-300"></div>
@@ -44,7 +51,7 @@ const Home = () => {
 
                   <div className="flex lg:md:gap-[70px] sm:justify-around mt-[40px] items-center lg:md:justify-start justify-between">
                       <Link to={'/contact/'} className='work px-[18px] py-2 lg:md:py-[10px] text-white lg:md:px-9 bg-orangee rounded-full font-bold lg:text-[17px] '>Get in Touch</Link>
-                      <Link to={'/ourWork/'} style={{transition: '.4s ease'}} className='  lg:md:hover:gap-6 px-[20px] gap-4 hover:text-white lg:md:py-3 lg:md:px-8 text-orangee rounded-full font-bold lg:md:text-[17px] flex items-center lg:md:gap-5  '>Explore our Portfolio <FaArrowRight className='lg:md:text-base text-[14px] text-orangeLight'/></Link>
+                      <Link to={'/ourWork/'} style={{transition: '.3s ease'}} className='  lg:md:hover:gap-6 px-[20px] gap-4 border-[.5px] border-orangeLight py-2  hover:text-white lg:md:py-3 lg:md:px-8 text-orangee rounded-full font-bold lg:md:text-[17px] flex items-center lg:md:gap-5  '>Explore our Portfolio <FaArrowRight className='lg:md:text-base text-[14px] text-orangeLight'/></Link>
                       {/* <Link to={'/ourWork/'} className='buttons first: relative overflow-hidden z-[1] cursor-pointer  first:bg-orangee first font-medium  flex justify-center items-center max-w-content h-[39px] px-[26px]  rounded-full'>Explore our Portfolio <FaArrowRight className='text-base text-orangeLight'/></Link> */}
                   </div>
                   <div className="flex justify-between w-full sm:justify-around   lg:md:gap-[50px] mt-5 items-center lg:md:justify-start">
@@ -92,6 +99,10 @@ const Home = () => {
 
             <section className='z-[2]'>
               <OurStory />
+            </section>
+
+            <section className=''>
+              <Features />
 
             </section>
             {/* Part 3 Latest Work */}
@@ -106,7 +117,10 @@ const Home = () => {
             </section>
 
             <section className='mt-20 z-[2]'>
-                  Services
+                  <Services />
+            </section>
+            <section className='mt-20 z-[2]'>
+                  <Ads />
             </section>
 
             {/* Part 5 Report */}
@@ -118,7 +132,19 @@ const Home = () => {
             <section className='mt-20  z-[2]'>
                   <FAQ />
             </section>
-                  
+              
+              {/* Part 7 FAQ */}
+              <section className='mt-20  z-[2]'>
+                    <Fin />
+              </section>
+              <section className='mt-20  z-[2]'>
+                    <Tools />
+              </section>
+            
+            {/* <div className="w-full gap-20 absolute bottom-10 flex justify-center items-center">
+              <div className="w-[140px] h-[140px]  bg-transparent rounded-full absolute -top-[40px]"><span className='w-full blur-[10px] -bottom-[90px] h-full bg-[#d4352e] absolute rounded-full  left-0 '></span></div>
+              <div className="w-[140px] opacity-70 h-[140px] left-[35%] bg-transparent rounded-full absolute -top-[40px]"><span className='w-full h-full bg-[#11e1e8] absolute rounded-full opacity-75 blur-[10px] -bottom-[90px] left-0 '></span></div>
+            </div> */}
 
 
         </div>
