@@ -1,7 +1,11 @@
 import React, { lazy } from 'react'
 import Lenis from '../Constants/Lenis'
+// import About from '../StoryCom/about'
+// import Head from '../StoryCom/Head'
 
 const First = lazy(() => import('../StoryCom/First'))
+const Head = lazy(() => import('../StoryCom/Head'))
+const About = lazy(() => import('../StoryCom/About'))
 
 const Story = () => {
   return (
@@ -17,7 +21,16 @@ const Story = () => {
           </div>
         
           <div className="max-w-[1500px] px-4 md:lg:px-5 h-full mx-auto w-full">
-            <div className="w-full  pb-1 flex flex-col text-wrap md:lg:pb-[70px] pt-[100px]">
+            
+            <div className="w-full  pb-1 flex flex-col text-wrap md:lg:pb-[70px] pt-[70px]">
+              <section>
+                  <Head />
+              </section>
+
+              <section>
+                  {/* <About /> */}
+              </section>
+
               <section>
                   <First />
               </section>

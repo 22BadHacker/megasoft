@@ -131,7 +131,7 @@ export const navLinks = [
     { href: "/OurStory", label: "Our Story" },
     { href: "/ourWork/", label: "Our Work" },
     { href: "/services/", label: "Services"}, 
-    { href: "#", label: "Pricing" },
+    // { href: "#", label: "Pricing" },
 ];
 
 

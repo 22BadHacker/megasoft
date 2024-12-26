@@ -555,7 +555,7 @@ input:focus + .line::before{
 
     .num{
         color: transparent;
-        -webkit-text-stroke: 2px white;
+        -webkit-text-stroke: 1.5px white;
         
     }
 
@@ -606,7 +606,7 @@ input:focus + .line::before{
         transition: .2s ease-in-out;
     }
 
-    @media (min-width:)
+    
     .second{
         font-size: 34px;
     }
@@ -626,6 +626,16 @@ input:focus + .line::before{
     .circle:nth-child(6){
         @apply absolute -left-[4px]  -bottom-[5px] 
     }
+
+    /* .maroc::after{
+        position: absolute;
+        content: url('/src/Collection/Maroc.jpeg');
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: normal;
+    } */
 
     .gradient{
         border: .5px solid;

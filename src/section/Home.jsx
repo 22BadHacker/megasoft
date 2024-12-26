@@ -9,6 +9,7 @@ import Drag2 from '../Constants/Drag2'
 import Drag3 from '../Constants/Drag3'
 import Lenis from '../Constants/Lenis'
 import Features from '../Constants/Features'
+import End from '../Constants/End'
 const Fin = lazy(() => import('../Constants/Fin'))
 const Tools= lazy(() => import('../Constants/Tools'))
 const Ads= lazy(() => import('../Constants/Ads'))
@@ -119,9 +120,9 @@ const Home = () => {
             <section className='mt-20 z-[2]'>
                   <Services />
             </section>
-            <section className='mt-20 z-[2]'>
+            {/* <section className='mt-20 z-[2]'>
                   <Ads />
-            </section>
+            </section> */}
 
             {/* Part 5 Report */}
             <section className='mt-20 z-[2]'>
@@ -138,7 +139,8 @@ const Home = () => {
                     <Fin />
               </section>
               <section className='mt-20  z-[2]'>
-                    <Tools />
+                    {/* <Tools /> */}
+                    <End />
               </section>
             
             {/* <div className="w-full gap-20 absolute bottom-10 flex justify-center items-center">
