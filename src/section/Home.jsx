@@ -10,6 +10,7 @@ import Drag3 from '../Constants/Drag3'
 import Lenis from '../Constants/Lenis'
 import Features from '../Constants/Features'
 import End from '../Constants/End'
+import { FaLightbulb } from "react-icons/fa6";
 const Fin = lazy(() => import('../Constants/Fin'))
 const Tools= lazy(() => import('../Constants/Tools'))
 const Ads= lazy(() => import('../Constants/Ads'))
@@ -53,10 +54,11 @@ const Home = () => {
                   
           
                   
-                  <p className='text-orangee bg-white w-fit text-[18px] font-semibold relative top-1'>Empower Your Business with Exceptional Web Design</p>                
+                  {/* <p className='text-white bg-orangee w-fit px-2 text-[18px] font-semibold relative top-1'>Empower Your Business with Exceptional Web Design</p>                 */}
+                  <p className='text-orangee  flex items-center drop-shadow-[1px_1px_5px_rgb(249, 83, 2,.5)] gap-1 px-2 text-[18px] font-semibold relative top-1'>Light Up <FaLightbulb className='text-white drop-shadow-[1px_1px_5px_rgb(255,255,255,.5)]'/> Your Business with Exceptional & Creative Design</p>                
                   <p className='con4 lg:md:text-[68px] sm:text-[60px]  text-[40px] font-bold sm:leading-[-10px] lg:md:sm:leading-tight lg:md:sm:-tracking-[2px]'>Where Innovation Meets Design, Build Your Dream Project Today</p>
                 
-                  <p className='text-gray-300 font-semibold py-5 sm:w-[600px]'>Our team of talented designers and developers work collaboratively to bring your vision to life, ensuring every website we create is tailored to meet the unique needs of your brand and your users.</p>
+                  <p className='text-gray-300 font-semibold py-5 sm:w-[600px]'>Our team of talented designers and developers work collaboratively to bring your vision to life, ensuring every project we create is tailored to meet the unique needs of your brand and your users.</p>
 
                   <div className="flex lg:md:gap-[70px] sm:justify-around mt-[40px] items-center lg:md:justify-start justify-between">
                       <Link to={'/contact/'} className='work px-[18px] py-2 lg:md:py-[10px] text-white lg:md:px-9 bg-orangee rounded-full font-bold lg:text-[17px] '>Get in Touch</Link>

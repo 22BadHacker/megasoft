@@ -577,15 +577,12 @@ input:focus + .line::before{
         mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
     }
 
-    .soft{
-        border-radius: 2rem 8rem 8rem 9rem / 3rem 11rem 6rem 5rem;
-        background: var(--secondary);
-        padding: 2px 6px;
-    }
+    
 
     .stoo{
         padding-left: 5px;
-        mask-image: linear-gradient(to left, transparent, black 15%, rgb(0, 0, 0, .8) 95%, transparent);
+        mix-blend-mode: difference;
+        mask-image: linear-gradient(-45deg , transparent, rgb(255, 0, 0) 30%, rgba(255, 6, 6, 0.8) 95%, transparent);
     }
     
     .brand{
@@ -627,15 +624,7 @@ input:focus + .line::before{
         @apply absolute -left-[4px]  -bottom-[5px] 
     }
 
-    /* .maroc::after{
-        position: absolute;
-        content: url('/src/Collection/Maroc.jpeg');
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        mix-blend-mode: normal;
-    } */
+   
 
     .gradient{
         border: .5px solid;

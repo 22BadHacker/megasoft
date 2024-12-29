@@ -1,5 +1,6 @@
 import React, { lazy } from 'react'
 import Lenis from '../Constants/Lenis'
+import Stack from '../StoryCom/Stack'
 // import About from '../StoryCom/about'
 // import Head from '../StoryCom/Head'
 
@@ -35,6 +36,9 @@ const Story = () => {
                   <First />
               </section>
 
+              <section>
+                  <Stack />
+              </section>
             </div>
 
           </div>
