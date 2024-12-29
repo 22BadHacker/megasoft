@@ -37,7 +37,14 @@ const Head = () => {
         </div>
         <h1 className='num text-center w-full relative pt-2 leading-[1.1] text-[60px] sm:text-[80px] text-white font-bold'><span className='text-transparent drop-shadow-[0px_0_30px_rgb(255,255,255,.8)]'>It's our job to Light up your</span> Success </h1>
         
-        
+        {/* <p></p> */}
+        <div className="grid w-full grid-cols-4 pt-10">
+          <div className="relative w-full rounded-xl overflow-hidden shadow-[2px_2px_10px_rgb(0,0,0,.3)]">
+            <img src={require('../ss/df30ce307f9cfe83914bd0bb0f6c5ed1.gif')} className='mix-blend-exclusion w-full h-full object-cover' alt="" />
+            <p className='absolute text-[22px] rounded-full bg-gradient-to-r from-[rgb(0,0,0,.5)] to-[rgb(23,22,22,.2)] px-5 py-1 backdrop-blur-[10px] flex items-center justify-center text-white font-semibold bottom-[40px] num tracking-[2px] shadow-[1px_1px_0px_rgb(0,0,0,.5)] left-1/2 -translate-x-1/2 '>CREATIVITY</p>
+
+          </div>
+        </div>
 
         <div className="grid w-full grid-cols-2 pt-[100px]">
           <p className='text-white h-fit font-medium flex items-center gap-2'>THE BACKSTORY <MdOutlineArrowRightAlt className='border-orange-500/40 text-orangee rounded-[10px] w-8 border-[.5px]'/></p>

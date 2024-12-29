@@ -6,7 +6,7 @@ import { ImLocation2 } from "react-icons/im";
 const Drag5 = ({name, img, email}) => {
   return (
     
-    <div className='relative lg:-left-[50px]  md:sm:left-[200px] flex '>
+    <div className='relative    flex w-full justify-start'>
       <motion.div disabled drag  whileDrag={{borderColor: '#ff8a00'}} className='w-[370px] gap-2 h-auto p-4 cursor-grab  bg-[rgb(17,17,17, .2)] backdrop-blur-[10px] px-3 rounded-md border-[.2px] flex flex-col z-20  border-orange-500/30 select-nonfef     '>
       <div className="w-full h-full  absolute top-0 left-0 bg-transparent"></div>
       

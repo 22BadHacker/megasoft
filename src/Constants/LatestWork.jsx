@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MdOutlineArrowRightAlt } from 'react-icons/md';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,9 +33,9 @@ const LatestWork = () => {
                             <div className='box flex relative'>
                                 <div className="late flex flex-col relative">
                                     <img className='object-cover w-full h-full' src={src} alt="" />
-                                    <h5 className='absolute top-1 left-1 text-orangee font-bold text-[12px] bg-[rgb(17,17,17,.3)] backdrop-blur-5 py-1 px-2 rounded-full'>{desc}</h5>
-                                    <p className='text-white pt-2 font-bold text-[17px] tracking-[.5px]'>{name}</p>
-                                    <h6 className='font-semibold text-white/50 text-[14px] relative -top-[2px]'>{date}</h6>
+                                    <h5 className='absolute top-1 left-1 text-orangee font-bold text-[12px] bg-[rgb(17,17,17,.2)] backdrop-blur-[30px] py-1 px-2 rounded-full'>{desc}</h5>
+                                    <p className='text-white flex items-center gap-2 pt-2 font-bold text-[17px] tracking-[.5px]'>{name}<MdOutlineArrowRightAlt className='border-orange-500/40 text-orangee rounded-[10px] w-8 border-[.5px]'/></p>
+                                    <h6 className='font-semibold text-white/60 text-[14px] relative -top-[2px]'>{date}</h6>
                                 </div>
                             </div>
                         )

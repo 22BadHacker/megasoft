@@ -1,8 +1,7 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 
-// import img from '../Collection/7ea5a69a55c9b224382b915707371f5d.jpg'
-
+import img from '../Assets/services/Mockup-megaWeb.png'
 
 
 
@@ -19,7 +18,7 @@ const Drag3 = () => {
           <div className="w-2 h-2 absolute -left-1 -bottom-1 bg-white"></div>
           <div className="w-2 h-2 absolute -right-1 -bottom-1 bg-white"></div>
          
-        {/* <img src={img} className='brand blur-[0px] h-[300px] object-cover mt-2' alt="" /> */}
+        <img src={img} className='brand blur-[0px] h-[300px] object-cover mt-2' alt="" />
         
        
           

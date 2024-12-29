@@ -67,6 +67,18 @@ import { LuHexagon } from "react-icons/lu";
 import { IoDiamondOutline } from "react-icons/io5";
 import { FiUserPlus } from "react-icons/fi";
 
+// Logos
+
+import Figma from '../Logos/Figma.svg'
+import Illustrator from '../Logos/Illustrator.svg'
+import Photoshop from '../Logos/Photoshope.svg'
+import typeScript from '../Logos/typeScript.svg'
+import NextJS from '../Logos/javaScript.svg'
+import React from '../Logos/AfterEffect.svg'
+import Laa from '../Logos/Laravel.svg'
+import mongo from '../Logos/Mongo.svg'
+import logoo from '../Assets/newColor.svg'
+
 
 export {
     Analitics,
@@ -81,11 +93,11 @@ export {
 
 
 export const feaut = [
-    {icon: <AiFillThunderbolt className='text-orangeLight size-10 p-2 bg-transparent backdrop-blur-[2px] rounded-full'/>, name: 'Fast Deleviry', desc: 'Why wait? Launch your business online with our quick and hassle-free web design solutions, tailored for speed and success '},
-    {icon: <IoIosTrendingUp className='text-orangeLight size-10 p-2 bg-transparent backdrop-blur-[2px] rounded-full'/>, name: 'Performance Optimization', desc: 'Why settle for slow when you can soar? Unlock the full potential of your website with our expert performance optimization services.'},
-    {icon: <GiTakeMyMoney className='text-orangeLight size-10 p-2 bg-transparent backdrop-blur-[2px] rounded-full'/>, name: 'Affordable Pricing', desc: 'Why pay more for less? With our affordable pricing, you get premium services and solutions that fit your budget perfectly.'},
+    {icon: <AiFillThunderbolt className='text-orangeLight sm:size-[43px] size-[40px] p-2 bg-transparent backdrop-blur-[2px] rounded-full'/>, name: 'Fast Deleviry', desc: 'Why wait? Launch your business online with our quick and hassle-free web design solutions, tailored for speed and success '},
+    {icon: <IoIosTrendingUp className='text-orangeLight size-[40px] sm:size-[43px] p-2 bg-transparent backdrop-blur-[2px] rounded-full'/>, name: 'Performance Optimization', desc: 'Why settle for slow when you can soar? Unlock the full potential of your website with our expert performance optimization services.'},
+    {icon: <GiTakeMyMoney className='text-orangeLight size-10 p-2 bg-transparent backdrop-blur-[2px] rounded-full sm:size-[43px]'/>, name: 'Affordable Pricing', desc: 'Why pay more for less? With our affordable pricing, you get premium services and solutions that fit your budget perfectly.'},
     
-    {icon: <MdOutlineSecurity className='text-orangeLight size-10 p-2 bg-transparent backdrop-blur-[2px] rounded-full'/>, name: 'Security Features', desc: 'Earn your users’ trust with state-of-the-art security features that ensure their data is safe and sound.'},
+    {icon: <MdOutlineSecurity className='text-orangeLight size-10 p-2 bg-transparent backdrop-blur-[2px] rounded-full sm:size-[43px]'/>, name: 'Security Features', desc: 'Earn your users’ trust with state-of-the-art security features that ensure their data is safe and sound.'},
 ]
 
 
@@ -117,7 +129,7 @@ export const icoons2 = [
     {icon: <RiTailwindCssFill className="text-[#15b8c5] text-[28px]  rounded-md "/>, name: 'TailWind'},
     {icon: <FaBootstrap className="text-[#7710f1] text-[28px]  rounded-md "/>, name: 'BootStrap'},
     {icon: <FaLaravel className="text-[#ff2d20] text-[28px]  rounded-md "/>, name: 'Laravel'},
-    {icon: <SiNextdotjs className="text-[#fff] text-[28px]   "/>, name: 'Laravel'},
+    {icon: <SiNextdotjs className="text-[#fff] text-[28px]   "/>, name: 'NextJS'},
     {img: mot, name: 'Laravel'},  
 ]
 
@@ -272,6 +284,8 @@ export const servicesSlider = [
     'SEO',
 ] 
 
+
+
 export const sliderIcons =[
     {src: '', name: 'React'},
     {src: '', name: 'Tailwind css'},
@@ -293,7 +307,7 @@ export const workSlide = [
 
 
 export const Latest = [
-    {date: '15 nov, 2024',src: work6, name: 'Intelligence Industry.', desc: 'Web Devolepment'},
+    {date: '15 nov, 2024',src: work6, name: 'Intelligence Industry', desc: 'Web Devolepment'},
     {date: '5 nov, 2024',src: work3, name: 'HMS Proprete', desc: 'Graphic Design'},
     {date: '25 oct, 2024',src: work, name: 'Floora Cosmitic', desc: 'UX Design'},
     {date: '2 oct, 2024',src: work2, name: 'MEGASOFT', desc: 'Business Card'},

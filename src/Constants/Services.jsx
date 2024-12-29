@@ -28,43 +28,43 @@ const Services = () => {
     })
   return (
     <div className='py-6 z-[1] relative overflow-hidden pt-7 flex flex-col gap-4 mt-[100px] px-4 md:lg:px-0  w-full '>
-        {/* <img src={img4} className='w-full mix-blend-screen object-cover -z-[1] h-auto fixed top-0 left-0 ' alt="" /> */}
+        
         <p className='text-white flex gap-1 items-center text-[35px] duration-[.3s] ease-in-out w-fit cursor-pointer hover:text-orangee font-bold pb-3 hover'><span className='bg-orangee w-8 h-[2px]'> </span>Our Services</p>
 
         <div className="box4 grid w-full h-auto grid-cols-1 lg:grid-cols-[1fr_.5fr] gap-5">
             <div className="w-full h-auto grid grid-cols-2 gap-5">
-                <div className="img1 w-full h-full relative rounded-md overflow-hidden">
-                    <img loading='lazy' src={img1} className=' w-full h-full object-cover' alt="" />
+                <div className="img1 shadow-[2px_2px_10px_rgb(0,0,0,.4)] w-full h-full relative rounded-md overflow-hidden">
+                    <img loading='lazy' src={img1} className=' w-full h-full object-cover' alt="Web Development" />
                     <p className='text-orangee text-[11px] sm:text-[14px] border-[.5px] border-orangee bg-gradient-to-r from-black/20 to-lime-200/20 shadow-lg backdrop-blur-[50px] px-3 py-1 rounded-full font-semibold absolute bottom-2 left-2'>Web Development</p>
                 </div>
-            <div className="img3 w-full h-auto overflow-hidden relative rounded-md">
-                <img loading='lazy' src={img3} className=' object-cover saturate-200 h-full w-full' alt="" />
+            <div className="img3 w-full h-auto overflow-hidden relative rounded-md shadow-[2px_2px_10px_rgb(0,0,0,.4)]">
+                <img loading='lazy' src={img3} className=' object-cover saturate-200 h-full w-full' alt="Graphic Design" />
                 <p className='text-orangee text-[14px] border-[.5px] border-orange-500/50 bg-transparent shadow-lg backdrop-blur-[10px] px-3 py-1 rounded-full font-semibold absolute bottom-2 left-2'>Graphic Design</p>
             </div>
                
             </div>
-                <div className="img2 w-full h-full relative rounded-md overflow-hidden">
-                    <img loading='lazy' src={img2} className=' w-full h-full object-cover' alt="" />
+                <div className="img2 w-full h-full relative rounded-md overflow-hidden shadow-[2px_2px_10px_rgb(0,0,0,.4)]">
+                    <img loading='lazy' src={img2} className=' w-full h-full object-cover' alt="UX Design" />
                     <p className='text-orangee text-[12px] sm:text-[14px] border-[.5px] border-orange-500/50 bg-transparent shadow-lg backdrop-blur-[80px] px-3 py-1 rounded-full font-semibold absolute bottom-2 left-2'>UX Design</p>
                 </div>
 
         </div>
 
         <div className=" gap-5 grid-cols-2 lg:grid-cols-4 grid w-full h-auto">
-            <div className="w-full h-full relative rounded-md overflow-hidden">
-                <img loading='lazy' src={img7} className='w-full h-full object-cover' alt="" />
+            <div className="w-full h-full relative rounded-md overflow-hidden shadow-[2px_2px_10px_rgb(0,0,0,.4)]">
+                <img loading='lazy' src={img7} className='w-full h-full object-cover' alt="Project Mangment" />
                 <p className='text-orangee text-[12px] sm:text-[14px] border-[.5px] border-orange-500/50 bg-trasparent shadow-lg backdrop-blur-[50px] px-3 py-1 rounded-full font-semibold absolute bottom-2 left-2'>Project Mangment</p>
             </div>
-            <div className="w-full h-full relative rounded-md overflow-hidden">
-                <img loading='lazy' src={img5} className='w-full h-full object-cover' alt="" />
+            <div className="w-full h-full relative rounded-md overflow-hidden shadow-[2px_2px_10px_rgb(0,0,0,.4)]">
+                <img loading='lazy' src={img5} className='w-full h-full object-cover' alt=">Mobile Application" />
                 <p className='text-orangee text-[12px] sm:text-[14px] border-[.5px] border-orange-500/50 bg-transparent shadow-lg backdrop-blur-[10px] px-3 py-1 rounded-full font-semibold absolute bottom-2 left-2'>Mobile Application</p>
             </div>
-            <div className="w-full h-full relative rounded-md overflow-hidden">
-                <img loading='lazy' src={img6} className='w-full h-full object-cover' alt="" />
+            <div className="w-full h-full relative rounded-md overflow-hidden shadow-[2px_2px_10px_rgb(0,0,0,.4)]">
+                <img loading='lazy' src={img6} className='w-full h-full object-cover' alt="Digital Marketing" />
                 <p className='text-orangee text-[12px] sm:text-[14px] border-[.5px] border-orange-500/50 bg-transparent shadow-lg backdrop-blur-[10px] px-3 py-1 rounded-full font-semibold absolute bottom-2 left-2'>Digital Marketing</p>
             </div>
-            <div className="w-full h-full relative rounded-md overflow-hidden">
-                <img loading='lazy' src={img8} className='w-full h-full object-cover' alt="" />
+            <div className="w-full h-full relative rounded-md overflow-hidden shadow-[2px_2px_10px_rgb(0,0,0,.4)]">
+                <img loading='lazy' src={img8} className='w-full h-full object-cover' alt="Motion Graphics" />
                 <p className='text-orangee text-[12px] sm:text-[14px] border-[.5px] border-orangee bg-gradient-to-r from-black/20 to-lime-200/20 shadow-lg backdrop-blur-[50px] px-3 py-1 rounded-full font-semibold absolute bottom-2 left-2'>Motion Graphics</p>
             </div>
         </div>

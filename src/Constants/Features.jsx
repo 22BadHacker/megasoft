@@ -14,7 +14,7 @@ const Features = () => {
               const {icon, name, desc} = item
               return (
                 <div className="flex w-full hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] hover:scale-[1.02] ease-in-out duration-[.25s] cursor-pointer overflow-hidden z-[1] flex-col h-[310px]   justify-between bg-gradient-to-br relative from-[rgb(0,0,0,.1)] to-[rgb(0,0,0,.35)] p-[10px_12px] backdrop-blur-[10px]">
-                    <span className='absolute z-[-5] top-8 left-1/2 -translate-x-1/2 w-[50px] rounded-full blur-[30px] h-[50px] bg-gradient-to-t from-transparent to-orangee'></span>
+                    <span className='absolute z-[-5] top-8 left-1/2 -translate-x-1/2 w-[50px] rounded-full blur-[40px] opacity-90 h-[50px] bg-orangee'></span>
                     <span className='absolute z-[-5] top-0 left-1/2 shadow-[0px_10px_20px_0px_rgba(0,0,0,.5)] -translate-x-1/2 w-[50px] rounded-full blur-[0px] h-[4px] bg-gradient-to-t from-transparent to-orangee'></span>
                     <div className="w-full h-full backdrop-blur-[50px] z-[-1] top-0 left-0 bg-transparent absolute blur-[40px]"></div>
                     <span className='w-full items-right flex'>{icon}</span>

@@ -25,7 +25,7 @@ const Home = () => {
 
     <Lenis>
 
-      <div className='w-screen h-auto relative z-[1] bg-black pb-[200px] lg:md:pt-[180px] pt-[120px]'>
+      <div className='w-screen h-auto relative z-[1] bg-black pb-[50px] md:pt-[180px] pt-[120px]'>
           
           <div className="woo fixed -z-[1] h-[120vh] w-full inset-0"></div>
           <div aria-hidden="true" className="fixed  left-0 -z-[1]  inset-0 grid grid-cols-2 opacity-55 -space-x-52 lg:md:sm:opacity-40">
@@ -33,6 +33,8 @@ const Home = () => {
                       <div className="blur-[106px] rotate-[180deg] h-[80px] opacity-90 lg:md:sm:opacity-90 relative   lg:md:sm:left-0 top-[60px] bg-gradient-to-r from-cyan-400 to-sky-300"></div>
                       
             </div>
+
+           
 
 
         <div className=' max-w-[1500px] px-4 md:lg:px-5 h-full mx-auto w-full md:px-9'>
@@ -42,10 +44,16 @@ const Home = () => {
             <div className="grid  sm:grid-cols-1 lg:md:grid-cols-2 w-full">
               
                 <div className=" flex  flex-col gap-4 z-[1] lg:md:gap-7 w-full lg:max-w-[720px]">
+
+
+                <div className="w-full absolute  opacity-40">
+                  <div className="h-[500px] -rotate-45 w-[180px] z-[-5]  absolute left-[100px] blur-[60px] top-0 bg-red-500 rounded-full"></div>
+                  <div className="h-[500px] -rotate-45 w-[150px] z-[-5]  absolute left-[250px] blur-[50px] top-0 bg-blue-500 rounded-full"></div>
+                </div>
                   
           
                   
-                  <p className='text-orangee text-[18px] font-semibold relative top-1'>Empower Your Business with Exceptional Web Design</p>                
+                  <p className='text-orangee bg-white w-fit text-[18px] font-semibold relative top-1'>Empower Your Business with Exceptional Web Design</p>                
                   <p className='con4 lg:md:text-[68px] sm:text-[60px]  text-[40px] font-bold sm:leading-[-10px] lg:md:sm:leading-tight lg:md:sm:-tracking-[2px]'>Where Innovation Meets Design, Build Your Dream Project Today</p>
                 
                   <p className='text-gray-300 font-semibold py-5 sm:w-[600px]'>Our team of talented designers and developers work collaboratively to bring your vision to life, ensuring every website we create is tailored to meet the unique needs of your brand and your users.</p>
@@ -120,9 +128,9 @@ const Home = () => {
             <section className='mt-20 z-[2]'>
                   <Services />
             </section>
-            {/* <section className='mt-20 z-[2]'>
+            <section className='mt-20 z-[2]'>
                   <Ads />
-            </section> */}
+            </section>
 
             {/* Part 5 Report */}
             <section className='mt-20 z-[2]'>
@@ -147,6 +155,17 @@ const Home = () => {
               <div className="w-[140px] h-[140px]  bg-transparent rounded-full absolute -top-[40px]"><span className='w-full blur-[10px] -bottom-[90px] h-full bg-[#d4352e] absolute rounded-full  left-0 '></span></div>
               <div className="w-[140px] opacity-70 h-[140px] left-[35%] bg-transparent rounded-full absolute -top-[40px]"><span className='w-full h-full bg-[#11e1e8] absolute rounded-full opacity-75 blur-[10px] -bottom-[90px] left-0 '></span></div>
             </div> */}
+
+            <div className="w-full absolute  opacity-65">
+
+            <div className="h-[300px] -rotate-45 w-[50px] z-[-5]  absolute left-[200px] blur-[45px] bottom-20 bg-red-500 rounded-full"></div>
+            <div className="h-[300px] -rotate-45 w-[50px] z-[-5]  absolute left-[300px] blur-[45px] bottom-20 bg-blue-500 rounded-full"></div>
+            </div>
+            <div className="w-full absolute  opacity-65">
+
+            <div className="h-[300px] -rotate-45 w-[50px] z-[-5]  absolute right-[500px] blur-[45px] bottom-20 bg-blue-500 rounded-full"></div>
+            <div className="h-[300px] -rotate-45 w-[50px] z-[-5]  absolute right-[400px] blur-[45px] bottom-20 bg-red-500 rounded-full"></div>
+            </div>
 
 
         </div>
