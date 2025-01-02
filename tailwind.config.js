@@ -12,6 +12,7 @@ module.exports = {
             roboto: ['Roboto', 'sans-serif'],
             novea: 'var(--novea)',
             sign: 'var(--sign)',
+            Poppins: 'var(--poppins)'
         },
         colors: {
             creamy: 'var(--primary)',

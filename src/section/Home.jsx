@@ -26,7 +26,7 @@ const Home = () => {
 
     <Lenis>
 
-      <div className='w-screen h-auto relative z-[1] bg-black pb-[50px] md:pt-[180px] pt-[120px]'>
+      <div className='w-screen h-auto relative z-[1] bg-black pb-[50px] md:pt-[175px] pt-[120px]'>
           
           <div className="woo fixed -z-[1] h-[120vh] w-full inset-0"></div>
           <div aria-hidden="true" className="fixed  left-0 -z-[1]  inset-0 grid grid-cols-2 opacity-55 -space-x-52 lg:md:sm:opacity-40">
@@ -55,7 +55,7 @@ const Home = () => {
           
                   
                   {/* <p className='text-white bg-orangee w-fit px-2 text-[18px] font-semibold relative top-1'>Empower Your Business with Exceptional Web Design</p>                 */}
-                  <p className='text-orangee  flex items-center drop-shadow-[1px_1px_5px_rgb(249, 83, 2,.5)] gap-1 px-2 text-[18px] font-semibold relative top-1'>Light Up <FaLightbulb className='text-white drop-shadow-[1px_1px_5px_rgb(255,255,255,.5)]'/> Your Business with Exceptional & Creative Design</p>                
+                  <p className='text-orangee   text-[18px] font-semibold relative top-2'>Light Up <FaLightbulb className='text-white inline-flex drop-shadow-[1px_1px_5px_rgb(255,255,255,.5)]'/> Your Business with Exceptional & Creative Design</p>                
                   <p className='con4 lg:md:text-[68px] sm:text-[60px]  text-[40px] font-bold sm:leading-[-10px] lg:md:sm:leading-tight lg:md:sm:-tracking-[2px]'>Where Innovation Meets Design, Build Your Dream Project Today</p>
                 
                   <p className='text-gray-300 font-semibold py-5 sm:w-[600px]'>Our team of talented designers and developers work collaboratively to bring your vision to life, ensuring every project we create is tailored to meet the unique needs of your brand and your users.</p>
@@ -103,10 +103,7 @@ const Home = () => {
 
 
             {/* Part 3 About */}
-            <section className='z-[2]'>
-              {/* <img className='w-[600px]' src={megaa} alt="" /> */}
-
-            </section>
+            
 
             <section className='z-[2]'>
               <OurStory />

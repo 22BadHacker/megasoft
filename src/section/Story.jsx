@@ -1,12 +1,19 @@
 import React, { lazy } from 'react'
 import Lenis from '../Constants/Lenis'
 import Stack from '../StoryCom/Stack'
+import Expert from '../StoryCom/Expert'
+import WhyUs from '../StoryCom/WhyUs'
+import Sigma from '../StoryCom/Sigma'
+import Process from '../StoryCom/Process'
+import BigText from '../StoryCom/BigText'
 // import About from '../StoryCom/about'
 // import Head from '../StoryCom/Head'
 
 const First = lazy(() => import('../StoryCom/First'))
 const Head = lazy(() => import('../StoryCom/Head'))
 const About = lazy(() => import('../StoryCom/About'))
+const Serv = lazy(() => import('../StoryCom/Serv'))
+
 
 const Story = () => {
   return (
@@ -32,13 +39,51 @@ const Story = () => {
                   {/* <About /> */}
               </section>
 
-              <section>
+              {/* <section>
                   <First />
+              </section> */}
+              <div className="w-full h-[.2px] bg-white opacity-30 my-20"></div>
+              {/* <div className="w-full flex  my-[100px]  items-center opacity-30 ">
+                  <div className="h-3 w-3 border-orangeLight border-[.5px]"></div>
+                  <div className="w-1/2 h-[.5px] bg-orangeLight"></div>
+                  <div className="h-3 w-3 border-orangeLight border-[.5px]"></div>
+                  <div className="w-1/2 h-[.5px] bg-orangeLight"></div>
+                  <div className="h-3 w-3 border-orangeLight border-[.5px]"></div>
+              </div> */}
+              <section className=' relative'>
+                  {/* <h1 className='text-white sm:text-[70px] leading-[1] max-w-[400px] pb-20  cursor-pointer text-[30px]  h-fit font-semibold'>Web app development</h1> */}
+ 
+                  {/* <Expert /> */}
+                  <Serv />
               </section>
 
-              <section>
+              <section className=' relative pt-10'>
                   <Stack />
               </section>
+
+              {/* <div className="w-full h-[.2px] bg-white opacity-30 my-20"></div> */}
+
+              <section className=' relative pt-10'>
+                  <Process />
+              </section>
+
+              <section className=' relative pt-[180px]'>
+                  <BigText />
+              </section>
+
+              <section className=' relative pt-[140px]'>
+                  <Sigma />
+              </section>
+
+              <section className=' relative pt-[100px]'>
+                  <First />
+              </section >
+
+              <section className=' relative pt-[120px]'>
+                  <WhyUs />
+              </section>
+
+
             </div>
 
           </div>

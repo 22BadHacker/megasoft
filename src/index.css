@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,11 +18,13 @@
     --body_background: #fff;
     --body_color: #000;
     --primary: #e8d5c8;
-    --secondary: rgb(249, 83, 2,.9);
+    /* --secondary: rgb(249, 83, 2,.9); */
+    --secondary: #e24d04;
     --secondary-orange: rgb(249, 83, 2,.8);
     --light-blue: #e4ebf5;
     --novea: 'novea', sans-serif;
     --sign: 'sign', sans-serif;
+    --poppins: 'Poppins', sans-serif;
 }
 
 body {
@@ -187,6 +190,51 @@ input:focus + .line::before{
         
    }
 
+   .stack:hover{
+        cursor: pointer;
+        color: whitesmoke;
+        border: .2px solid var(--secondary-orange);
+   }
+   .stack:hover::after{
+        height: 100%;
+   }
+
+   .moree{
+        transition: 250ms ease-in-out;
+        position: relative;
+        z-index: 1;  
+        overflow: hidden;
+        cursor: pointer;
+   }
+
+   .moree:hover::after{
+    height: 0;
+   }
+   .moree::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-orange);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transition: 250ms ease-in-out;
+   }
+   
+
+   .stack::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background: var(--secondary-orange);
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    transition: 250ms ease-in-out;
+   }
+
 
     .bar, .bar2, .burger{
         transition: .4s ease-in-out;
@@ -231,21 +279,22 @@ input:focus + .line::before{
 
      .hoov:hover > img{
         filter: saturate(1.5);
-        transition: .3s ease-in-out;
+        transition: 250ms ease-in-out;
      }
      
      .hoov:hover > p{
        color: var(--secondary);
-        transition: .3s ease-in-out;
+        transition: 250ms ease-in-out;
+        filter: drop-shadow(2px 2px 10px rgb(226, 77, 4,.8)) !important;
      }
      .hoov:hover > h4{
        color: var(--primary);
-        transition: .3s ease-in-out;
+        transition: 250ms ease-in-out;
      }
 
 
      .hoov{
-        transition: .3s ease-in-out;
+        transition: 250ms ease-in-out;
         cursor: pointer;
      }
 
@@ -334,23 +383,24 @@ input:focus + .line::before{
     .get{
         transition: 250ms ease-in-out;
         position: relative ;
+        border: .5px solid var(--secondary);
+        transition: 220ms ease-in-out;
+        background: rgb(17, 17, 17, .3);
+        backdrop-filter: blur(10px);
     }
 
     .get:hover{
         color: var(--secondary) !important;
+
     }
 
     .get:hover::before{
         height: 0;
         transition: 250ms ease-in-out;
     }
-    .get:hover::after{
-        width: 100%;
-        transition: 250ms ease-in-out;
-        background: white;
-    }
+   
 
-    .get::before, .get::after{
+    .get::before{
         content: '';
         position: absolute;
         z-index: -1;
@@ -359,17 +409,10 @@ input:focus + .line::before{
         background: var(--secondary);
         top: 0;
         left: 0;
-        transition: 250ms ease-in-out;
+        transition: 220ms ease-in-out;
     }
 
-    .get::after{
-        bottom: 0 !important;
-        z-index: -2;
-        height: 100%;
-        width: 100%;
-        background: var(--primary);
-        
-    }
+    
 
 
     .hov:hover > span{
@@ -410,7 +453,7 @@ input:focus + .line::before{
         position: absolute;
         bottom: 0;
         left: 0;
-        transition: .3s ease-in-out;
+        transition: 200ms ease-in-out;
         border-radius: 40px;
         
     }
@@ -424,12 +467,12 @@ input:focus + .line::before{
         width: 100%;
         height: 100%;
         background: transparent;
-        border: 2px solid rgba(113, 110, 110, .2);
+        border: .5px solid rgba(113, 110, 110, .4);
         border-radius: 50px;
         position: absolute;
         bottom: 0;
         left: 0;
-        transition: .3s ease-in-out;
+        transition: 200ms ease-in-out;
     }
 
    
@@ -557,6 +600,10 @@ input:focus + .line::before{
         color: transparent;
         -webkit-text-stroke: 1.5px white;
         
+    }
+
+    .main:hover >.expert{
+        @apply text-white bg-orangee
     }
 
    

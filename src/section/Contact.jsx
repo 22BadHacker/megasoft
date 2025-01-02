@@ -68,16 +68,20 @@ const Contact = () => {
         <div className='w-full mx-auto max-w-[1500px]'> 
 
         {/*Information section*/}
-        <div className=' w-full  pb-1 flex text-wrap md:lg:pb-[70px] pt-[60px]'>
+        <div className=' w-full  pb-1 flex text-wrap md:lg:pb-[70px] pt-[60px] md:pt-[50px]'>
                 {/* Head Title */}
-                <h1  className='text-[12vw] flex gap-4 px-2 con2 pointer-events-none tracking-[2px]   font-roboto relative font-[900] sm:text-[12.5vw]  lg:text-[8.5vw] tracking-tight   lg:even:-top-[65px] md:text-[11vw] md:even:-top-[50px]'>Our Information</h1>               
+                <h1  className='text-[12vw] leading-snug md:leading-normal flex gap-4 sm:px-2 con2 pointer-events-none tracking-tight   font-Poppins relative font-[700] sm:text-[11vw]  lg:text-[8.3vw]     md:text-[11vw] '>Our Information</h1> 
+                <div className="w-full absolute top-0 md:left-[120px] opacity-40">
+                    <div className="h-[500px] -rotate-90 w-[180px] z-[-5]  absolute left-[100px] blur-[60px] top-0 bg-red-500 rounded-full"></div>
+                    <div className="h-[500px] -rotate-0 w-[180px] z-[-5]  absolute left-[350px] blur-[50px] top-0 bg-blue-500 rounded-full"></div>
+                </div>              
         </div>
 
         <div className="infoo grid pb-10 gap-8 lg:grid-cols-[1fr_.5fr] md:grid-cols-[.5fr_1fr]">
 
                 
 
-            <div className=" grid lg:w- text-wrap  w-full gap-2 lg:grid-cols-2 sm:grid-cols-2 lg:md:gap-0 md:grid-cols-1 md:gap-0">
+            <div className=" grid  text-wrap  w-full gap-2  lg:grid-cols-2 sm:grid-cols-2 lg:md:gap-0 grid-cols-2 md:gap-0">
                 <div className="flex text-wrap gap-0 flex-col lg:md:gap-6">
                     <p className='text-white/90 pt-3   relative -top-[15px] text-nowrap font-bold text-[31px] mt-10 md:lg:mt-0 lg:md:sm:top-4 lg:md:sm:-top-[] sm:text-[35px]  lg:md:text-[45px]'>Founders</p>
                     <div className="flex relative -top-2 lg:md:top-0 gap-[2px] flex-col">
@@ -86,7 +90,7 @@ const Contact = () => {
                         <p className='text-lightBlue/90 font-medium text-[16px] '>&Team</p>
                     </div>
                 </div>
-                <div className="flex ] gap-0 flex-col lg:md:gap-6">
+                <div className="flex ] gap-0 flex-col lg:md:gap-6 flex-wrap text-wrap">
                     <p className='text-white/90 pt-3  relative -top-[15px] text-nowrap font-bold text-[31px] sm:text-[35px] mt-10 md:lg:mt-0 lg:md:sm:top-4 lg:md:sm:-top-[]  lg:md:text-[45px]  '>Emails</p>
                     <div className="flex relative -top-2 md:lg:top-0 gap-[2px] flex-col">
                         <a href='mailto:aitmeryem.s@gmail.com' className='text-lightBlue/90 font-medium text-[16px] '>aitmeryem.s@gmail.com</a>
@@ -142,8 +146,12 @@ const Contact = () => {
             { /* Let's get to work Section*/}
             <div className=' w-full relative  pb-2 flex flex-col text-wrap md:lg:pb-[70px] '>
                 {/* Head Title */}
-                <h1  className='text-[12vw] lg:text-[145px]  lg:leading-normal con2 pointer-events-none tracking-[2px]   font-roboto relative font-[900] sm:text-[12.5vw]  lg:text-[8.5vw] tracking-tight px-2   lg:even:-top-[65px] md:text-[11vw] md:even:-top-[50px]'>Let's get to work</h1> 
-                <p className='ml-4 xl:lg:text-[26.5px] text-[18px] md:text-[25px] sm:text-[23px] opacity-90 font-novea lg:absolute tracking-wide left-[394px] bottom-20'>Let us help you become even greater at what you do.</p>              
+                <h1  className='text-[12vw] lg:text-[145px] leading-tight sm:leading-normal con2 pointer-events-none tracking-[1px]   font-Poppins relative font-[700] sm:text-[12.5vw]  lg:text-[8.5vw]  px-1   lg:even:-top-[65px] md:text-[11vw] md:even:-top-[50px]'>Let's get to work</h1> 
+                <p className='ml-2 xl:lg:text-[26.5px] text-[18px] md:text-[25px] sm:text-[23px] opacity-90 font-novea lg:absolute tracking-wide left-[394px] bottom-20'>Let us help you become even greater at what you do.</p>   
+                <div className="w-full absolute -top-20 left-0 md:left-[120px] opacity-40">
+                    <div className="h-[500px] -rotate-45 w-[180px] z-[-5]  absolute left-[100px] blur-[60px] top-0 bg-red-500 rounded-full"></div>
+                    <div className="h-[500px] -rotate-45 w-[150px] z-[-5]  absolute left-[250px] blur-[50px] top-0 bg-blue-500 rounded-full"></div>
+                </div>           
             </div>
 
             {/* action='https://api.web3forms.com/submit' */}

@@ -41,6 +41,7 @@ import work3 from '../Assets/Work/Free-PSD-Modern-Brand-Business-Card-Mockup (1)
 import work4 from '../Assets/Work/small reusable bag mockup (1).webp'
 import work5 from '../Assets/Work/Logo_on_the_Builiding_Mockup_2.jpg'
 import work6 from '../Assets/Work/Mockup.jpg'
+import work7 from '../StoryCom/Asset/Business_Card_on_Paper_Mockup.webp'
 import sooft from '../Collection/Mockup-megaWeb.webp'
 
 import { FaReact } from "react-icons/fa";
@@ -100,6 +101,34 @@ export const feaut = [
     {icon: <MdOutlineSecurity className='text-orangeLight size-10 p-2 bg-transparent backdrop-blur-[2px] rounded-full sm:size-[43px]'/>, name: 'Security Features', desc: 'Earn your users’ trust with state-of-the-art security features that ensure their data is safe and sound.'},
 ]
 
+export const WebStack = [
+    // '',
+    'React',
+    'Laravel',
+    'TailwindCSS',
+    'MySQL',
+    'BootStrap',
+    'MongoDB',
+    'Next.js',
+    'React Native',
+    'Flutter',
+    'Node.js',
+    'Express.js',
+    'TypeScript',
+    '',
+]
+
+export const DesignStack = [
+    'Adobe Illustrator',
+    'Adobe Photoshop',
+    'Figma',
+    'After Effect',
+    'Adobe XD',
+    'Premier Pro',
+    'InDesign',
+    'Webflow',
+]
+
 
 export const icoons3 = [
     
@@ -140,7 +169,7 @@ export const icoons2 = [
 export const navLinks = [
     { href: "/", label: "Introduction" },
     // { href: "#", label: "Features" },
-    { href: "/OurStory", label: "Our Story" },
+    { href: "/OurStory", label: "Entreprise" },
     { href: "/ourWork/", label: "Our Work" },
     { href: "/services/", label: "Services"}, 
     // { href: "#", label: "Pricing" },
@@ -294,13 +323,14 @@ export const sliderIcons =[
 
 
 export const workSlide = [
-    {id: 'box1', src: work, name: 'Floora Cosmitic', desc: 'Web Devolepment'},
-    {id: 'box2', src: work6, name: 'Intelligence Industry.', desc: 'UX Design/Web Devolepment'},
-    {id: "box3", src: work2, name: 'MEGASOFT', desc: 'Graphic Design/Business Card'},
-    {id: "box4", src: work3, name: 'HMS Proprete', desc: 'Graphic Design/Business Card'},
-    {id: "box5", src: work4, name: 'Omeniya Event', desc: 'Branding/Logo Design'},
+    {id: 'box1', src: work, name: 'Floora Cosmitic', desc: 'UX Design/Web Devolepment'},
+    {id: 'box2', src: work6, name: 'Intelligence Industry', desc: 'Web Devolepment'},
+    {id: "box3", src: work2, name: 'MEGASOFT', desc: 'Business Card'},
+    {id: "box4", src: work3, name: 'HMS Proprete', desc: 'Business Card'},
+    {id: "box5", src: work4, name: 'Omeniya Event', desc: 'Logo Design'},
     {id: "box6", src: work5, name: 'Coopérative ITRANE', desc: 'Branding/Logo Design'},
-    {id: "box6", src: sooft, name: 'MEGASOFT Corp', desc: 'Web Design'},
+    {id: "box7", src: sooft, name: 'MEGASOFT Website', desc: 'Web Design'},
+    {id: "box8", src: work7, name: 'Intelligence Industry', desc: 'Business Card'},
     
 ]
 

@@ -41,7 +41,7 @@ const Nav = () => {
 
     <>
 
-        <header id='navbar' className='lg:md:heaad w-[97.5vw] sm:head h-[68px] flex items-center bg-gradient-to-b from-[rgb(0,0,0, .1)] to-transparent backdrop-blur-sm  pb-[48px] lg:md:sm:mr-0 pt-6 z-10 fixed  top-0 left-0 inset-0 flex-center'>
+        <header id='navbar' className='lg:md:heaad w-[100vw] sm:head h-[68px] flex items-center bg-gradient-to-b from-[rgb(0,0,0, .1)] to-transparent backdrop-blur-sm  pb-[48px] lg:md:sm:mr-0 pt-6 z-10 fixed  top-0 left-0 inset-0 flex-center'>
             <nav className=' px-6 transition-all ease-in-out pt-8 w-full z-[22] h-full max-w-[1500px] mx-auto  flex-center-between    md:lg:px-4 md:lg:pt-10 lg:pb-2 sm:px-8'>
                 {/* Logo */}
                 <>
@@ -51,7 +51,7 @@ const Nav = () => {
 
                         
                         
-                        <img  className='logo size-[200px] flex-1 lg:size-[210px] ' src={logo2} alt="" />
+                        <img  className='logo size-[200px] flex-1 lg:size-[210px] mb-1' src={logo2} alt="" />
                         
                     </Link>
                 </>
@@ -65,7 +65,7 @@ const Nav = () => {
                             return (
                                 <li className='li' onClick={scrollToTop}  key={label}>
         
-                                    <Link onClick={scrollToTop}  to={href}  className={`linkss   relative max-w-content text-white/80 font-roboto font-semibold text-[18px] hover:text-orangee flex gap-2 items-center`}>{label}</Link>
+                                    <Link onClick={scrollToTop}  to={href}  className={`linkss   relative drop-shadow-[2px_2px_10px_rgb(255,255,255,.2)] text-white/85  font-semibold text-[17.5px] hover:text-orangee flex gap-2 items-center`}>{label}</Link>
         
                                 </li>
                             )
@@ -83,7 +83,7 @@ const Nav = () => {
 
                 <>
                     <div className='hidden lg:flex items-center  gap-3'>
-                        <Link onClick={scrollToTop} className=' get hover:text-orangee lg:btn-flex '  to="/contact/">Get in Touch</Link>
+                        <Link onClick={scrollToTop} className=' get hover:text-orangee lg:btn-flex mb-2'  to="/contact/">Get in Touch</Link>
                         
                     </div>
                 </>
@@ -93,7 +93,7 @@ const Nav = () => {
                 {/* Burger */}
 
                 <>
-                    <div className={`burger ${toggleClass} relative left-4 scale-[.78] flex rounded-full justify-center  flex-col gap-[6px] relative w-12 h-12  shadow-lg bg-[rgb(17,17,17,.6)] backdrop-blur-xl cursor-pointer items-center lg:hidden sm:scale-[.8]`}onClick={toggleMenu}>
+                    <div className={`burger ${toggleClass} relative left-3 scale-[.78] flex rounded-full justify-center  flex-col gap-[6px]  w-12 h-12  shadow-lg bg-[rgb(17,17,17,.2)] backdrop-blur-[5px] cursor-pointer items-center lg:hidden sm:scale-[.8]`}onClick={toggleMenu}>
                         <div className="bar absolute -translate-y-1 w-7 h-[1.5px] bg-white "></div>
                         <div className="bar2 absolute translate-y-1 w-7 h-[1.5px] bg-white"></div>
                         

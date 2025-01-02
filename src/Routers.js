@@ -15,12 +15,13 @@ const Story = lazy(()=> import('./section/Story'))
 const Routers = () => {
   return (
     <Lenis>
-    <div className='w-screen h-auto relative overflow-x-hidden'>
-        {/* <div className="body w-screen h-screen bg-black  relative overflow-y-scroll"> */}
+         
             
               {/* <PreLoader /> */}
 
-                <Router>
+            <Router>
+              <div className='body w-screen h-auto relative overflow-x-hidden'>
+                <div className="size-[350px] rounded-full  fixed right-0 top-0 bg-red-500"></div>
                   <Nav />
                   
                 
@@ -43,11 +44,11 @@ const Routers = () => {
                     
                       <Footer />
                   </div>
-                  </Router>
+              </div>
+            </Router>
           {/* </div> */}
     
         
-    </div>
     </Lenis>
   )
 }
